@@ -115,7 +115,9 @@ export default function AdminPage() {
     });
 
     if (!response.ok) {
-      throw new Error("Failed to update recruiter");
+      const errorData = await response.json().catch(() => ({}));
+      const errorMessage = errorData.details || errorData.error || "Failed to update recruiter";
+      throw new Error(errorMessage);
     }
 
     // Refresh recruiters list
