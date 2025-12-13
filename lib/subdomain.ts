@@ -27,7 +27,7 @@ export function getCountryFromSubdomain(hostname: string): CountryCode {
   
   // Handle localhost for development
   if (host === 'localhost' || host.startsWith('127.0.0.1') || host.startsWith('192.168.')) {
-    return 'us'; // Default to US for local development
+    return 'in'; // Default to India for local development
   }
   
   // Check if first part is a valid country code
@@ -37,8 +37,8 @@ export function getCountryFromSubdomain(hostname: string): CountryCode {
     return COUNTRY_MAP[subdomain];
   }
   
-  // Default to US if no valid subdomain
-  return 'us';
+  // Default to India if no valid subdomain
+  return 'in';
 }
 
 export function isValidCountryCode(code: string): code is CountryCode {

@@ -14,6 +14,13 @@ export const metadata: Metadata = {
   title: "Recruiter Directory - Find Technical Recruiters",
   description:
     "Connect with top technical recruiters worldwide. Browse recruiter profiles by country and contact them directly on LinkedIn.",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [{ url: "/apple-icon.svg", type: "image/svg+xml" }],
+  },
 };
 
 export default function RootLayout({

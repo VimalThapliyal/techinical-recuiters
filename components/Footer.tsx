@@ -29,7 +29,7 @@ export function Footer() {
               <ul className="space-y-2 text-sm text-[#666666]">
                 <li>
                   <Link
-                    href="/us"
+                    href="/in"
                     className="hover:text-[#0077b5] transition-colors"
                   >
                     Browse Recruiters
@@ -61,22 +61,40 @@ export function Footer() {
               </ul>
             </div>
           </div>
-          <div className="border-t border-[#e0e0e0] pt-8 text-center space-y-2">
-            <p className="text-sm text-[#666666]">
-              © {new Date().getFullYear()} Recruiter Directory. All rights
-              reserved.
-            </p>
-            <p className="text-sm text-[#666666]">
-              Designed and concept by{" "}
-              <a
-                href="https://www.linkedin.com/in/vimal-thapliyal/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#0077b5] hover:text-[#004182] font-semibold transition-colors underline decoration-[#0077b5]/50 hover:decoration-[#004182]"
-              >
-                Vimal Thapliyal
-              </a>
-            </p>
+          <div className="border-t border-[#e0e0e0] pt-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-4">
+              <div className="flex items-center gap-6 text-sm text-[#666666]">
+                <Link
+                  href="/privacy"
+                  className="hover:text-[#0077b5] transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  href="/terms"
+                  className="hover:text-[#0077b5] transition-colors"
+                >
+                  Terms & Conditions
+                </Link>
+              </div>
+            </div>
+            <div className="text-center space-y-2">
+              <p className="text-sm text-[#666666]">
+                © {new Date().getFullYear()} Recruiter Directory. All rights
+                reserved.
+              </p>
+              <p className="text-sm text-[#666666]">
+                Designed and concept by{" "}
+                <a
+                  href="https://www.linkedin.com/in/vimal-thapliyal/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#0077b5] hover:text-[#004182] font-semibold transition-colors underline decoration-[#0077b5]/50 hover:decoration-[#004182]"
+                >
+                  Vimal Thapliyal
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>

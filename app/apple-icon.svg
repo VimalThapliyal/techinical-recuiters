@@ -1,0 +1,20 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="180" rx="40" fill="url(#gradient)"/>
+  <g stroke="white" stroke-width="8" stroke-linecap="round" fill="none">
+    <!-- Globe circle -->
+    <circle cx="90" cy="90" r="50"/>
+    <!-- Longitude lines -->
+    <path d="M90 40C70 40 53 50 42 65M90 40C110 40 127 50 138 65M90 140C70 140 53 130 42 115M90 140C110 140 127 130 138 115"/>
+    <!-- Latitude lines -->
+    <ellipse cx="90" cy="65" rx="22" ry="11"/>
+    <ellipse cx="90" cy="115" rx="22" ry="11"/>
+    <!-- Center line -->
+    <line x1="40" y1="90" x2="140" y2="90"/>
+  </g>
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0077b5"/>
+      <stop offset="100%" stop-color="#004182"/>
+    </linearGradient>
+  </defs>
+</svg>

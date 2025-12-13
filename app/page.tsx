@@ -39,13 +39,44 @@ export default function LandingPage() {
   useEffect(() => {
     // Hero animations
     if (heroRef.current) {
-      gsap.from(heroRef.current.children, {
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out",
+      const heroChildren = Array.from(
+        heroRef.current.children
+      ) as HTMLElement[];
+
+      // Set initial visibility to ensure elements are visible even if GSAP fails
+      heroChildren.forEach((child) => {
+        child.style.opacity = "1";
+        child.style.visibility = "visible";
       });
+
+      // Animate with GSAP if available
+      try {
+        gsap.from(heroChildren, {
+          y: 50,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power3.out",
+          onComplete: () => {
+            // Ensure visibility after animation
+            heroChildren.forEach((child) => {
+              child.style.opacity = "1";
+              child.style.visibility = "visible";
+            });
+          },
+        });
+      } catch (error) {
+        console.warn(
+          "GSAP hero animation error, elements will remain visible:",
+          error
+        );
+        // Fallback: ensure all elements are visible
+        heroChildren.forEach((child) => {
+          child.style.opacity = "1";
+          child.style.visibility = "visible";
+          child.style.transform = "translateY(0)";
+        });
+      }
     }
 
     // Features animation - with fallback for visibility
@@ -175,7 +206,10 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-7xl mx-auto w-full">
-          <div ref={heroRef} className="text-center space-y-8">
+          <div
+            ref={heroRef}
+            className="text-center space-y-8 [&>*]:opacity-100 [&>*]:visible"
+          >
             <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 mb-8 shadow-2xl">
               <Sparkles className="h-5 w-5 text-[#00d4ff]" />
               <span className="text-sm font-semibold text-white">
@@ -206,7 +240,7 @@ export default function LandingPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 pt-4 md:pt-8">
               <Button
                 size="lg"
-                onClick={() => router.push("/us")}
+                onClick={() => router.push("/in")}
                 className="group relative bg-gradient-to-r from-[#0077b5] to-[#00d4ff] text-white text-lg px-10 py-7 h-auto font-semibold shadow-2xl hover:shadow-[#0077b5]/50 transition-all duration-300 hover:scale-105 border-0"
               >
                 <span className="relative z-10 flex items-center">
@@ -217,12 +251,17 @@ export default function LandingPage() {
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                onClick={() => router.push("/profile")}
-                className="!border-2 !border-white/30 !text-white hover:!bg-white/20 bg-white/10 backdrop-blur-xl text-base md:text-lg px-8 md:px-10 py-6 md:py-7 h-auto font-semibold transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                onClick={() => router.push("/submit")}
+                className="group relative bg-gradient-to-r from-[#00d4ff] to-[#0077b5] text-white text-lg px-10 py-7 h-auto font-bold shadow-2xl hover:shadow-[#00d4ff]/50 transition-all duration-300 hover:scale-105 border-0 animate-pulse-glow"
               >
-                <Sparkles className="mr-2 h-5 w-5" />
-                Create Your Profile
+                <span className="relative z-10 flex items-center">
+                  <Sparkles className="mr-2 h-5 w-5 animate-spin-slow" />
+                  Add Your Profile
+                  <span className="ml-2 px-2 py-0.5 text-xs bg-yellow-400 text-black rounded-full font-bold animate-pulse">
+                    FREE
+                  </span>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0077b5] to-[#00d4ff] opacity-0 group-hover:opacity-100 transition-opacity rounded-lg" />
               </Button>
             </div>
 
@@ -488,12 +527,17 @@ export default function LandingPage() {
                 </Button>
                 <Button
                   size="lg"
-                  variant="outline"
-                  onClick={() => router.push("/profile")}
-                  className="!border-2 !border-white !text-white hover:!bg-white/10 text-base md:text-lg px-8 md:px-10 py-6 md:py-7 h-auto font-semibold backdrop-blur-xl w-full sm:w-auto bg-transparent"
+                  onClick={() => router.push("/submit")}
+                  className="group relative bg-gradient-to-r from-[#00d4ff] to-[#0077b5] text-white text-base md:text-lg px-8 md:px-10 py-6 md:py-7 h-auto font-bold shadow-2xl hover:shadow-[#00d4ff]/50 transition-all duration-300 hover:scale-105 border-0 animate-pulse-glow w-full sm:w-auto"
                 >
-                  <Sparkles className="mr-2 h-5 w-5" />
-                  Create Your Profile
+                  <span className="relative z-10 flex items-center">
+                    <Sparkles className="mr-2 h-5 w-5 animate-spin-slow" />
+                    Add Your Profile
+                    <span className="ml-2 px-2 py-0.5 text-xs bg-yellow-400 text-black rounded-full font-bold animate-pulse">
+                      FREE
+                    </span>
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#0077b5] to-[#00d4ff] opacity-0 group-hover:opacity-100 transition-opacity rounded-lg" />
                 </Button>
               </div>
             </div>
@@ -525,7 +569,7 @@ export default function LandingPage() {
                 <ul className="space-y-2 text-sm text-white/60">
                   <li>
                     <Link
-                      href="/us"
+                      href="/in"
                       className="hover:text-white transition-colors"
                     >
                       Browse Recruiters
@@ -557,22 +601,40 @@ export default function LandingPage() {
                 </ul>
               </div>
             </div>
-            <div className="border-t border-white/10 pt-8 text-center space-y-2">
-              <p className="text-sm text-white/60">
-                © {new Date().getFullYear()} Recruiter Directory. All rights
-                reserved.
-              </p>
-              <p className="text-sm text-white/60">
-                Designed and concept by{" "}
-                <a
-                  href="https://www.linkedin.com/in/vimal-thapliyal/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#00d4ff] hover:text-[#0077b5] font-semibold transition-colors underline decoration-[#0077b5]/50 hover:decoration-[#00d4ff]"
-                >
-                  Vimal Thapliyal
-                </a>
-              </p>
+            <div className="border-t border-white/10 pt-8">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-4">
+                <div className="flex items-center gap-6 text-sm text-white/60">
+                  <Link
+                    href="/privacy"
+                    className="hover:text-[#00d4ff] transition-colors"
+                  >
+                    Privacy Policy
+                  </Link>
+                  <Link
+                    href="/terms"
+                    className="hover:text-[#00d4ff] transition-colors"
+                  >
+                    Terms & Conditions
+                  </Link>
+                </div>
+              </div>
+              <div className="text-center space-y-2">
+                <p className="text-sm text-white/60">
+                  © {new Date().getFullYear()} Recruiter Directory. All rights
+                  reserved.
+                </p>
+                <p className="text-sm text-white/60">
+                  Designed and concept by{" "}
+                  <a
+                    href="https://www.linkedin.com/in/vimal-thapliyal/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#00d4ff] hover:text-[#0077b5] font-semibold transition-colors underline decoration-[#0077b5]/50 hover:decoration-[#00d4ff]"
+                  >
+                    Vimal Thapliyal
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>

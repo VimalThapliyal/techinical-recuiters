@@ -23,7 +23,7 @@ export default function CountryPage() {
   const params = useParams();
   const countryParam = params?.country as string;
   const country = (
-    isValidCountryCode(countryParam) ? countryParam : "us"
+    isValidCountryCode(countryParam) ? countryParam : "in"
   ) as CountryCode;
 
   const [recruiters, setRecruiters] = useState<Recruiter[]>([]);

@@ -31,12 +31,12 @@ export default function ProfilePage() {
   const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
   const [recruiters, setRecruiters] = useState<Recruiter[]>([]);
-  const [country, setCountry] = useState<CountryCode>("us");
+  const [country, setCountry] = useState<CountryCode>("in");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Get country from subdomain or default
-    let detectedCountry: CountryCode = "us";
+    let detectedCountry: CountryCode = "in";
     if (typeof window !== "undefined") {
       const hostname = window.location.hostname;
       const countryFromSubdomain = getCountryFromSubdomain(hostname);

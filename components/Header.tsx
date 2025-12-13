@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/select";
 import { COUNTRY_INFO } from "@/lib/subdomain";
 import { CountryCode } from "@/types/recruiter";
-import { Globe, Grid3x3, List, User } from "lucide-react";
+import { Globe, Grid3x3, List, User, Plus, Sparkles } from "lucide-react";
 
 interface HeaderProps {
   currentCountry: CountryCode;
@@ -28,6 +28,7 @@ export function Header({
   const pathname = usePathname();
   const currentCountryInfo = COUNTRY_INFO[currentCountry];
   const isProfilePage = pathname === "/profile";
+  const isSubmitPage = pathname === "/submit";
 
   const handleCountryChange = (value: string) => {
     if (value === currentCountry) return;
@@ -44,7 +45,7 @@ export function Header({
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-4">
             <Link
-              href={`/${currentCountry}`}
+              href="/"
               className="flex items-center gap-3 hover:opacity-80 transition-opacity group"
               aria-label="Recruiter Directory Home"
             >
@@ -62,7 +63,7 @@ export function Header({
           </div>
 
           <div className="flex items-center gap-3">
-            {onViewModeChange && !isProfilePage && (
+            {onViewModeChange && !isProfilePage && !isSubmitPage && (
               <div className="hidden sm:flex items-center gap-1 border border-[#e5e7eb] rounded-lg p-1 bg-[#f9fafb]">
                 <Button
                   variant={viewMode === "grid" ? "default" : "ghost"}
@@ -84,6 +85,29 @@ export function Header({
                 </Button>
               </div>
             )}
+            <Button
+              variant={isSubmitPage ? "default" : "default"}
+              size="sm"
+              asChild
+              className={
+                isSubmitPage
+                  ? "bg-[#0077b5] text-white hover:bg-[#004182]"
+                  : "relative bg-gradient-to-r from-[#0077b5] to-[#00d4ff] text-white hover:from-[#004182] hover:to-[#0077b5] shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse hover:animate-none border-0 font-semibold"
+              }
+            >
+              <Link
+                href="/submit"
+                aria-label="Add Your Profile"
+                className="relative"
+              >
+                <Sparkles className="h-4 w-4 sm:mr-2 animate-spin-slow" />
+                <span className="hidden sm:inline">Add Your Profile</span>
+                <span className="sm:hidden">Add</span>
+                {!isSubmitPage && (
+                  <span className="absolute -top-1 -right-1 h-2 w-2 bg-yellow-400 rounded-full animate-ping" />
+                )}
+              </Link>
+            </Button>
             <Button
               variant={isProfilePage ? "default" : "ghost"}
               size="sm"
