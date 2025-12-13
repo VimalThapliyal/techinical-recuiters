@@ -4,21 +4,34 @@ import { getCountryFromSubdomain, isValidCountryCode } from '@/lib/subdomain';
 
 export function middleware(request: NextRequest) {
   const hostname = request.headers.get('host') || '';
-  const country = getCountryFromSubdomain(hostname);
   const pathname = request.nextUrl.pathname;
   
-  // Allow landing page on root domain (no subdomain or localhost)
+  // Extract subdomain from hostname
+  const parts = hostname.split('.');
+  const firstPart = parts[0]?.toLowerCase();
+  
+  // Check if first part is a valid country code
+  const isCountrySubdomain = firstPart && isValidCountryCode(firstPart);
+  
+  // Root domain detection:
+  // - localhost (development)
+  // - Main project domain (e.g., techinical-recuiters.vercel.app)
+  // - Custom domain without country subdomain
   const isRootDomain = hostname === 'localhost' || 
                        hostname === 'localhost:3000' ||
-                       !hostname.includes('.') ||
-                       hostname.split('.').length <= 2;
+                       hostname.startsWith('127.0.0.1') ||
+                       hostname.startsWith('192.168.') ||
+                       !isCountrySubdomain; // If first part is NOT a country code, it's root domain
   
-  // If accessing root with a country subdomain, redirect to country page
+  // If accessing root path with a country subdomain, redirect to country page
   // But allow landing page on root domain
-  if (pathname === '/' && isValidCountryCode(country) && !isRootDomain) {
-    const url = request.nextUrl.clone();
-    url.pathname = `/${country}`;
-    return NextResponse.redirect(url);
+  if (pathname === '/' && isCountrySubdomain && !isRootDomain) {
+    const country = getCountryFromSubdomain(hostname);
+    if (isValidCountryCode(country)) {
+      const url = request.nextUrl.clone();
+      url.pathname = `/${country}`;
+      return NextResponse.redirect(url);
+    }
   }
   
   // Allow API routes and static files to pass through
