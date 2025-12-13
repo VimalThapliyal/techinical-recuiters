@@ -154,7 +154,10 @@
     "name": "Haseeb Javed",
     "country": "UK",
     "company": "techruiter.",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "5+ years",
     "bio": "Recruiter at techruiter. sharing insights on tech hiring.",
     "linkedinUrl": "https://uk.linkedin.com/company/techruiter-io (team member)",
@@ -195,7 +198,10 @@
     "name": "Jack Capel",
     "country": "UK",
     "company": "Harvey Nash",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "10+ years",
     "bio": "UK South Director at Harvey Nash, expert in technology talent.",
     "linkedinUrl": "https://uk.linkedin.com/company/harvey-nash-uk (team member)",
@@ -206,7 +212,10 @@
     "name": "Callum Roberts",
     "country": "UK",
     "company": "IT/IQ Tech Recruiters (UK operations)",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "5+ years",
     "bio": "Senior recruiter in tech across the UK.",
     "linkedinUrl": "https://uk.linkedin.com/in/callum-roberts-0a0776133",
@@ -217,7 +226,10 @@
     "name": "Sarah Doughty",
     "country": "UK",
     "company": "TalentLab",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "10+ years",
     "bio": "VP Talent Operations at TalentLab in the UK.",
     "linkedinUrl": "https://uk.linkedin.com/in/sarah-doughty-talentlab",
@@ -228,7 +240,10 @@
     "name": "Gord Marriage",
     "country": "UK",
     "company": "TalentLab",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "15+ years",
     "bio": "Technical recruitment leader in web and mobile.",
     "linkedinUrl": "https://uk.linkedin.com/in/gord-marriage",
@@ -247,14 +262,17 @@
     "experience": "5+ years",
     "bio": "Tech recruiter building IT support teams in the UK.",
     "linkedinUrl": "https://uk.linkedin.com/in/natalie-townson-6095ba168",
-    "imageUrl": ""
+    "imageUrl": "https://media.licdn.com/dms/image/v2/D5603AQH8nke2qySAng/profile-displayphoto-scale_400_400/B56Zhd6YouHcAg-/0/1753922243860?e=1767225600&v=beta&t=Xe5Lrmq4X-QndxOMksrOoXGP-vAkM3_QcF7eo5OmKLQ"
   },
   {
     "id": "uk-019",
     "name": "John Connolly",
     "country": "UK",
     "company": "Morgan Consulting",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "10+ years",
     "bio": "Practice Manager for software recruitment in the UK.",
     "linkedinUrl": "https://uk.linkedin.com/in/johnconnolly00",
