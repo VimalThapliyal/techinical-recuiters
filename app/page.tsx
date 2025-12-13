@@ -23,7 +23,11 @@ import { COUNTRY_INFO } from "@/lib/subdomain";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 
 if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
+  try {
+    gsap.registerPlugin(ScrollTrigger);
+  } catch (error) {
+    console.warn("GSAP ScrollTrigger registration failed:", error);
+  }
 }
 
 export default function LandingPage() {
@@ -44,19 +48,47 @@ export default function LandingPage() {
       });
     }
 
-    // Features animation
+    // Features animation - with fallback for visibility
     if (featuresRef.current) {
-      gsap.from(featuresRef.current.children, {
-        scrollTrigger: {
-          trigger: featuresRef.current,
-          start: "top 80%",
-        },
-        y: 60,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: "power3.out",
+      const cards = Array.from(featuresRef.current.children) as HTMLElement[];
+      
+      // Set initial visibility to ensure cards are visible even if GSAP fails
+      cards.forEach((child) => {
+        child.style.opacity = "1";
+        child.style.visibility = "visible";
       });
+
+      // Animate with GSAP if available
+      try {
+        gsap.from(cards, {
+          scrollTrigger: {
+            trigger: featuresRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none",
+            once: true,
+          },
+          y: 60,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out",
+          onComplete: () => {
+            // Ensure visibility after animation
+            cards.forEach((child) => {
+              child.style.opacity = "1";
+              child.style.visibility = "visible";
+            });
+          },
+        });
+      } catch (error) {
+        console.warn("GSAP animation error, cards will remain visible:", error);
+        // Fallback: ensure all cards are visible
+        cards.forEach((child) => {
+          child.style.opacity = "1";
+          child.style.visibility = "visible";
+          child.style.transform = "translateY(0)";
+        });
+      }
     }
 
     // Stats animation
@@ -325,6 +357,7 @@ export default function LandingPage() {
           <div
             ref={featuresRef}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+            style={{ opacity: 1, visibility: "visible" }}
           >
             {features.map((feature, idx) => {
               const Icon = feature.icon;

@@ -22,26 +22,10 @@ export function Header({ currentCountry, viewMode, onViewModeChange }: HeaderPro
   const handleCountryChange = (value: string) => {
     if (value === currentCountry) return;
     
-    // Get the protocol and hostname
-    const protocol = window.location.protocol;
-    const hostname = window.location.hostname;
-    
-    // Extract the base domain (everything after the subdomain)
-    const parts = hostname.split('.');
-    let baseDomain = hostname;
-    
-    // If we have a subdomain, remove it
-    if (parts.length > 2 || (parts.length === 2 && parts[0] !== 'localhost' && !parts[0].startsWith('127'))) {
-      baseDomain = parts.slice(1).join('.');
-    }
-    
-    // Build new URL with new subdomain
-    const newSubdomain = value;
-    const newHost = parts.length > 1 && !hostname.includes('localhost') && !hostname.includes('127')
-      ? `${newSubdomain}.${baseDomain}`
-      : `${newSubdomain}.localhost:3000`;
-    
-    window.location.href = `${protocol}//${newHost}`;
+    // Use path-based routing instead of subdomain routing
+    // This works better with Vercel and custom domains
+    const newPath = `/${value}`;
+    window.location.href = newPath;
   };
 
   return (
