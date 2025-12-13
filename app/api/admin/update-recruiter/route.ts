@@ -102,15 +102,31 @@ export async function POST(request: NextRequest) {
     if (oldCountryCode !== countryCode) {
       // Remove from old country file
       oldRecruiters.splice(recruiterIndex, 1);
-      writeFileSync(oldDataFilePath, JSON.stringify(oldRecruiters, null, 2));
+      
+      try {
+        writeFileSync(oldDataFilePath, JSON.stringify(oldRecruiters, null, 2));
+      } catch (writeError) {
+        console.error("Error writing to old country file:", writeError);
+        throw new Error(`Failed to write to ${oldDataFilePath}: ${writeError instanceof Error ? writeError.message : 'Unknown error'}`);
+      }
 
       // Add to new country file
       recruiters.push(updatedRecruiter);
-      writeFileSync(dataFilePath, JSON.stringify(recruiters, null, 2));
+      try {
+        writeFileSync(dataFilePath, JSON.stringify(recruiters, null, 2));
+      } catch (writeError) {
+        console.error("Error writing to new country file:", writeError);
+        throw new Error(`Failed to write to ${dataFilePath}: ${writeError instanceof Error ? writeError.message : 'Unknown error'}`);
+      }
     } else {
       // Update in place
       oldRecruiters[recruiterIndex] = updatedRecruiter;
-      writeFileSync(oldDataFilePath, JSON.stringify(oldRecruiters, null, 2));
+      try {
+        writeFileSync(oldDataFilePath, JSON.stringify(oldRecruiters, null, 2));
+      } catch (writeError) {
+        console.error("Error writing to file:", writeError);
+        throw new Error(`Failed to write to ${oldDataFilePath}: ${writeError instanceof Error ? writeError.message : 'Unknown error'}`);
+      }
     }
 
     return NextResponse.json({
@@ -120,8 +136,24 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     console.error("Error updating recruiter:", error);
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
+    const errorStack = error instanceof Error ? error.stack : undefined;
+    
+    // Log detailed error for debugging
+    console.error("Error details:", {
+      message: errorMessage,
+      stack: errorStack,
+      recruiterId: recruiter?.id,
+      countryCode: recruiter?.country,
+    });
+    
     return NextResponse.json(
-      { error: "Failed to update recruiter" },
+      { 
+        error: "Failed to update recruiter",
+        details: errorMessage,
+        // Only include stack in development
+        ...(process.env.NODE_ENV === "development" && { stack: errorStack })
+      },
       { status: 500 }
     );
   }
