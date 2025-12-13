@@ -18,6 +18,7 @@ import {
 import { StatisticsDashboard } from "@/components/StatisticsDashboard";
 import { calculateMatchScore } from "@/lib/matching";
 import { Footer } from "@/components/Footer";
+import { Statistics } from "@/lib/data";
 
 const ITEMS_PER_PAGE = 12;
 
@@ -38,7 +39,14 @@ export default function CountryPage() {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const [statistics, setStatistics] = useState(getStatistics(country));
+  const [statistics, setStatistics] = useState<Statistics>({
+    total: 0,
+    withPhotos: 0,
+    withoutPhotos: 0,
+    topCompanies: [],
+    topSpecializations: [],
+    experienceDistribution: { "1-3": 0, "3-5": 0, "5-10": 0, "10+": 0 },
+  });
   const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
   const [matchScores, setMatchScores] = useState<Map<string, number>>(
     new Map()
@@ -83,7 +91,16 @@ export default function CountryPage() {
         const data = await response.json();
         
         setRecruiters(data.recruiters || []);
-        setSpecializations(data.specializations || getAllSpecializations(country));
+        // Extract specializations from recruiters if not provided
+        if (data.specializations && data.specializations.length > 0) {
+          setSpecializations(data.specializations);
+        } else {
+          const specSet = new Set<string>();
+          (data.recruiters || []).forEach((r: Recruiter) => {
+            r.specialization.forEach((spec) => specSet.add(spec));
+          });
+          setSpecializations(Array.from(specSet).sort());
+        }
         
         // Extract companies from recruiters
         const companySet = new Set<string>();
