@@ -97,11 +97,11 @@ export default function RecruiterProfilePage() {
     );
   }
 
-  const initials = (recruiter.name || "?")
+  const initials = ((recruiter.name || "?")
     .split(" ")
-    .map((n) => n[0])
+    .map((n) => n?.[0] || "")
     .join("")
-    .toUpperCase()
+    .toUpperCase() || "?")
     .slice(0, 2);
 
   const profileUrl = getRecruiterProfileUrl(recruiter.id, country);

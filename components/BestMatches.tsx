@@ -85,7 +85,7 @@ export function BestMatches({
 
                 {/* Specializations */}
                 <div className="flex flex-wrap gap-1.5 mb-4">
-                  {match.specialization.slice(0, 3).map((spec, idx) => (
+                  {(match.specialization || []).slice(0, 3).map((spec, idx) => (
                     <Badge
                       key={idx}
                       variant="secondary"
