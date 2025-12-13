@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getRecruitersByCountry, searchRecruiters, getAllSpecializations } from '@/lib/data';
+import { getRecruitersByCountry, searchRecruiters, getAllSpecializations, getStatistics } from '@/lib/data';
 import { getCountryFromSubdomain, isValidCountryCode } from '@/lib/subdomain';
 import { CountryCode } from '@/types/recruiter';
 
@@ -31,17 +31,19 @@ export async function GET(request: NextRequest) {
     // Otherwise return all recruiters for the country
     const recruiters = getRecruitersByCountry(country);
     const specializations = getAllSpecializations(country);
+    const statistics = getStatistics(country);
     
     return NextResponse.json({
       recruiters,
       country,
       total: recruiters.length,
       specializations,
+      statistics,
     });
   } catch (error) {
     console.error('Error fetching recruiters:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch recruiters' },
+      { error: 'Failed to fetch recruiters', details: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
     );
   }

@@ -12,12 +12,8 @@ import { CountryCode } from "@/types/recruiter";
 import { UserProfile } from "@/types/user";
 import { isValidCountryCode } from "@/lib/subdomain";
 import {
-  getRecruitersByCountry,
-  getAllSpecializations,
-  getAllCompanies,
   sortRecruiters,
   SortOption,
-  getStatistics,
 } from "@/lib/data";
 import { StatisticsDashboard } from "@/components/StatisticsDashboard";
 import { calculateMatchScore } from "@/lib/matching";
@@ -75,22 +71,124 @@ export default function CountryPage() {
   }, [userProfile, recruiters]);
 
   useEffect(() => {
-    // Load recruiters for the country
+    // Load recruiters for the country via API to avoid bundling large JSON files
     setLoading(true);
-    const countryRecruiters = getRecruitersByCountry(country);
-    const countrySpecializations = getAllSpecializations(country);
-    const countryCompanies = getAllCompanies(country);
-
-    setRecruiters(countryRecruiters);
-    setSpecializations(countrySpecializations);
-    setCompanies(countryCompanies);
-    setStatistics(getStatistics(country));
-    setSearchQuery("");
-    setSelectedSpecialization("all");
-    setSelectedCompany("all");
-    setSortBy("name-asc");
-    setCurrentPage(1);
-    setLoading(false);
+    
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`/api/recruiters?country=${country}`);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch: ${response.status}`);
+        }
+        const data = await response.json();
+        
+        setRecruiters(data.recruiters || []);
+        setSpecializations(data.specializations || getAllSpecializations(country));
+        
+        // Extract companies from recruiters
+        const companySet = new Set<string>();
+        (data.recruiters || []).forEach((r: Recruiter) => {
+          if (r.company && r.company !== "Unknown Company") {
+            companySet.add(r.company);
+          }
+        });
+        setCompanies(Array.from(companySet).sort());
+        
+        // Use statistics from API response, or calculate from fetched data
+        if (data.statistics) {
+          setStatistics(data.statistics);
+        } else {
+          // Fallback: calculate from fetched recruiters
+          const recruiters = data.recruiters || [];
+          const total = recruiters.length;
+          const withPhotos = recruiters.filter((r: Recruiter) => r.imageUrl).length;
+          const withoutPhotos = total - withPhotos;
+          
+          // Top companies
+          const companyCounts: Record<string, number> = {};
+          recruiters.forEach((r: Recruiter) => {
+            if (r.company && r.company !== "Unknown Company") {
+              companyCounts[r.company] = (companyCounts[r.company] || 0) + 1;
+            }
+          });
+          const topCompanies = Object.entries(companyCounts)
+            .map(([company, count]) => ({ company, count }))
+            .sort((a, b) => b.count - a.count)
+            .slice(0, 10);
+          
+          // Top specializations
+          const specializationCounts: Record<string, number> = {};
+          recruiters.forEach((r: Recruiter) => {
+            r.specialization.forEach((spec) => {
+              specializationCounts[spec] = (specializationCounts[spec] || 0) + 1;
+            });
+          });
+          const topSpecializations = Object.entries(specializationCounts)
+            .map(([specialization, count]) => ({ specialization, count }))
+            .sort((a, b) => b.count - a.count)
+            .slice(0, 10);
+          
+          // Experience distribution
+          const extractYears = (exp: string): number => {
+            const match = exp.match(/(\d+)/);
+            return match ? parseInt(match[1], 10) : 0;
+          };
+          
+          const experienceDistribution = {
+            "1-3": 0,
+            "3-5": 0,
+            "5-10": 0,
+            "10+": 0,
+          };
+          
+          recruiters.forEach((r: Recruiter) => {
+            const years = extractYears(r.experience);
+            if (years >= 1 && years < 3) {
+              experienceDistribution["1-3"]++;
+            } else if (years >= 3 && years < 5) {
+              experienceDistribution["3-5"]++;
+            } else if (years >= 5 && years < 10) {
+              experienceDistribution["5-10"]++;
+            } else if (years >= 10) {
+              experienceDistribution["10+"]++;
+            }
+          });
+          
+          setStatistics({
+            total,
+            withPhotos,
+            withoutPhotos,
+            topCompanies,
+            topSpecializations,
+            experienceDistribution,
+          });
+        }
+        
+        setSearchQuery("");
+        setSelectedSpecialization("all");
+        setSelectedCompany("all");
+        setSortBy("name-asc");
+        setCurrentPage(1);
+      } catch (error) {
+        console.error("Error fetching recruiters:", error);
+        // Fallback to empty arrays
+        setRecruiters([]);
+        setSpecializations([]);
+        setCompanies([]);
+        setStatistics({
+          total: 0,
+          withPhotos: 0,
+          withoutPhotos: 0,
+          topCompanies: [],
+          topSpecializations: [],
+          experienceDistribution: { "1-3": 0, "3-5": 0, "5-10": 0, "10+": 0 },
+        });
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    fetchData();
   }, [country]);
 
   // Filter and sort recruiters

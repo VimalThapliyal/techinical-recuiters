@@ -1,19 +1,102 @@
 import { Recruiter, CountryCode } from "@/types/recruiter";
-import usData from "@/data/us.json";
-import ukData from "@/data/uk.json";
-import caData from "@/data/ca.json";
-import auData from "@/data/au.json";
-import inData from "@/data/in.json";
 
-const dataMap: Record<CountryCode, Recruiter[]> = {
-  us: usData as Recruiter[],
-  uk: ukData as Recruiter[],
-  ca: caData as Recruiter[],
-  au: auData as Recruiter[],
-  in: inData as Recruiter[],
-};
+// Use dynamic imports to avoid bundling large JSON files
+// This only works server-side, so client components should use the API route
+let dataMap: Record<CountryCode, Recruiter[]> | null = null;
+
+async function loadDataMap(): Promise<Record<CountryCode, Recruiter[]>> {
+  if (dataMap) return dataMap;
+  
+  // Only load on server-side (Node.js environment)
+  if (typeof window === "undefined") {
+    try {
+      const { readFileSync } = await import("fs");
+      const { join } = await import("path");
+      
+      const countries: CountryCode[] = ["us", "uk", "ca", "au", "in"];
+      dataMap = {} as Record<CountryCode, Recruiter[]>;
+      
+      for (const country of countries) {
+        try {
+          const filePath = join(process.cwd(), "data", `${country}.json`);
+          const fileContents = readFileSync(filePath, "utf8");
+          dataMap[country] = JSON.parse(fileContents) as Recruiter[];
+        } catch (error) {
+          console.error(`Error loading data for ${country}:`, error);
+          dataMap[country] = [];
+        }
+      }
+      
+      return dataMap;
+    } catch (error) {
+      console.error("Error loading data files:", error);
+      return {
+        us: [],
+        uk: [],
+        ca: [],
+        au: [],
+        in: [],
+      };
+    }
+  }
+  
+  // Client-side: return empty, should use API route
+  return {
+    us: [],
+    uk: [],
+    ca: [],
+    au: [],
+    in: [],
+  };
+}
+
+// Synchronous version for server-side use (API routes, server components)
+function getDataMapSync(): Record<CountryCode, Recruiter[]> {
+  if (dataMap) return dataMap;
+  
+  if (typeof window === "undefined") {
+    try {
+      const { readFileSync } = require("fs");
+      const { join } = require("path");
+      
+      const countries: CountryCode[] = ["us", "uk", "ca", "au", "in"];
+      dataMap = {} as Record<CountryCode, Recruiter[]>;
+      
+      for (const country of countries) {
+        try {
+          const filePath = join(process.cwd(), "data", `${country}.json`);
+          const fileContents = readFileSync(filePath, "utf8");
+          dataMap[country] = JSON.parse(fileContents) as Recruiter[];
+        } catch (error) {
+          console.error(`Error loading data for ${country}:`, error);
+          dataMap[country] = [];
+        }
+      }
+      
+      return dataMap;
+    } catch (error) {
+      console.error("Error loading data files:", error);
+      return {
+        us: [],
+        uk: [],
+        ca: [],
+        au: [],
+        in: [],
+      };
+    }
+  }
+  
+  return {
+    us: [],
+    uk: [],
+    ca: [],
+    au: [],
+    in: [],
+  };
+}
 
 export function getRecruitersByCountry(country: CountryCode): Recruiter[] {
+  const dataMap = getDataMapSync();
   return dataMap[country] || [];
 }
 
@@ -27,6 +110,7 @@ export function getRecruiterById(
   }
 
   // Search across all countries if no country specified
+  const dataMap = getDataMapSync();
   for (const countryCode of Object.keys(dataMap) as CountryCode[]) {
     const recruiter = dataMap[countryCode].find((r) => r.id === id);
     if (recruiter) return recruiter;
