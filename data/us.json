@@ -1,106 +1,222 @@
 [
   {
-    "id": "us-1",
-    "name": "Sarah Johnson",
+    "id": "us-001",
+    "name": "Chris Graziani",
     "country": "US",
-    "company": "TechRecruit Pro",
-    "specialization": [
-      "Software Engineering",
-      "Product Management",
-      "Data Science"
-    ],
-    "experience": "8 years",
-    "bio": "Senior technical recruiter specializing in placing top-tier software engineers and product managers at leading tech companies across Silicon Valley.",
-    "linkedinUrl": "https://www.linkedin.com/in/sarahjohnson-techrecruiter",
-    "imageUrl": "/images/recruiters/sarah-johnson.jpg"
+    "company": "Independent",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "10+ years",
+    "bio": "Senior Technical Recruiter | Connecting Top Tech Talent | Data-Driven & Relationship-Focused.",
+    "linkedinUrl": "https://www.linkedin.com/in/christophergraziani/",
+    "imageUrl": ""
   },
   {
-    "id": "us-2",
-    "name": "Michael Chen",
+    "id": "us-002",
+    "name": "Scott Rogers",
     "country": "US",
-    "company": "Elite Talent Solutions",
-    "specialization": ["AI/ML", "Cloud Engineering", "DevOps"],
-    "experience": "10 years",
-    "bio": "Expert in AI and cloud engineering recruitment with a proven track record of placing candidates at FAANG companies and innovative startups.",
-    "linkedinUrl": "https://www.linkedin.com/in/michaelchen-elitetalent",
-    "imageUrl": "/images/recruiters/michael-chen.jpg"
+    "company": "Fastly",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "10+ years",
+    "bio": "Lead Technical Recruiter at Fastly.",
+    "linkedinUrl": "https://www.linkedin.com/in/scott-rogers-561b435/",
+    "imageUrl": ""
   },
   {
-    "id": "us-3",
-    "name": "Emily Rodriguez",
+    "id": "us-003",
+    "name": "Brianna Delacruz",
     "country": "US",
-    "company": "Startup Recruiters",
-    "specialization": [
-      "Frontend Development",
-      "UX/UI Design",
-      "Mobile Development"
-    ],
-    "experience": "6 years",
-    "bio": "Passionate about connecting talented frontend developers and designers with exciting startup opportunities in New York and San Francisco.",
-    "linkedinUrl": "https://www.linkedin.com/in/emilyrodriguez-startuprecruiter",
-    "imageUrl": "/images/recruiters/emily-rodriguez.jpg"
+    "company": "Tesla",
+    "specialization": ["Talent Acquisition", "Technical Sourcing"],
+    "experience": "8+ years",
+    "bio": "Sr. Technical Sourcer at Tesla.",
+    "linkedinUrl": "https://www.linkedin.com/in/brianna-delacruz-564098105/",
+    "imageUrl": ""
   },
   {
-    "id": "us-4",
-    "name": "David Thompson",
+    "id": "us-004",
+    "name": "Brad Fuellenbach",
     "country": "US",
-    "company": "Executive Search Partners",
-    "specialization": ["CTO", "VP Engineering", "Engineering Leadership"],
-    "experience": "12 years",
-    "bio": "Executive recruiter focused on C-level and VP engineering positions at high-growth technology companies.",
-    "linkedinUrl": "https://www.linkedin.com/in/davidthompson-execsearch",
-    "imageUrl": "/images/recruiters/david-thompson.jpg"
+    "company": "Apple",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "10+ years",
+    "bio": "Technical Recruiter at Apple.",
+    "linkedinUrl": "https://www.linkedin.com/in/fuellenbach/",
+    "imageUrl": ""
   },
   {
-    "id": "us-5",
-    "name": "Jessica Martinez",
+    "id": "us-005",
+    "name": "Aryan Chauhan",
     "country": "US",
-    "company": "Diverse Tech Recruiting",
-    "specialization": [
-      "Full Stack Development",
-      "Backend Engineering",
-      "System Architecture"
-    ],
-    "experience": "7 years",
-    "bio": "Dedicated to building diverse engineering teams and connecting underrepresented talent with opportunities at top tech companies.",
-    "linkedinUrl": "https://www.linkedin.com/in/jessicamartinez-diversetech",
-    "imageUrl": "/images/recruiters/jessica-martinez.jpg"
+    "company": "Independent",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "5+ years",
+    "bio": "Sr. Technical Recruiter for United States.",
+    "linkedinUrl": "https://www.linkedin.com/in/aryan-chauhan-9844481b6/",
+    "imageUrl": ""
   },
   {
-    "id": "us-6",
-    "name": "Robert Kim",
+    "id": "us-006",
+    "name": "Mayuri Shende",
     "country": "US",
-    "company": "Silicon Valley Recruiters",
-    "specialization": [
-      "Backend Engineering",
-      "Distributed Systems",
-      "Microservices"
-    ],
-    "experience": "9 years",
-    "bio": "Specializing in backend engineering roles at scale, connecting senior engineers with opportunities at unicorn startups and established tech giants.",
-    "linkedinUrl": "https://www.linkedin.com/in/robertkim-svrecruiter",
-    "imageUrl": "/images/recruiters/robert-kim.jpg"
+    "company": "Independent",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "5+ years",
+    "bio": "US Recruitment Tech Recruiter.",
+    "linkedinUrl": "https://www.linkedin.com/in/mayuri-shende-usrecruiter/",
+    "imageUrl": ""
   },
   {
-    "id": "us-7",
-    "name": "Amanda Foster",
+    "id": "us-007",
+    "name": "Trent Cotton",
     "country": "US",
-    "company": "Tech Talent Advisors",
-    "specialization": ["React", "TypeScript", "Frontend Architecture"],
-    "experience": "5 years",
-    "bio": "Frontend specialist helping React and TypeScript developers find their dream roles at innovative product companies.",
-    "linkedinUrl": "https://www.linkedin.com/in/amandafoster-techtalent",
-    "imageUrl": "/images/recruiters/amanda-foster.jpg"
-  },
-  {
-    "id": "us-8",
-    "name": "Richard Eby",
-    "country": "US",
-    "company": "The Coding Recruiter",
-    "specialization": ["Java", "Python", "Machine Learning", "Full Life Cycle Recruiting"],
+    "company": "iCIMS",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
     "experience": "15+ years",
-    "bio": "Technical recruiter with over 15 years of experience. Developer in Java and Python/Django. Machine Learning and Deep Learning certified. 30K+ LinkedIn connections. Specializes in placing software engineers, particularly those integrating ML models into production.",
-    "linkedinUrl": "https://www.linkedin.com/in/thecodingrecruiter/",
-    "imageUrl": "/images/recruiters/richard-eby.jpg"
+    "bio": "Head of Talent Acquisition Insights.",
+    "linkedinUrl": "https://www.linkedin.com/in/trentcotton",
+    "imageUrl": ""
+  },
+  {
+    "id": "us-008",
+    "name": "Travis King",
+    "country": "US",
+    "company": "Ledgent Technology",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "6+ years",
+    "bio": "Talent Acquisition Specialist.",
+    "linkedinUrl": "https://www.linkedin.com/in/travisrobertking/",
+    "imageUrl": ""
+  },
+  {
+    "id": "us-009",
+    "name": "Dean Williams",
+    "country": "US",
+    "company": "Independent",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "14+ years",
+    "bio": "Senior Technical Recruiter.",
+    "linkedinUrl": "https://www.linkedin.com/in/deanwilliamsrecruiter/",
+    "imageUrl": ""
+  },
+  {
+    "id": "us-010",
+    "name": "Will Womack",
+    "country": "US",
+    "company": "Korn Ferry",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "15+ years",
+    "bio": "Head of Talent Acquisition.",
+    "linkedinUrl": "https://www.linkedin.com/in/willwomack3/",
+    "imageUrl": ""
+  },
+  {
+    "id": "us-011",
+    "name": "Amy Miller",
+    "country": "US",
+    "company": "Amazon",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "10+ years",
+    "bio": "Recruiting Manager for satellite tech teams.",
+    "linkedinUrl": "https://www.linkedin.com/in/amymil",
+    "imageUrl": ""
+  },
+  {
+    "id": "us-012",
+    "name": "Zack D",
+    "country": "US",
+    "company": "Tesla",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "8+ years",
+    "bio": "Staff Technical Recruiter, Engineering.",
+    "linkedinUrl": "https://www.linkedin.com/in/zack-d-09ba53a4/",
+    "imageUrl": ""
+  },
+  {
+    "id": "us-013",
+    "name": "Dianna C",
+    "country": "US",
+    "company": "Apple",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "6+ years",
+    "bio": "Technical Recruiter, IS&T.",
+    "linkedinUrl": "https://www.linkedin.com/in/dianna-c-296a7677/",
+    "imageUrl": ""
+  },
+  {
+    "id": "us-014",
+    "name": "Jeff V.",
+    "country": "US",
+    "company": "Vaco",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "3+ years",
+    "bio": "Sr. Technical Recruiter.",
+    "linkedinUrl": "https://www.linkedin.com/in/jvincentvaco/",
+    "imageUrl": ""
+  },
+  {
+    "id": "us-015",
+    "name": "Jennifer Skinner",
+    "country": "US",
+    "company": "Capital One",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "8+ years",
+    "bio": "Senior Technical Recruiter for Students & Grads.",
+    "linkedinUrl": "https://www.linkedin.com/in/jennifer-skinner-16177a144/",
+    "imageUrl": ""
+  },
+  {
+    "id": "us-016",
+    "name": "Rey Rodriguez",
+    "country": "US",
+    "company": "SpaceX",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "10+ years",
+    "bio": "Technical Recruiter at SpaceX.",
+    "linkedinUrl": "https://www.linkedin.com/in/rey-rodriguez/",
+    "imageUrl": ""
+  },
+  {
+    "id": "us-017",
+    "name": "Kristin Lukich Berkowitz",
+    "country": "US",
+    "company": "Independent",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "10+ years",
+    "bio": "Technical Recruiter and Mythbuster.",
+    "linkedinUrl": "https://www.linkedin.com/in/kristinlukich/",
+    "imageUrl": ""
+  },
+  {
+    "id": "us-018",
+    "name": "Brent Williams",
+    "country": "US",
+    "company": "Hire Horizons",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "14+ years",
+    "bio": "Technical Recruiter.",
+    "linkedinUrl": "https://www.linkedin.com/in/brentwilliams3/",
+    "imageUrl": ""
+  },
+  {
+    "id": "us-019",
+    "name": "Sam Ray",
+    "country": "US",
+    "company": "Gridiron IT",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "5+ years",
+    "bio": "Technical Recruiter.",
+    "linkedinUrl": "https://www.linkedin.com/in/sam-ray2023/",
+    "imageUrl": ""
+  },
+  {
+    "id": "us-020",
+    "name": "Bhuvanesh Kumar",
+    "country": "US",
+    "company": "VySystems",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "8+ years",
+    "bio": "Senior Talent Acquisition Specialist | North America.",
+    "linkedinUrl": "https://www.linkedin.com/in/bhuvanesh-kumar-337008222/",
+    "imageUrl": ""
   }
 ]

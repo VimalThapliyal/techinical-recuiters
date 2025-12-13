@@ -1,96 +1,278 @@
 [
   {
-    "id": "uk-1",
-    "name": "James Wilson",
+    "id": "uk-001",
+    "name": "Anam Choudhury",
     "country": "UK",
-    "company": "London Tech Recruiters",
+    "company": "CTRL Recruitment Group",
     "specialization": [
-      "FinTech",
-      "Software Engineering",
-      "Quantitative Development"
+      "Talent Acquisition",
+      "Technical Recruitment",
+      "IT Recruitment"
     ],
-    "experience": "9 years",
-    "bio": "Specializing in FinTech recruitment across London, connecting developers with leading financial technology companies and investment banks.",
-    "linkedinUrl": "https://www.linkedin.com/in/jameswilson-londontech",
-    "imageUrl": "/images/recruiters/james-wilson.jpg"
+    "experience": "7+ years",
+    "bio": "Senior Technical Recruiter at CTRL Recruitment Group, based in London.",
+    "linkedinUrl": "https://uk.linkedin.com/in/anam-choudhury-318997b9",
+    "imageUrl": ""
   },
   {
-    "id": "uk-2",
-    "name": "Sophie Brown",
+    "id": "uk-002",
+    "name": "Joshua Smith",
     "country": "UK",
-    "company": "Tech Talent UK",
+    "company": "MBN Solutions",
     "specialization": [
-      "Cloud Engineering",
-      "DevOps",
-      "Site Reliability Engineering"
+      "Talent Acquisition",
+      "Technical Recruitment",
+      "Data & Analytics"
     ],
-    "experience": "8 years",
-    "bio": "Expert in cloud and infrastructure roles, helping engineers find opportunities at scale-up companies and established tech firms across the UK.",
-    "linkedinUrl": "https://www.linkedin.com/in/sophiebrown-techuk",
-    "imageUrl": "/images/recruiters/sophie-brown.jpg"
+    "experience": "10+ years",
+    "bio": "Technical recruiter specializing in data, analytics, and tech roles in London.",
+    "linkedinUrl": "https://uk.linkedin.com/in/joshsmithmbn",
+    "imageUrl": ""
   },
   {
-    "id": "uk-3",
-    "name": "Oliver Taylor",
+    "id": "uk-003",
+    "name": "Liam Thomson",
     "country": "UK",
-    "company": "Startup Recruiters London",
+    "company": "Orbital",
     "specialization": [
-      "Product Management",
-      "Growth Engineering",
-      "Mobile Development"
+      "Talent Acquisition",
+      "Technical Recruitment",
+      "Tech & Engineering"
     ],
-    "experience": "6 years",
-    "bio": "Focused on product and growth roles at innovative startups in London's thriving tech scene.",
-    "linkedinUrl": "https://www.linkedin.com/in/olivertaylor-startuplondon",
-    "imageUrl": "/images/recruiters/oliver-taylor.jpg"
+    "experience": "8+ years",
+    "bio": "Talent Acquisition specialist in tech and engineering, based in London.",
+    "linkedinUrl": "https://uk.linkedin.com/in/liam-thomson-269932a7",
+    "imageUrl": ""
   },
   {
-    "id": "uk-4",
-    "name": "Charlotte Davis",
+    "id": "uk-004",
+    "name": "Richard Taylor",
     "country": "UK",
-    "company": "AI Talent Partners",
-    "specialization": ["Machine Learning", "Data Science", "AI Research"],
-    "experience": "7 years",
-    "bio": "Leading AI and ML recruitment specialist, connecting researchers and data scientists with cutting-edge AI companies.",
-    "linkedinUrl": "https://www.linkedin.com/in/charlottedavis-aitalent",
-    "imageUrl": "/images/recruiters/charlotte-davis.jpg"
-  },
-  {
-    "id": "uk-5",
-    "name": "Thomas Anderson",
-    "country": "UK",
-    "company": "Enterprise Tech Recruiters",
+    "company": "Sleek",
     "specialization": [
-      "Enterprise Software",
-      "Salesforce",
-      "SAP",
-      "ERP Systems"
+      "Talent Acquisition",
+      "Technical Recruitment",
+      "Product & Engineering"
     ],
-    "experience": "10 years",
-    "bio": "Specializing in enterprise software roles, helping professionals find opportunities at large corporations and consulting firms.",
-    "linkedinUrl": "https://www.linkedin.com/in/thomasanderson-enterprise",
-    "imageUrl": "/images/recruiters/thomas-anderson.jpg"
+    "experience": "10+ years",
+    "bio": "Talent Acquisition Lead specializing in product, design, and engineering roles.",
+    "linkedinUrl": "https://uk.linkedin.com/in/richard-taylor-talent",
+    "imageUrl": ""
   },
   {
-    "id": "uk-6",
-    "name": "Emma Thompson",
+    "id": "uk-005",
+    "name": "Harvey Jutton",
     "country": "UK",
-    "company": "Edinburgh Tech Recruiters",
-    "specialization": ["Python", "Data Engineering", "Backend Development"],
-    "experience": "7 years",
-    "bio": "Specializing in Python and data engineering roles across Scotland, connecting talent with opportunities in Edinburgh and Glasgow.",
-    "linkedinUrl": "https://www.linkedin.com/in/emmathompson-edinburghtech",
-    "imageUrl": "/images/recruiters/emma-thompson.jpg"
+    "company": "Unfiltered Recruiter",
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment",
+      "AI & Tech"
+    ],
+    "experience": "5+ years",
+    "bio": "Founder and CEO of Unfiltered Recruiter, AI enthusiast in tech hiring.",
+    "linkedinUrl": "https://uk.linkedin.com/in/harvey-jutton-a840ab268",
+    "imageUrl": ""
   },
   {
-    "id": "uk-7",
-    "name": "Daniel Clarke",
+    "id": "uk-006",
+    "name": "Joshua Sharpe",
     "country": "UK",
-    "company": "Manchester Digital Recruiters",
-    "specialization": ["Full Stack Development", "Node.js", "React"],
-    "experience": "8 years",
-    "bio": "Helping full-stack developers find exciting opportunities in Manchester's growing tech ecosystem.",
-    "linkedinUrl": "https://www.linkedin.com/in/danielclarke-manchester",
-    "imageUrl": "/images/recruiters/daniel-clarke.jpg"
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment",
+      "Digital & Design"
+    ],
+    "experience": "8+ years",
+    "bio": "Recruiter specializing in technology, digital marketing, and design.",
+    "linkedinUrl": "https://uk.linkedin.com/in/joshuasharpe174",
+    "imageUrl": ""
+  },
+  {
+    "id": "uk-007",
+    "name": "Chris Reid",
+    "country": "UK",
+    "company": "Precision Sourcing",
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment",
+      "SAP & Data"
+    ],
+    "experience": "10+ years",
+    "bio": "Recruiting experts in SAP, Data, Engineering & Projects in the UK.",
+    "linkedinUrl": "https://uk.linkedin.com/in/chris-reid-0710b0a8",
+    "imageUrl": ""
+  },
+  {
+    "id": "uk-008",
+    "name": "Matt Gold",
+    "country": "UK",
+    "company": "Re:Sourced",
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment",
+      "Engineering & IT"
+    ],
+    "experience": "13+ years",
+    "bio": "Founder & Director specializing in engineering and IT recruitment in London.",
+    "linkedinUrl": "https://uk.linkedin.com/in/mattcgold",
+    "imageUrl": ""
+  },
+  {
+    "id": "uk-009",
+    "name": "Charlotte Cameron (Zappia)",
+    "country": "UK",
+    "company": "TEC Partners",
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment",
+      "Gaming & Tech"
+    ],
+    "experience": "8+ years",
+    "bio": "Recruiter at TEC Partners specializing in gaming and technical roles.",
+    "linkedinUrl": "https://uk.linkedin.com/company/tecpartners (team member)",
+    "imageUrl": ""
+  },
+  {
+    "id": "uk-010",
+    "name": "Jonathan Norfolk",
+    "country": "UK",
+    "company": "TEC Partners",
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment",
+      "Engineering"
+    ],
+    "experience": "10+ years",
+    "bio": "Recruiter at TEC Partners focusing on engineering and systems roles.",
+    "linkedinUrl": "https://uk.linkedin.com/company/tecpartners (team member)",
+    "imageUrl": ""
+  },
+  {
+    "id": "uk-011",
+    "name": "Haseeb Javed",
+    "country": "UK",
+    "company": "techruiter.",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "5+ years",
+    "bio": "Recruiter at techruiter. sharing insights on tech hiring.",
+    "linkedinUrl": "https://uk.linkedin.com/company/techruiter-io (team member)",
+    "imageUrl": ""
+  },
+  {
+    "id": "uk-012",
+    "name": "Richard Walters",
+    "country": "UK",
+    "company": "TalentTech Recruitment",
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment",
+      "SaaS Sales"
+    ],
+    "experience": "15+ years",
+    "bio": "Technology recruiter helping hyper-growth tech businesses.",
+    "linkedinUrl": "https://uk.linkedin.com/company/talenttech-recruitment-ltd (team member)",
+    "imageUrl": ""
+  },
+  {
+    "id": "uk-013",
+    "name": "Gary Smith",
+    "country": "UK",
+    "company": "UKTech Resourcing",
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment",
+      "Cyber & DevOps"
+    ],
+    "experience": "10+ years",
+    "bio": "Recruiter at UKTech Resourcing focusing on cyber security and DevOps.",
+    "linkedinUrl": "https://uk.linkedin.com/company/uktechresourcing (team member)",
+    "imageUrl": ""
+  },
+  {
+    "id": "uk-014",
+    "name": "Jack Capel",
+    "country": "UK",
+    "company": "Harvey Nash",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "10+ years",
+    "bio": "UK South Director at Harvey Nash, expert in technology talent.",
+    "linkedinUrl": "https://uk.linkedin.com/company/harvey-nash-uk (team member)",
+    "imageUrl": ""
+  },
+  {
+    "id": "uk-015",
+    "name": "Callum Roberts",
+    "country": "UK",
+    "company": "IT/IQ Tech Recruiters (UK operations)",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "5+ years",
+    "bio": "Senior recruiter in tech across the UK.",
+    "linkedinUrl": "https://uk.linkedin.com/in/callum-roberts-0a0776133",
+    "imageUrl": ""
+  },
+  {
+    "id": "uk-016",
+    "name": "Sarah Doughty",
+    "country": "UK",
+    "company": "TalentLab",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "10+ years",
+    "bio": "VP Talent Operations at TalentLab in the UK.",
+    "linkedinUrl": "https://uk.linkedin.com/in/sarah-doughty-talentlab",
+    "imageUrl": ""
+  },
+  {
+    "id": "uk-017",
+    "name": "Gord Marriage",
+    "country": "UK",
+    "company": "TalentLab",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "15+ years",
+    "bio": "Technical recruitment leader in web and mobile.",
+    "linkedinUrl": "https://uk.linkedin.com/in/gord-marriage",
+    "imageUrl": ""
+  },
+  {
+    "id": "uk-018",
+    "name": "Natalie Townson",
+    "country": "UK",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment",
+      "IT Support"
+    ],
+    "experience": "5+ years",
+    "bio": "Tech recruiter building IT support teams in the UK.",
+    "linkedinUrl": "https://uk.linkedin.com/in/natalie-townson-6095ba168",
+    "imageUrl": ""
+  },
+  {
+    "id": "uk-019",
+    "name": "John Connolly",
+    "country": "UK",
+    "company": "Morgan Consulting",
+    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "experience": "10+ years",
+    "bio": "Practice Manager for software recruitment in the UK.",
+    "linkedinUrl": "https://uk.linkedin.com/in/johnconnolly00",
+    "imageUrl": ""
+  },
+  {
+    "id": "uk-020",
+    "name": "Danny Hansard",
+    "country": "UK",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment",
+      "Software & Product"
+    ],
+    "experience": "5+ years",
+    "bio": "Experienced tech recruiter for software and product roles.",
+    "linkedinUrl": "https://uk.linkedin.com/in/dannyhansard",
+    "imageUrl": ""
   }
 ]

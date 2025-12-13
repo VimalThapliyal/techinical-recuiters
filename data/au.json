@@ -1,96 +1,222 @@
 [
   {
-    "id": "au-1",
-    "name": "Emma Williams",
+    "id": "au-001",
+    "name": "Nathan Sutherland",
     "country": "AU",
-    "company": "Sydney Tech Recruiters",
-    "specialization": [
-      "Software Engineering",
-      "Product Management",
-      "Agile Coaching"
-    ],
-    "experience": "9 years",
-    "bio": "Leading tech recruiter in Sydney, specializing in software engineering and product roles at fast-growing Australian tech companies.",
-    "linkedinUrl": "https://www.linkedin.com/in/emmawilliams-sydneytech",
-    "imageUrl": "/images/recruiters/emma-williams.jpg"
+    "company": "Sideline Talent Solutions",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "5+ years",
+    "bio": "Director / Tech Recruiter | Australia | Helping Australia's tech industry hire software engineers / developers. After completing a Psychology degree in ...",
+    "linkedinUrl": "https://au.linkedin.com/in/nathan-sutherland-9000a9114",
+    "imageUrl": ""
   },
   {
-    "id": "au-2",
-    "name": "Liam O'Connor",
+    "id": "au-002",
+    "name": "Joshua Sharpe",
     "country": "AU",
-    "company": "Melbourne FinTech Recruiters",
-    "specialization": ["FinTech", "Payment Systems", "Banking Technology"],
-    "experience": "7 years",
-    "bio": "Specializing in FinTech recruitment across Melbourne and Sydney, with expertise in payment systems and banking technology roles.",
-    "linkedinUrl": "https://www.linkedin.com/in/liamoconnor-fintech",
-    "imageUrl": "/images/recruiters/liam-oconnor.jpg"
+    "company": "Independent",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "8+ years",
+    "bio": "Recruiter and Talent Acquisition Specialist 8 Years Recruiting across Technology, Digital Marketing and Design Currently working alongside HR and talent ...",
+    "linkedinUrl": "https://au.linkedin.com/in/joshuasharpe174",
+    "imageUrl": ""
   },
   {
-    "id": "au-3",
-    "name": "Zoe Mitchell",
+    "id": "au-003",
+    "name": "Harvey Jutton",
     "country": "AU",
-    "company": "Startup Talent Australia",
-    "specialization": ["Frontend Development", "React", "Vue.js", "TypeScript"],
-    "experience": "6 years",
-    "bio": "Focused on frontend development roles at innovative startups across Australia, with expertise in modern JavaScript frameworks.",
-    "linkedinUrl": "https://www.linkedin.com/in/zoemitchell-frontend",
-    "imageUrl": "/images/recruiters/zoe-mitchell.jpg"
+    "company": "Unfiltered Recruiter",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "5+ years",
+    "bio": "Unfiltered Recruiter | Founder | CEO | Recruiting the best people in the world in order to change the world | AI Enthusiast.",
+    "linkedinUrl": "https://au.linkedin.com/in/harvey-jutton-a840ab268",
+    "imageUrl": ""
   },
   {
-    "id": "au-4",
-    "name": "Noah Taylor",
+    "id": "au-004",
+    "name": "Danny Hansard",
     "country": "AU",
-    "company": "Cloud & Infrastructure Recruiters",
-    "specialization": [
-      "Cloud Engineering",
-      "Kubernetes",
-      "Docker",
-      "Infrastructure"
-    ],
-    "experience": "8 years",
-    "bio": "Expert in cloud and infrastructure engineering, helping professionals find opportunities at companies building scalable cloud platforms.",
-    "linkedinUrl": "https://www.linkedin.com/in/noahtaylor-cloudinfra",
-    "imageUrl": "/images/recruiters/noah-taylor.jpg"
+    "company": "Independent",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "5+ years",
+    "bio": "Startup Founder | Experienced Tech Recruiter After working for a number of recruitment companies and picking up a passion for recruiting in software engineering and product management within the tech space ...",
+    "linkedinUrl": "https://au.linkedin.com/in/dannyhansard",
+    "imageUrl": ""
   },
   {
-    "id": "au-5",
-    "name": "Ava Johnson",
+    "id": "au-005",
+    "name": "Amy Schultz",
     "country": "AU",
-    "company": "Data & Analytics Recruiters",
-    "specialization": [
-      "Data Science",
-      "Business Intelligence",
-      "Analytics Engineering"
-    ],
-    "experience": "7 years",
-    "bio": "Specializing in data science and analytics roles, connecting professionals with opportunities at data-driven companies across Australia.",
-    "linkedinUrl": "https://www.linkedin.com/in/avajohnson-dataanalytics",
-    "imageUrl": "/images/recruiters/ava-johnson.jpg"
+    "company": "Sanofi",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "10+ years",
+    "bio": "Global Talent Leader | Tech | Canva & LinkedIn alum I relocated to Sydney to lead the Onsite Recruitment team at Sanofi...",
+    "linkedinUrl": "https://au.linkedin.com/in/schultzamy",
+    "imageUrl": ""
   },
   {
-    "id": "au-6",
-    "name": "Ethan Brown",
+    "id": "au-006",
+    "name": "Jackie Yu",
     "country": "AU",
-    "company": "Brisbane Tech Recruiters",
-    "specialization": ["Full Stack Development", "Node.js", "Python"],
-    "experience": "6 years",
-    "bio": "Helping full-stack developers find opportunities in Brisbane's emerging tech scene and remote-first companies.",
-    "linkedinUrl": "https://www.linkedin.com/in/ethanbrown-brisbanetech",
-    "imageUrl": "/images/recruiters/ethan-brown.jpg"
+    "company": "Google Australia",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "5+ years",
+    "bio": "Recruiter at Google Australia | Currently recruiting exceptional talent for Google Cloud in Australia, New Zealand and across APAC.",
+    "linkedinUrl": "https://au.linkedin.com/in/jackieyu04",
+    "imageUrl": ""
   },
   {
-    "id": "au-7",
-    "name": "Sophia Lee",
+    "id": "au-007",
+    "name": "Adam Cicchetti",
     "country": "AU",
-    "company": "Perth Digital Recruiters",
-    "specialization": [
-      "Backend Engineering",
-      "API Development",
-      "System Architecture"
-    ],
-    "experience": "8 years",
-    "bio": "Connecting backend engineers with opportunities at mining tech companies and innovative startups in Western Australia.",
-    "linkedinUrl": "https://www.linkedin.com/in/sophialee-perthdigital",
-    "imageUrl": "/images/recruiters/sophia-lee.jpg"
+    "company": "Independent",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "10+ years",
+    "bio": "Senior/Lead recruitment/talent acquisition specialist, consulting with organisations/managers/stakeholders to find the best solution/s for their needs.",
+    "linkedinUrl": "https://au.linkedin.com/in/adamsydneyitrec",
+    "imageUrl": ""
+  },
+  {
+    "id": "au-008",
+    "name": "Aman Kumar",
+    "country": "AU",
+    "company": "Zone IT Solutions",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "6+ years",
+    "bio": "Recruitment Consultant | Zone IT Solutions With an MBA degree in Human Resources Development and over six years of experience in IT and non-IT recruitment...",
+    "linkedinUrl": "https://www.linkedin.com/in/aman-kumar933",
+    "imageUrl": ""
+  },
+  {
+    "id": "au-009",
+    "name": "Emma O'Connell",
+    "country": "AU",
+    "company": "LinkedIn",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "10+ years",
+    "bio": "LinkedIn Recruitment Expert I lead a team of dedicated cross-functional and subject matter experts to deliver solutions across all of LinkedIn's Talent & Learning offerings.",
+    "linkedinUrl": "https://au.linkedin.com/in/emmakoconnell",
+    "imageUrl": ""
+  },
+  {
+    "id": "au-010",
+    "name": "Simi Joseph",
+    "country": "AU",
+    "company": "Insurance Commission of Western Australia",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "15+ years",
+    "bio": "Talent Acquisition & Workforce Planning Specialist in Perth.",
+    "linkedinUrl": "https://au.linkedin.com/in/simimathewjoseph",
+    "imageUrl": ""
+  },
+  {
+    "id": "au-011",
+    "name": "Lou Chargros",
+    "country": "AU",
+    "company": "Renaissance Fusion",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "5+ years",
+    "bio": "Talent Acquisition Specialist focusing on tech hires.",
+    "linkedinUrl": "https://www.linkedin.com/in/lou-chargros-82178b151/",
+    "imageUrl": ""
+  },
+  {
+    "id": "au-012",
+    "name": "John Connolly",
+    "country": "AU",
+    "company": "Morgan Consulting",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "10+ years",
+    "bio": "Practice Manager - Recruiting the Best Software ... Morgan is one of Australia's leading specialist recruitment agencies.",
+    "linkedinUrl": "https://au.linkedin.com/in/johnconnolly00",
+    "imageUrl": ""
+  },
+  {
+    "id": "au-013",
+    "name": "Natalie Townson",
+    "country": "AU",
+    "company": "Independent",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "5+ years",
+    "bio": "Crossfit loving tech recruiter who helps build IT support teams across Australia.",
+    "linkedinUrl": "https://au.linkedin.com/in/natalie-townson-6095ba168",
+    "imageUrl": ""
+  },
+  {
+    "id": "au-014",
+    "name": "Eli Gündüz",
+    "country": "AU",
+    "company": "Independent",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "10+ years",
+    "bio": "I help tech professionals land $140K–$300K+ offers ... hiring top tech talent for fast-growing companies like Atlassian across Australia, NZ, and ...",
+    "linkedinUrl": "https://au.linkedin.com/in/eligunduz",
+    "imageUrl": ""
+  },
+  {
+    "id": "au-015",
+    "name": "Chris Reid",
+    "country": "AU",
+    "company": "Precision Sourcing",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "10+ years",
+    "bio": "Helping Australian businesses recruit experts in SAP, Data, Engineering & Projects.",
+    "linkedinUrl": "https://au.linkedin.com/in/chris-reid-0710b0a8",
+    "imageUrl": ""
+  },
+  {
+    "id": "au-016",
+    "name": "Amy Johnston",
+    "country": "AU",
+    "company": "AIM Recruitment Solutions",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "14+ years",
+    "bio": "Experienced recruiter in Melbourne focusing on IT and technology roles.",
+    "linkedinUrl": "https://au.linkedin.com/in/amy-johnston-23024432",
+    "imageUrl": ""
+  },
+  {
+    "id": "au-017",
+    "name": "Matt Gold",
+    "country": "AU",
+    "company": "Re:Sourced",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "13+ years",
+    "bio": "Founder & Director specializing in engineering and IT recruitment in Sydney.",
+    "linkedinUrl": "https://au.linkedin.com/in/mattcgold",
+    "imageUrl": ""
+  },
+  {
+    "id": "au-018",
+    "name": "Adam Lee",
+    "country": "AU",
+    "company": "CAE",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "10+ years",
+    "bio": "Senior Talent Acquisition Specialist APAC, based in Sydney.",
+    "linkedinUrl": "https://au.linkedin.com/in/adam-lee-sydney",
+    "imageUrl": ""
+  },
+  {
+    "id": "au-019",
+    "name": "Erum Irfan",
+    "country": "AU",
+    "company": "atWork Australia",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "5+ years",
+    "bio": "Experienced IT Recruiter in Greater Sydney Area.",
+    "linkedinUrl": "https://www.linkedin.com/in/erum-irfan/",
+    "imageUrl": ""
+  },
+  {
+    "id": "au-020",
+    "name": "Iyesha Syed",
+    "country": "AU",
+    "company": "ARMswap",
+    "specialization": ["Talent Acquisition", "IT Recruitment"],
+    "experience": "8+ years",
+    "bio": "Talent Acquisition specialist in tech roles across Australia.",
+    "linkedinUrl": "https://au.linkedin.com/in/iyesha-syed",
+    "imageUrl": ""
   }
 ]
