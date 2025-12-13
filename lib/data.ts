@@ -20,7 +20,9 @@ const dataMap: Record<CountryCode, Recruiter[]> = {
 // This is more reliable for Vercel serverless functions
 
 export function getRecruitersByCountry(country: CountryCode): Recruiter[] {
-  return dataMap[country] || [];
+  const recruiters = dataMap[country] || [];
+  // Filter out deactivated recruiters from public directory
+  return recruiters.filter((r: any) => r.isActive !== false);
 }
 
 export function getRecruiterById(

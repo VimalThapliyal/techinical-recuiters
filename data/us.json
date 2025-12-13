@@ -4,62 +4,80 @@
     "name": "Chris Graziani",
     "country": "US",
     "company": "Independent",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "10+ years",
     "bio": "Senior Technical Recruiter | Connecting Top Tech Talent | Data-Driven & Relationship-Focused.",
     "linkedinUrl": "https://www.linkedin.com/in/christophergraziani/",
-    "imageUrl": ""
+    "imageUrl": "https://media.licdn.com/dms/image/v2/C4E03AQFiheqnmMZYmQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1573619482001?e=1767225600&v=beta&t=mPfxW--mzY-K3BXuM9liLE5gGOkmu4smf5YN3mF7CzQ"
   },
   {
     "id": "us-002",
     "name": "Scott Rogers",
     "country": "US",
     "company": "Fastly",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "10+ years",
     "bio": "Lead Technical Recruiter at Fastly.",
     "linkedinUrl": "https://www.linkedin.com/in/scott-rogers-561b435/",
-    "imageUrl": ""
+    "imageUrl": "https://media.licdn.com/dms/image/v2/C4E03AQHUNRjebn4lXg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517661681155?e=1767225600&v=beta&t=Xp3uPvAlMct81rWxvGQuWvHpJgpaybAiHiq1x1hTjUA"
   },
   {
     "id": "us-003",
     "name": "Brianna Delacruz",
     "country": "US",
     "company": "Tesla",
-    "specialization": ["Talent Acquisition", "Technical Sourcing"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Sourcing"
+    ],
     "experience": "8+ years",
     "bio": "Sr. Technical Sourcer at Tesla.",
     "linkedinUrl": "https://www.linkedin.com/in/brianna-delacruz-564098105/",
-    "imageUrl": ""
+    "imageUrl": "https://media.licdn.com/dms/image/v2/D5603AQHG6wNVICcyPA/profile-displayphoto-scale_400_400/B56ZpfikzqJkAk-/0/1762539490950?e=1767225600&v=beta&t=CbTtAvtF6_ouzek6KhSCIIwyhtZPvXf01gEmM8Ps67c"
   },
   {
     "id": "us-004",
     "name": "Brad Fuellenbach",
     "country": "US",
     "company": "Apple",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "10+ years",
     "bio": "Technical Recruiter at Apple.",
     "linkedinUrl": "https://www.linkedin.com/in/fuellenbach/",
-    "imageUrl": ""
+    "imageUrl": "https://media.licdn.com/dms/image/v2/C5603AQEl8sf2bfH3CA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516287997152?e=1767225600&v=beta&t=DD7TZgfSfFPixekqikDyK7T6hSl0QjBlUSim-cJcbJ4"
   },
   {
     "id": "us-005",
     "name": "Aryan Chauhan",
     "country": "US",
     "company": "Independent",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "5+ years",
     "bio": "Sr. Technical Recruiter for United States.",
     "linkedinUrl": "https://www.linkedin.com/in/aryan-chauhan-9844481b6/",
-    "imageUrl": ""
+    "imageUrl": "https://media.licdn.com/dms/image/v2/D5603AQE_ppK5I4KWOQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1711252808484?e=1767225600&v=beta&t=AVhGtZM8EW9FfNCQhGMkyEPOEYuggdm5KwPFTr5A0rQ"
   },
   {
     "id": "us-006",
     "name": "Mayuri Shende",
     "country": "US",
     "company": "Independent",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "5+ years",
     "bio": "US Recruitment Tech Recruiter.",
     "linkedinUrl": "https://www.linkedin.com/in/mayuri-shende-usrecruiter/",
@@ -70,73 +88,94 @@
     "name": "Trent Cotton",
     "country": "US",
     "company": "iCIMS",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "15+ years",
     "bio": "Head of Talent Acquisition Insights.",
     "linkedinUrl": "https://www.linkedin.com/in/trentcotton",
-    "imageUrl": ""
+    "imageUrl": "https://media.licdn.com/dms/image/v2/D4E03AQGMMnatJaKVlg/profile-displayphoto-scale_400_400/B4EZhRHC8cGUAk-/0/1753707459652?e=1767225600&v=beta&t=iquSERcuZgVJq_XfbAmNBB1lf71XJz2Yj2cOMZlV6Uk"
   },
   {
     "id": "us-008",
     "name": "Travis King",
     "country": "US",
     "company": "Ledgent Technology",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "6+ years",
     "bio": "Talent Acquisition Specialist.",
     "linkedinUrl": "https://www.linkedin.com/in/travisrobertking/",
-    "imageUrl": ""
+    "imageUrl": "https://media.licdn.com/dms/image/v2/D5635AQFqN47LkbdXHw/profile-framedphoto-shrink_400_400/B56ZmdjltrHAAg-/0/1759284976834?e=1766253600&v=beta&t=pb6n41gEvI4IdHOh6arX7ulMyHbz8uTIrxNa474M_j4"
   },
   {
     "id": "us-009",
     "name": "Dean Williams",
     "country": "US",
     "company": "Independent",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "14+ years",
     "bio": "Senior Technical Recruiter.",
     "linkedinUrl": "https://www.linkedin.com/in/deanwilliamsrecruiter/",
-    "imageUrl": ""
+    "imageUrl": "https://media.licdn.com/dms/image/v2/D4E03AQHY9cEnb_XK_w/profile-displayphoto-shrink_800_800/B4EZcW2JtoHQAg-/0/1748434984876?e=1767225600&v=beta&t=wV6-DtCfMx15u2S4DMbZG6OBq87ekVAn5vz-v0_rg6c"
   },
   {
     "id": "us-010",
     "name": "Will Womack",
     "country": "US",
     "company": "Korn Ferry",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "15+ years",
     "bio": "Head of Talent Acquisition.",
     "linkedinUrl": "https://www.linkedin.com/in/willwomack3/",
-    "imageUrl": ""
+    "imageUrl": "https://media.licdn.com/dms/image/v2/D5603AQEMDkIeMFrOuQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1690291884633?e=1767225600&v=beta&t=5ei5JjE7Ra11xK2yjrJVLDiTpozwSrJJGS-qVfF0e7g"
   },
   {
     "id": "us-011",
     "name": "Amy Miller",
     "country": "US",
     "company": "Amazon",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "10+ years",
     "bio": "Recruiting Manager for satellite tech teams.",
     "linkedinUrl": "https://www.linkedin.com/in/amymil",
-    "imageUrl": ""
+    "imageUrl": "https://media.licdn.com/dms/image/v2/D5635AQEkc9CcxZ2P_g/profile-framedphoto-shrink_400_400/B56ZmnLTYjG0Ac-/0/1759446382407?e=1766253600&v=beta&t=L8jPGmgPeRXtWX1wiZtGLc0nIv1NSte9S9E0YRzj46Y"
   },
   {
     "id": "us-012",
     "name": "Zack D",
     "country": "US",
     "company": "Tesla",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "8+ years",
     "bio": "Staff Technical Recruiter, Engineering.",
     "linkedinUrl": "https://www.linkedin.com/in/zack-d-09ba53a4/",
-    "imageUrl": ""
+    "imageUrl": "https://media.licdn.com/dms/image/v2/C5603AQG8XUFgH0ueYQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1601326322239?e=1767225600&v=beta&t=J8NZSTGJhAxO2jVQdYrIg-jmNH7dg-E9lZNcY3NqL-M"
   },
   {
     "id": "us-013",
     "name": "Dianna C",
     "country": "US",
     "company": "Apple",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "6+ years",
     "bio": "Technical Recruiter, IS&T.",
     "linkedinUrl": "https://www.linkedin.com/in/dianna-c-296a7677/",
@@ -147,7 +186,10 @@
     "name": "Jeff V.",
     "country": "US",
     "company": "Vaco",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "3+ years",
     "bio": "Sr. Technical Recruiter.",
     "linkedinUrl": "https://www.linkedin.com/in/jvincentvaco/",
@@ -158,7 +200,10 @@
     "name": "Jennifer Skinner",
     "country": "US",
     "company": "Capital One",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "8+ years",
     "bio": "Senior Technical Recruiter for Students & Grads.",
     "linkedinUrl": "https://www.linkedin.com/in/jennifer-skinner-16177a144/",
@@ -169,7 +214,10 @@
     "name": "Rey Rodriguez",
     "country": "US",
     "company": "SpaceX",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "10+ years",
     "bio": "Technical Recruiter at SpaceX.",
     "linkedinUrl": "https://www.linkedin.com/in/rey-rodriguez/",
@@ -180,7 +228,10 @@
     "name": "Kristin Lukich Berkowitz",
     "country": "US",
     "company": "Independent",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "10+ years",
     "bio": "Technical Recruiter and Mythbuster.",
     "linkedinUrl": "https://www.linkedin.com/in/kristinlukich/",
@@ -191,7 +242,10 @@
     "name": "Brent Williams",
     "country": "US",
     "company": "Hire Horizons",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "14+ years",
     "bio": "Technical Recruiter.",
     "linkedinUrl": "https://www.linkedin.com/in/brentwilliams3/",
@@ -202,7 +256,10 @@
     "name": "Sam Ray",
     "country": "US",
     "company": "Gridiron IT",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "5+ years",
     "bio": "Technical Recruiter.",
     "linkedinUrl": "https://www.linkedin.com/in/sam-ray2023/",
@@ -213,7 +270,10 @@
     "name": "Bhuvanesh Kumar",
     "country": "US",
     "company": "VySystems",
-    "specialization": ["Talent Acquisition", "Technical Recruitment"],
+    "specialization": [
+      "Talent Acquisition",
+      "Technical Recruitment"
+    ],
     "experience": "8+ years",
     "bio": "Senior Talent Acquisition Specialist | North America.",
     "linkedinUrl": "https://www.linkedin.com/in/bhuvanesh-kumar-337008222/",
