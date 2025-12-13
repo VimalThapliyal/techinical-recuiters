@@ -51,7 +51,7 @@ export default function LandingPage() {
     // Features animation - with fallback for visibility
     if (featuresRef.current) {
       const cards = Array.from(featuresRef.current.children) as HTMLElement[];
-      
+
       // Set initial visibility to ensure cards are visible even if GSAP fails
       cards.forEach((child) => {
         child.style.opacity = "1";
