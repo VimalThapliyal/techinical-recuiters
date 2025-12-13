@@ -47,12 +47,13 @@ export function RecruiterCard({
   const { addToast } = useToast();
   const [isSharing, setIsSharing] = useState(false);
 
-  const initials = ((recruiter.name || "?")
-    .split(" ")
-    .map((n) => n?.[0] || "")
-    .join("")
-    .toUpperCase() || "?")
-    .slice(0, 2);
+  const initials = (
+    (recruiter.name || "?")
+      .split(" ")
+      .map((n) => n?.[0] || "")
+      .join("")
+      .toUpperCase() || "?"
+  ).slice(0, 2);
 
   const profileUrl = getRecruiterProfileUrl(recruiter.id, country);
 
@@ -198,8 +199,8 @@ export function RecruiterCard({
                 {recruiter.bio}
               </p>
               <div className="flex flex-wrap gap-2">
-                {recruiter.specialization.map((spec, index) => (
-                  <Badge key={index} variant="secondary">
+                {(recruiter.specialization || []).map((spec, index) => (
+                  <Badge key={`${recruiter.id}-spec-${index}-${spec}`} variant="secondary">
                     {spec}
                   </Badge>
                 ))}
@@ -255,7 +256,7 @@ export function RecruiterCard({
         </p>
         <div className="flex flex-wrap gap-2">
           {(recruiter.specialization || []).slice(0, 3).map((spec, index) => (
-            <Badge key={index} variant="secondary" className="text-xs">
+            <Badge key={`${recruiter.id}-spec-${index}-${spec}`} variant="secondary" className="text-xs">
               {spec}
             </Badge>
           ))}

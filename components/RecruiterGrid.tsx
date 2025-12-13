@@ -58,9 +58,9 @@ export function RecruiterGrid({
           : "space-y-4"
       }
     >
-      {recruiters.map((recruiter) => (
+      {recruiters.map((recruiter, index) => (
         <RecruiterCard
-          key={recruiter.id}
+          key={recruiter.id || `recruiter-${index}`}
           recruiter={recruiter}
           country={country}
           viewMode={viewMode}
