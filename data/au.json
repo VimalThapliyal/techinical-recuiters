@@ -1,0 +1,96 @@
+[
+  {
+    "id": "au-1",
+    "name": "Emma Williams",
+    "country": "AU",
+    "company": "Sydney Tech Recruiters",
+    "specialization": [
+      "Software Engineering",
+      "Product Management",
+      "Agile Coaching"
+    ],
+    "experience": "9 years",
+    "bio": "Leading tech recruiter in Sydney, specializing in software engineering and product roles at fast-growing Australian tech companies.",
+    "linkedinUrl": "https://www.linkedin.com/in/emmawilliams-sydneytech",
+    "imageUrl": "/images/recruiters/emma-williams.jpg"
+  },
+  {
+    "id": "au-2",
+    "name": "Liam O'Connor",
+    "country": "AU",
+    "company": "Melbourne FinTech Recruiters",
+    "specialization": ["FinTech", "Payment Systems", "Banking Technology"],
+    "experience": "7 years",
+    "bio": "Specializing in FinTech recruitment across Melbourne and Sydney, with expertise in payment systems and banking technology roles.",
+    "linkedinUrl": "https://www.linkedin.com/in/liamoconnor-fintech",
+    "imageUrl": "/images/recruiters/liam-oconnor.jpg"
+  },
+  {
+    "id": "au-3",
+    "name": "Zoe Mitchell",
+    "country": "AU",
+    "company": "Startup Talent Australia",
+    "specialization": ["Frontend Development", "React", "Vue.js", "TypeScript"],
+    "experience": "6 years",
+    "bio": "Focused on frontend development roles at innovative startups across Australia, with expertise in modern JavaScript frameworks.",
+    "linkedinUrl": "https://www.linkedin.com/in/zoemitchell-frontend",
+    "imageUrl": "/images/recruiters/zoe-mitchell.jpg"
+  },
+  {
+    "id": "au-4",
+    "name": "Noah Taylor",
+    "country": "AU",
+    "company": "Cloud & Infrastructure Recruiters",
+    "specialization": [
+      "Cloud Engineering",
+      "Kubernetes",
+      "Docker",
+      "Infrastructure"
+    ],
+    "experience": "8 years",
+    "bio": "Expert in cloud and infrastructure engineering, helping professionals find opportunities at companies building scalable cloud platforms.",
+    "linkedinUrl": "https://www.linkedin.com/in/noahtaylor-cloudinfra",
+    "imageUrl": "/images/recruiters/noah-taylor.jpg"
+  },
+  {
+    "id": "au-5",
+    "name": "Ava Johnson",
+    "country": "AU",
+    "company": "Data & Analytics Recruiters",
+    "specialization": [
+      "Data Science",
+      "Business Intelligence",
+      "Analytics Engineering"
+    ],
+    "experience": "7 years",
+    "bio": "Specializing in data science and analytics roles, connecting professionals with opportunities at data-driven companies across Australia.",
+    "linkedinUrl": "https://www.linkedin.com/in/avajohnson-dataanalytics",
+    "imageUrl": "/images/recruiters/ava-johnson.jpg"
+  },
+  {
+    "id": "au-6",
+    "name": "Ethan Brown",
+    "country": "AU",
+    "company": "Brisbane Tech Recruiters",
+    "specialization": ["Full Stack Development", "Node.js", "Python"],
+    "experience": "6 years",
+    "bio": "Helping full-stack developers find opportunities in Brisbane's emerging tech scene and remote-first companies.",
+    "linkedinUrl": "https://www.linkedin.com/in/ethanbrown-brisbanetech",
+    "imageUrl": "/images/recruiters/ethan-brown.jpg"
+  },
+  {
+    "id": "au-7",
+    "name": "Sophia Lee",
+    "country": "AU",
+    "company": "Perth Digital Recruiters",
+    "specialization": [
+      "Backend Engineering",
+      "API Development",
+      "System Architecture"
+    ],
+    "experience": "8 years",
+    "bio": "Connecting backend engineers with opportunities at mining tech companies and innovative startups in Western Australia.",
+    "linkedinUrl": "https://www.linkedin.com/in/sophialee-perthdigital",
+    "imageUrl": "/images/recruiters/sophia-lee.jpg"
+  }
+]

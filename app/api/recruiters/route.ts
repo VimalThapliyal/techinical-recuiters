@@ -1,0 +1,49 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { getRecruitersByCountry, searchRecruiters, getAllSpecializations } from '@/lib/data';
+import { getCountryFromSubdomain, isValidCountryCode } from '@/lib/subdomain';
+import { CountryCode } from '@/types/recruiter';
+
+export async function GET(request: NextRequest) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const countryParam = searchParams.get('country');
+    const query = searchParams.get('q') || '';
+    const specialization = searchParams.get('specialization') || undefined;
+    
+    // Get country from subdomain or query param
+    const hostname = request.headers.get('host') || '';
+    let country: CountryCode = getCountryFromSubdomain(hostname);
+    
+    if (countryParam && isValidCountryCode(countryParam)) {
+      country = countryParam;
+    }
+    
+    // If search query or specialization filter, use search function
+    if (query || specialization) {
+      const results = searchRecruiters(query, country, specialization);
+      return NextResponse.json({
+        recruiters: results,
+        country,
+        total: results.length,
+      });
+    }
+    
+    // Otherwise return all recruiters for the country
+    const recruiters = getRecruitersByCountry(country);
+    const specializations = getAllSpecializations(country);
+    
+    return NextResponse.json({
+      recruiters,
+      country,
+      total: recruiters.length,
+      specializations,
+    });
+  } catch (error) {
+    console.error('Error fetching recruiters:', error);
+    return NextResponse.json(
+      { error: 'Failed to fetch recruiters' },
+      { status: 500 }
+    );
+  }
+}
+

@@ -1,0 +1,96 @@
+[
+  {
+    "id": "uk-1",
+    "name": "James Wilson",
+    "country": "UK",
+    "company": "London Tech Recruiters",
+    "specialization": [
+      "FinTech",
+      "Software Engineering",
+      "Quantitative Development"
+    ],
+    "experience": "9 years",
+    "bio": "Specializing in FinTech recruitment across London, connecting developers with leading financial technology companies and investment banks.",
+    "linkedinUrl": "https://www.linkedin.com/in/jameswilson-londontech",
+    "imageUrl": "/images/recruiters/james-wilson.jpg"
+  },
+  {
+    "id": "uk-2",
+    "name": "Sophie Brown",
+    "country": "UK",
+    "company": "Tech Talent UK",
+    "specialization": [
+      "Cloud Engineering",
+      "DevOps",
+      "Site Reliability Engineering"
+    ],
+    "experience": "8 years",
+    "bio": "Expert in cloud and infrastructure roles, helping engineers find opportunities at scale-up companies and established tech firms across the UK.",
+    "linkedinUrl": "https://www.linkedin.com/in/sophiebrown-techuk",
+    "imageUrl": "/images/recruiters/sophie-brown.jpg"
+  },
+  {
+    "id": "uk-3",
+    "name": "Oliver Taylor",
+    "country": "UK",
+    "company": "Startup Recruiters London",
+    "specialization": [
+      "Product Management",
+      "Growth Engineering",
+      "Mobile Development"
+    ],
+    "experience": "6 years",
+    "bio": "Focused on product and growth roles at innovative startups in London's thriving tech scene.",
+    "linkedinUrl": "https://www.linkedin.com/in/olivertaylor-startuplondon",
+    "imageUrl": "/images/recruiters/oliver-taylor.jpg"
+  },
+  {
+    "id": "uk-4",
+    "name": "Charlotte Davis",
+    "country": "UK",
+    "company": "AI Talent Partners",
+    "specialization": ["Machine Learning", "Data Science", "AI Research"],
+    "experience": "7 years",
+    "bio": "Leading AI and ML recruitment specialist, connecting researchers and data scientists with cutting-edge AI companies.",
+    "linkedinUrl": "https://www.linkedin.com/in/charlottedavis-aitalent",
+    "imageUrl": "/images/recruiters/charlotte-davis.jpg"
+  },
+  {
+    "id": "uk-5",
+    "name": "Thomas Anderson",
+    "country": "UK",
+    "company": "Enterprise Tech Recruiters",
+    "specialization": [
+      "Enterprise Software",
+      "Salesforce",
+      "SAP",
+      "ERP Systems"
+    ],
+    "experience": "10 years",
+    "bio": "Specializing in enterprise software roles, helping professionals find opportunities at large corporations and consulting firms.",
+    "linkedinUrl": "https://www.linkedin.com/in/thomasanderson-enterprise",
+    "imageUrl": "/images/recruiters/thomas-anderson.jpg"
+  },
+  {
+    "id": "uk-6",
+    "name": "Emma Thompson",
+    "country": "UK",
+    "company": "Edinburgh Tech Recruiters",
+    "specialization": ["Python", "Data Engineering", "Backend Development"],
+    "experience": "7 years",
+    "bio": "Specializing in Python and data engineering roles across Scotland, connecting talent with opportunities in Edinburgh and Glasgow.",
+    "linkedinUrl": "https://www.linkedin.com/in/emmathompson-edinburghtech",
+    "imageUrl": "/images/recruiters/emma-thompson.jpg"
+  },
+  {
+    "id": "uk-7",
+    "name": "Daniel Clarke",
+    "country": "UK",
+    "company": "Manchester Digital Recruiters",
+    "specialization": ["Full Stack Development", "Node.js", "React"],
+    "experience": "8 years",
+    "bio": "Helping full-stack developers find exciting opportunities in Manchester's growing tech ecosystem.",
+    "linkedinUrl": "https://www.linkedin.com/in/danielclarke-manchester",
+    "imageUrl": "/images/recruiters/daniel-clarke.jpg"
+  }
+]

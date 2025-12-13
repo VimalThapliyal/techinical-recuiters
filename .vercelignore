@@ -1,0 +1,13 @@
+# Vercel ignore file
+node_modules
+.next
+.vercel
+*.log
+.env.local
+.env*.local
+.DS_Store
+*.md
+!README.md
+scripts/
+recuiter.txt
+

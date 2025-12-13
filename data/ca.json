@@ -1,0 +1,87 @@
+[
+  {
+    "id": "ca-1",
+    "name": "Alexandre Tremblay",
+    "country": "CA",
+    "company": "Toronto Tech Recruiters",
+    "specialization": [
+      "Software Engineering",
+      "Full Stack Development",
+      "E-commerce"
+    ],
+    "experience": "8 years",
+    "bio": "Bilingual recruiter specializing in software engineering roles across Toronto and Montreal, with strong connections to e-commerce and fintech companies.",
+    "linkedinUrl": "https://www.linkedin.com/in/alexandretremblay-toronto",
+    "imageUrl": "/images/recruiters/alexandre-tremblay.jpg"
+  },
+  {
+    "id": "ca-2",
+    "name": "Maya Patel",
+    "country": "CA",
+    "company": "Vancouver Tech Talent",
+    "specialization": ["Game Development", "VR/AR", "Mobile Development"],
+    "experience": "7 years",
+    "bio": "Expert in gaming and immersive technology recruitment, connecting developers with leading studios in Vancouver and across Canada.",
+    "linkedinUrl": "https://www.linkedin.com/in/mayapatel-vancouvertech",
+    "imageUrl": "/images/recruiters/maya-patel.jpg"
+  },
+  {
+    "id": "ca-3",
+    "name": "Ryan MacLeod",
+    "country": "CA",
+    "company": "Canadian FinTech Recruiters",
+    "specialization": ["FinTech", "Blockchain", "Cryptocurrency"],
+    "experience": "9 years",
+    "bio": "Specializing in FinTech and blockchain recruitment, with deep knowledge of Canada's growing cryptocurrency and financial technology sector.",
+    "linkedinUrl": "https://www.linkedin.com/in/ryanmacleod-fintech",
+    "imageUrl": "/images/recruiters/ryan-macleod.jpg"
+  },
+  {
+    "id": "ca-4",
+    "name": "Isabella Chen",
+    "country": "CA",
+    "company": "AI & Data Science Recruiters",
+    "specialization": ["Machine Learning", "Data Engineering", "Data Science"],
+    "experience": "6 years",
+    "bio": "Focused on AI and data science roles, helping professionals find opportunities at research institutions and innovative tech companies.",
+    "linkedinUrl": "https://www.linkedin.com/in/isabellachen-ai-data",
+    "imageUrl": "/images/recruiters/isabella-chen.jpg"
+  },
+  {
+    "id": "ca-5",
+    "name": "Daniel Kim",
+    "country": "CA",
+    "company": "Cloud Solutions Recruiters",
+    "specialization": ["Cloud Architecture", "AWS", "Azure", "DevOps"],
+    "experience": "8 years",
+    "bio": "Expert in cloud infrastructure roles, connecting engineers with opportunities at companies leveraging AWS, Azure, and GCP.",
+    "linkedinUrl": "https://www.linkedin.com/in/danielkim-cloudsolutions",
+    "imageUrl": "/images/recruiters/daniel-kim.jpg"
+  },
+  {
+    "id": "ca-6",
+    "name": "Sarah Mitchell",
+    "country": "CA",
+    "company": "Montreal Tech Recruiters",
+    "specialization": ["Java", "Spring Boot", "Microservices"],
+    "experience": "7 years",
+    "bio": "Bilingual recruiter specializing in Java and enterprise development roles in Montreal's vibrant tech scene.",
+    "linkedinUrl": "https://www.linkedin.com/in/sarahmitchell-montrealtech",
+    "imageUrl": "/images/recruiters/sarah-mitchell.jpg"
+  },
+  {
+    "id": "ca-7",
+    "name": "Kevin O'Brien",
+    "country": "CA",
+    "company": "Calgary Tech Talent",
+    "specialization": [
+      "Backend Engineering",
+      "API Development",
+      "System Design"
+    ],
+    "experience": "9 years",
+    "bio": "Connecting backend engineers with opportunities at energy tech companies and innovative startups in Calgary.",
+    "linkedinUrl": "https://www.linkedin.com/in/kevinobrien-calgarytech",
+    "imageUrl": "/images/recruiters/kevin-obrien.jpg"
+  }
+]
