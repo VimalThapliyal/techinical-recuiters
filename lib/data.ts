@@ -128,14 +128,14 @@ export function sortRecruiters(
       return sorted.sort((a, b) => b.company.localeCompare(a.company));
     case "experience-asc":
       return sorted.sort((a, b) => {
-        const aYears = extractYears(a.experience);
-        const bYears = extractYears(b.experience);
+        const aYears = extractYears(a?.experience);
+        const bYears = extractYears(b?.experience);
         return aYears - bYears;
       });
     case "experience-desc":
       return sorted.sort((a, b) => {
-        const aYears = extractYears(a.experience);
-        const bYears = extractYears(b.experience);
+        const aYears = extractYears(a?.experience);
+        const bYears = extractYears(b?.experience);
         return bYears - aYears;
       });
     case "match-desc":
@@ -147,8 +147,11 @@ export function sortRecruiters(
   }
 }
 
-function extractYears(experience: string): number {
+function extractYears(experience: string | undefined): number {
   // Extract number from strings like "5+ years", "3-5 years", "10+ years"
+  if (!experience || typeof experience !== 'string') {
+    return 0;
+  }
   const match = experience.match(/(\d+)/);
   return match ? parseInt(match[1], 10) : 0;
 }
@@ -221,6 +224,7 @@ export function getStatistics(country: CountryCode): Statistics {
   };
 
   recruiters.forEach((r) => {
+    if (!r || !r.experience) return;
     const years = extractYears(r.experience);
     if (years >= 1 && years < 3) {
       experienceDistribution["1-3"]++;
