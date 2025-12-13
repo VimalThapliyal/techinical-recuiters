@@ -1,154 +1,26 @@
 import { Recruiter, CountryCode } from "@/types/recruiter";
 
-// Use dynamic imports to avoid bundling large JSON files
-// This only works server-side, so client components should use the API route
-let dataMap: Record<CountryCode, Recruiter[]> | null = null;
+// Use static imports - Next.js will handle tree-shaking and code splitting
+// For very large files, Vercel will handle them appropriately
+import usData from "@/data/us.json";
+import ukData from "@/data/uk.json";
+import caData from "@/data/ca.json";
+import auData from "@/data/au.json";
+import inData from "@/data/in.json";
 
-async function loadDataMap(): Promise<Record<CountryCode, Recruiter[]>> {
-  if (dataMap) return dataMap;
+const dataMap: Record<CountryCode, Recruiter[]> = {
+  us: usData as Recruiter[],
+  uk: ukData as Recruiter[],
+  ca: caData as Recruiter[],
+  au: auData as Recruiter[],
+  in: inData as Recruiter[],
+};
 
-  // Only load on server-side (Node.js environment)
-  if (typeof window === "undefined") {
-    try {
-      const { readFileSync } = await import("fs");
-      const { join } = await import("path");
-
-      const countries: CountryCode[] = ["us", "uk", "ca", "au", "in"];
-      dataMap = {} as Record<CountryCode, Recruiter[]>;
-
-      for (const country of countries) {
-        try {
-          const filePath = join(process.cwd(), "data", `${country}.json`);
-          const fileContents = readFileSync(filePath, "utf8");
-          dataMap[country] = JSON.parse(fileContents) as Recruiter[];
-        } catch (error) {
-          console.error(`Error loading data for ${country}:`, error);
-          dataMap[country] = [];
-        }
-      }
-
-      return dataMap;
-    } catch (error) {
-      console.error("Error loading data files:", error);
-      return {
-        us: [],
-        uk: [],
-        ca: [],
-        au: [],
-        in: [],
-      };
-    }
-  }
-
-  // Client-side: return empty, should use API route
-  return {
-    us: [],
-    uk: [],
-    ca: [],
-    au: [],
-    in: [],
-  };
-}
-
-// Synchronous version for server-side use (API routes, server components)
-function getDataMapSync(): Record<CountryCode, Recruiter[]> {
-  if (dataMap) return dataMap;
-
-  if (typeof window === "undefined") {
-    try {
-      const { readFileSync } = require("fs");
-      const { join } = require("path");
-
-      const countries: CountryCode[] = ["us", "uk", "ca", "au", "in"];
-      dataMap = {} as Record<CountryCode, Recruiter[]>;
-
-      for (const country of countries) {
-        try {
-          // Try multiple possible paths for Vercel/serverless environments
-          const cwd = process.cwd();
-          const possiblePaths = [
-            join(cwd, "data", `${country}.json`),
-            join(cwd, "..", "data", `${country}.json`),
-            // For Vercel/serverless, files might be in a different location
-            join("/var/task", "data", `${country}.json`), // AWS Lambda
-            join("/var/runtime", "data", `${country}.json`), // AWS Lambda alternative
-          ];
-
-          // Also try __dirname if available (CommonJS)
-          try {
-            const dirname = __dirname;
-            possiblePaths.unshift(join(dirname, "..", "data", `${country}.json`));
-          } catch (e) {
-            // __dirname not available (ESM), skip
-          }
-
-          let fileContents: string | null = null;
-          let filePath: string | null = null;
-          let lastError: Error | null = null;
-
-          for (const path of possiblePaths) {
-            try {
-              fileContents = readFileSync(path, "utf8");
-              filePath = path;
-              break;
-            } catch (e) {
-              lastError = e instanceof Error ? e : new Error(String(e));
-              // Try next path
-              continue;
-            }
-          }
-
-          if (!fileContents) {
-            console.error(`❌ Could not find ${country}.json. Tried paths:`, possiblePaths);
-            console.error(`   Last error:`, lastError?.message);
-            console.error(`   Current working directory: ${cwd}`);
-            throw new Error(`Could not find ${country}.json in any expected location. CWD: ${cwd}`);
-          }
-
-          const parsed = JSON.parse(fileContents) as Recruiter[];
-          dataMap[country] = parsed;
-          console.log(`✅ Loaded ${parsed.length} recruiters for ${country} from ${filePath}`);
-        } catch (error) {
-          console.error(`❌ Error loading data for ${country}:`, error);
-          dataMap[country] = [];
-        }
-      }
-
-      return dataMap;
-    } catch (error) {
-      console.error("❌ Error loading data files:", error);
-      return {
-        us: [],
-        uk: [],
-        ca: [],
-        au: [],
-        in: [],
-      };
-    }
-  }
-
-  return {
-    us: [],
-    uk: [],
-    ca: [],
-    au: [],
-    in: [],
-  };
-}
+// Data is now loaded statically at build time
+// This is more reliable for Vercel serverless functions
 
 export function getRecruitersByCountry(country: CountryCode): Recruiter[] {
-  try {
-    const dataMap = getDataMapSync();
-    const recruiters = dataMap[country];
-    if (!recruiters || !Array.isArray(recruiters)) {
-      console.warn(`⚠️  No recruiters found for ${country} in dataMap`);
-      return [];
-    }
-    return recruiters;
-  } catch (error) {
-    console.error(`❌ Error in getRecruitersByCountry for ${country}:`, error);
-    return [];
-  }
+  return dataMap[country] || [];
 }
 
 export function getRecruiterById(
@@ -161,7 +33,6 @@ export function getRecruiterById(
   }
 
   // Search across all countries if no country specified
-  const dataMap = getDataMapSync();
   for (const countryCode of Object.keys(dataMap) as CountryCode[]) {
     const recruiter = dataMap[countryCode].find((r) => r.id === id);
     if (recruiter) return recruiter;
