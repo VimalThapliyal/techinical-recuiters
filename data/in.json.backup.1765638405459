@@ -2514,6 +2514,20 @@
     "imageUrl": ""
   },
   {
+    "id": "in-174",
+    "name": "Prabhu S",
+    "country": "IN",
+    "company": "Zalaris",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "13+ years",
+    "bio": "Seasoned Talent Acquisition professional with expertise in Technical recruitment.",
+    "linkedinUrl": "https://in.linkedin.com/in/prabhu-s-he-him-a5060958",
+    "imageUrl": ""
+  },
+  {
     "id": "in-175",
     "name": "Swati N.",
     "country": "IN",
@@ -2525,6 +2539,34 @@
     "experience": "8+ years",
     "bio": "Manager – Talent Acquisition | Strategic Hiring.",
     "linkedinUrl": "https://in.linkedin.com/in/swati-nag",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-176",
+    "name": "Ajay Kumar",
+    "country": "IN",
+    "company": "SAIGroup",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "15+ years",
+    "bio": "Talent Acquisition Professional with team management experience.",
+    "linkedinUrl": "https://in.linkedin.com/in/ajaypadu",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-177",
+    "name": "Shruti Agarwal",
+    "country": "IN",
+    "company": "Collegedunia",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Talent acquisition professional focused on hiring and engagement.",
+    "linkedinUrl": "https://in.linkedin.com/in/shruti-agarwal-5884472b6",
     "imageUrl": ""
   },
   {
@@ -2553,6 +2595,20 @@
     "experience": "10+ years",
     "bio": "Talent Acquisition professional in global information services.",
     "linkedinUrl": "https://in.linkedin.com/in/vivek-bajaj-hr",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-180",
+    "name": "Lakshmi Priya Saravanan",
+    "country": "IN",
+    "company": "Growfin",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "4+ years",
+    "bio": "Versatile Talent Acquisition Professional in tech hiring.",
+    "linkedinUrl": "https://in.linkedin.com/in/lakshmi-priya-4157b2210",
     "imageUrl": ""
   },
   {
@@ -2696,6 +2752,20 @@
     "imageUrl": ""
   },
   {
+    "id": "in-191",
+    "name": "Ishwari Kumbhare",
+    "country": "IN",
+    "company": "Kroll",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Senior Talent Acquisition Specialist in financial services.",
+    "linkedinUrl": "https://www.linkedin.com/in/ishwari-kumbhare-a1b716118/",
+    "imageUrl": ""
+  },
+  {
     "id": "in-192",
     "name": "Rakshith R",
     "country": "IN",
@@ -2707,6 +2777,34 @@
     "experience": "8+ years",
     "bio": "Talent Acquisition Manager.",
     "linkedinUrl": "https://www.linkedin.com/in/rakshith-r-4828b5210/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-193",
+    "name": "Aiyappa K V",
+    "country": "IN",
+    "company": "Tredence Inc.",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Talent Acquisition professional.",
+    "linkedinUrl": "https://www.linkedin.com/in/aiyappa-k-v-95444164/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-194",
+    "name": "Mohit G.",
+    "country": "IN",
+    "company": "Matellio India Pvt. Ltd.",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Assistant Manager - Talent Acquisition.",
+    "linkedinUrl": "https://www.linkedin.com/in/mohit-gupta0107/",
     "imageUrl": ""
   },
   {
@@ -2735,6 +2833,20 @@
     "experience": "14+ years",
     "bio": "Engineering Recruiter in Infrastructure.",
     "linkedinUrl": "https://www.linkedin.com/in/sreehari-n-199a6930/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-197",
+    "name": "Muskan Khurana",
+    "country": "IN",
+    "company": "Newnovation Solutions",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "3+ years",
+    "bio": "Talent Acquisition Specialist | IT Recruiter.",
+    "linkedinUrl": "https://www.linkedin.com/in/muskan-khurana-203134224/",
     "imageUrl": ""
   },
   {
@@ -2794,6 +2906,20 @@
     "imageUrl": ""
   },
   {
+    "id": "in-202",
+    "name": "Nidhi Saxena",
+    "country": "IN",
+    "company": "Achyutam",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Senior Manager Talent Acquisition Lead.",
+    "linkedinUrl": "https://www.linkedin.com/in/nidhi-saxena-008712128/",
+    "imageUrl": ""
+  },
+  {
     "id": "in-203",
     "name": "Sridhar Nalluri",
     "country": "IN",
@@ -2822,6 +2948,20 @@
     "imageUrl": ""
   },
   {
+    "id": "in-205",
+    "name": "Ashish Doshi",
+    "country": "IN",
+    "company": "EaseBiz",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "20+ years",
+    "bio": "Co-Founder | Growth-Focused Hiring Strategist.",
+    "linkedinUrl": "https://www.linkedin.com/in/ashish-doshi-a0b36537/",
+    "imageUrl": ""
+  },
+  {
     "id": "in-206",
     "name": "Krishnakant K.",
     "country": "IN",
@@ -2833,6 +2973,20 @@
     "experience": "8+ years",
     "bio": "Lead IT Recruiter.",
     "linkedinUrl": "https://www.linkedin.com/in/therecruitersradar/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-207",
+    "name": "Shreejith Nair",
+    "country": "IN",
+    "company": "LuLu Group India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "HR Professional in Talent Acquisition and Operations.",
+    "linkedinUrl": "https://www.linkedin.com/in/shreejith-nair-2930681b8/",
     "imageUrl": ""
   },
   {
@@ -3032,6 +3186,20 @@
     "imageUrl": ""
   },
   {
+    "id": "in-222",
+    "name": "Samson Peter",
+    "country": "IN",
+    "company": "Josys",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Senior Technical Recruiter | Talent Acquisition Specialist | Team Builder | Startups.",
+    "linkedinUrl": "https://in.linkedin.com/in/samsonpeter58",
+    "imageUrl": ""
+  },
+  {
     "id": "in-223",
     "name": "Rajesh Sridharan",
     "country": "IN",
@@ -3046,6 +3214,20 @@
     "imageUrl": ""
   },
   {
+    "id": "in-224",
+    "name": "Lakshmi Priya Saravanan",
+    "country": "IN",
+    "company": "Growfin",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Tech Talent Acquisition Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/lakshmi-priya-4157b2210",
+    "imageUrl": ""
+  },
+  {
     "id": "in-225",
     "name": "Satish Nair",
     "country": "IN",
@@ -3057,6 +3239,20 @@
     "experience": "15+ years",
     "bio": "Head Talent Acquisition India South.",
     "linkedinUrl": "https://in.linkedin.com/in/satish-nair-hr",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-226",
+    "name": "Dinak Raj",
+    "country": "IN",
+    "company": "Infinity Labs India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Talent Acquisition Manager.",
+    "linkedinUrl": "https://in.linkedin.com/in/dinak-raj-dinaa-%F0%9F%87%AE%F0%9F%87%B3-0006a555",
     "imageUrl": ""
   },
   {
@@ -3102,6 +3298,20 @@
     "imageUrl": ""
   },
   {
+    "id": "in-230",
+    "name": "Satya Udayagiri (SK)",
+    "country": "IN",
+    "company": "SS&C Eze",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "15+ years",
+    "bio": "Principal Recruiter and Talent Acquisition Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/satyaudayagiri",
+    "imageUrl": ""
+  },
+  {
     "id": "in-231",
     "name": "Gayathri Nagarajan",
     "country": "IN",
@@ -3144,6 +3354,20 @@
     "imageUrl": ""
   },
   {
+    "id": "in-234",
+    "name": "Ajay Kumar",
+    "country": "IN",
+    "company": "SAIGroup",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "15+ years",
+    "bio": "Talent Acquisition Professional.",
+    "linkedinUrl": "https://in.linkedin.com/in/ajaypadu",
+    "imageUrl": ""
+  },
+  {
     "id": "in-235",
     "name": "Rishika Srinivasan",
     "country": "IN",
@@ -3172,6 +3396,20 @@
     "imageUrl": ""
   },
   {
+    "id": "in-237",
+    "name": "Neha B.",
+    "country": "IN",
+    "company": "McKinsey & Company",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "11+ years",
+    "bio": "Senior Recruiter - Asia Pacific.",
+    "linkedinUrl": "https://in.linkedin.com/in/neha-b-ab05a929",
+    "imageUrl": ""
+  },
+  {
     "id": "in-238",
     "name": "Chandrashekar R",
     "country": "IN",
@@ -3197,6 +3435,48 @@
     "experience": "20+ years",
     "bio": "HR Leader in Talent Acquisition.",
     "linkedinUrl": "https://in.linkedin.com/in/sridharvenkatarayalu",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-240",
+    "name": "Shruti Agarwal",
+    "country": "IN",
+    "company": "Collegedunia",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Talent Acquisition Professional.",
+    "linkedinUrl": "https://in.linkedin.com/in/shruti-agarwal-5884472b6",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-241",
+    "name": "Nidhi Sharma Arora",
+    "country": "IN",
+    "company": "Freelance",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Talent Acquisition Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/nidhisharma1",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-242",
+    "name": "Rakesh Kumar",
+    "country": "IN",
+    "company": "Software Technology Inc.",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Lead Talent Acquisition Specialist.",
+    "linkedinUrl": "https://www.linkedin.com/in/rakesh-kumar-16b773104/",
     "imageUrl": ""
   },
   {
@@ -3295,6 +3575,2820 @@
     "experience": "7+ years",
     "bio": "Talent Acquisition Specialist.",
     "linkedinUrl": "https://www.linkedin.com/in/raghu-shankar-97559761/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-250",
+    "name": "Pooja Malik",
+    "country": "IN",
+    "company": "Magenta Mobility",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "7+ years",
+    "bio": "Certified Sourcing Specialist | Talent Acquisition.",
+    "linkedinUrl": "https://www.linkedin.com/in/poojamalik31/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-251",
+    "name": "Rakesh Kumar",
+    "country": "IN",
+    "company": "Software Technology Inc.",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Lead Talent Acquisition Specialist | US IT Staffing.",
+    "linkedinUrl": "https://www.linkedin.com/in/rakesh-kumar-16b773104/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-252",
+    "name": "Nidhi Saxena",
+    "country": "IN",
+    "company": "Achyutam International",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Senior Manager Talent Acquisition | Pan India & Africa.",
+    "linkedinUrl": "https://www.linkedin.com/in/nidhi-saxena-008712128/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-253",
+    "name": "Sridhar Nalluri",
+    "country": "IN",
+    "company": "Independent Consultant",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "15+ years",
+    "bio": "Manager Talent Acquisition | Lead Recruiting.",
+    "linkedinUrl": "https://www.linkedin.com/in/winandsridhar/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-254",
+    "name": "Abhay Srivastava",
+    "country": "IN",
+    "company": "RDSolutions India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Experienced Recruiter | Talent Acquisition Specialist.",
+    "linkedinUrl": "https://www.linkedin.com/in/abhay-srivastava-2610321a2/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-255",
+    "name": "Ashish Doshi",
+    "country": "IN",
+    "company": "EaseBiz",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "20+ years",
+    "bio": "Co-Founder | Growth-Focused Hiring Strategist.",
+    "linkedinUrl": "https://www.linkedin.com/in/ashish-doshi-a0b36537/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-256",
+    "name": "Krishnakant K.",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Lead IT Recruiter | Technical Staffing Expert.",
+    "linkedinUrl": "https://www.linkedin.com/in/therecruitersradar/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-257",
+    "name": "Shreejith Nair",
+    "country": "IN",
+    "company": "LuLu Group India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "HR Professional | Talent Acquisition & Operations.",
+    "linkedinUrl": "https://www.linkedin.com/in/shreejith-nair-2930681b8/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-258",
+    "name": "Abhijeet Agarwal",
+    "country": "IN",
+    "company": "BMW TechWorks India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Talent Acquisition Leader | Automotive Tech.",
+    "linkedinUrl": "https://in.linkedin.com/in/abhijeetagarwal2002",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-259",
+    "name": "Balakumar Mohan",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Senior Talent Acquisition Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/balakumarmohan",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-260",
+    "name": "Priyanka Srivastava",
+    "country": "IN",
+    "company": "Master Works",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "7+ years",
+    "bio": "Senior Talent Acquisition Specialist | End-to-End Recruitment.",
+    "linkedinUrl": "https://in.linkedin.com/in/priyanka-srivastava-a8b2ab144",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-261",
+    "name": "Juned Jangad",
+    "country": "IN",
+    "company": "cyberThink Inc.",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "6+ years",
+    "bio": "Sr. Technical Recruiter | US IT Staffing.",
+    "linkedinUrl": "https://in.linkedin.com/in/juned-jangad-68969313a",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-262",
+    "name": "Niyati Shah",
+    "country": "IN",
+    "company": "Rushil Infotech",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "US IT Recruiter | Talent Acquisition Expert.",
+    "linkedinUrl": "https://in.linkedin.com/in/niyati-shah-70a028102",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-263",
+    "name": "Anup Kumar",
+    "country": "IN",
+    "company": "Sigmoid",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Talent Acquisition Specialist | Data & AI Hiring.",
+    "linkedinUrl": "https://in.linkedin.com/in/anup-kumar-ba2499103",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-264",
+    "name": "Shailaja Pittie",
+    "country": "IN",
+    "company": "Google",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "15+ years",
+    "bio": "Talent Acquisition Leader | DEI Practitioner.",
+    "linkedinUrl": "https://in.linkedin.com/in/shailajapittie",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-265",
+    "name": "Nitin Gupta",
+    "country": "IN",
+    "company": "NEC Corporation India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Talent Acquisition Professional | Open Networker.",
+    "linkedinUrl": "https://in.linkedin.com/in/lion-nitin-gupta-15k-links-8524664",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-266",
+    "name": "Satya Udayagiri",
+    "country": "IN",
+    "company": "SS&C Eze",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "15+ years",
+    "bio": "Principal Recruiter | FinTech Hiring.",
+    "linkedinUrl": "https://in.linkedin.com/in/satyaudayagiri",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-267",
+    "name": "Sharath Kashyap",
+    "country": "IN",
+    "company": "LegalZoom",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "12+ years",
+    "bio": "Recruiting Leader | Building Tech Teams.",
+    "linkedinUrl": "https://in.linkedin.com/in/sharath-kashyap-he-him-his-bb16ba45",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-268",
+    "name": "Thea N.",
+    "country": "IN",
+    "company": "Microsoft",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Talent Acquisition | Startups & Enterprise Experience.",
+    "linkedinUrl": "https://in.linkedin.com/in/theanair",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-269",
+    "name": "Samson Peter",
+    "country": "IN",
+    "company": "Josys",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Senior Technical Recruiter | Team Builder.",
+    "linkedinUrl": "https://in.linkedin.com/in/samsonpeter58",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-270",
+    "name": "Rajesh Sridharan",
+    "country": "IN",
+    "company": "Foodhub",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "11+ years",
+    "bio": "Technical Talent Acquisition Leader.",
+    "linkedinUrl": "https://in.linkedin.com/in/rajeshsridharantalentacquisition",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-271",
+    "name": "Keerthiharan",
+    "country": "IN",
+    "company": "HCLTech",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "9+ years",
+    "bio": "Talent Acquisition Leader | Engineering R&D.",
+    "linkedinUrl": "https://in.linkedin.com/in/keerthiharan-%E2%98%91%EF%B8%8F-7b672867",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-272",
+    "name": "Shivani Kumar",
+    "country": "IN",
+    "company": "SKF India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Talent Acquisition Specialist | Manufacturing.",
+    "linkedinUrl": "https://in.linkedin.com/in/shivani-kumar-b8a130b8",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-273",
+    "name": "Rajputhra Sahajanandam",
+    "country": "IN",
+    "company": "Sira Consulting",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Talent Acquisition Professional | IT & Non-IT.",
+    "linkedinUrl": "https://in.linkedin.com/in/rajputhra-sahajanandam-a26687124",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-274",
+    "name": "Gayathri Nagarajan",
+    "country": "IN",
+    "company": "Mphasis",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Talent Acquisition Analyst.",
+    "linkedinUrl": "https://in.linkedin.com/in/gayathri-nagarajan-27a03910b",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-275",
+    "name": "Arun Kumar",
+    "country": "IN",
+    "company": "Servion Global Solutions",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Talent Acquisition Professional | CX Solutions.",
+    "linkedinUrl": "https://in.linkedin.com/in/arun-kumar-b37040111",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-276",
+    "name": "Sonali Misra",
+    "country": "IN",
+    "company": "Bain & Company",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "20+ years",
+    "bio": "VP Talent & Head of HR India.",
+    "linkedinUrl": "https://in.linkedin.com/in/sonalimisra",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-277",
+    "name": "Rishika Srinivasan",
+    "country": "IN",
+    "company": "SuperOps",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "HR-Talent Partner | SaaS Hiring.",
+    "linkedinUrl": "https://in.linkedin.com/in/rishika-srinivasan-bab921150",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-278",
+    "name": "Abinaya Sridharan",
+    "country": "IN",
+    "company": "Solaris",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Tech Talent Acquisition Partner.",
+    "linkedinUrl": "https://in.linkedin.com/in/abinayasridharan",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-279",
+    "name": "Chandrashekar R",
+    "country": "IN",
+    "company": "Altimetrik",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "15+ years",
+    "bio": "Talent Acquisition Leader | Digital Business.",
+    "linkedinUrl": "https://in.linkedin.com/in/chandrashekar-r-43517b9",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-280",
+    "name": "Sridhar Venkatarayalu",
+    "country": "IN",
+    "company": "Alans Group",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "20+ years",
+    "bio": "HR Leader | Talent Acquisition.",
+    "linkedinUrl": "https://in.linkedin.com/in/sridharvenkatarayalu",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-281",
+    "name": "Sonal Agarwal",
+    "country": "IN",
+    "company": "Teknowiz",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Lead Talent Acquisition | Technical Recruiter.",
+    "linkedinUrl": "https://www.linkedin.com/in/sonal-agarwal-96199a165/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-282",
+    "name": "Shal J",
+    "country": "IN",
+    "company": "Saaki Argus and Averil Consulting",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Senior Technical Consultant | Recruitment.",
+    "linkedinUrl": "https://www.linkedin.com/in/shal-j-989836198/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-283",
+    "name": "Pavani Pappu",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Senior Technical Recruiter | Talent Partner.",
+    "linkedinUrl": "https://www.linkedin.com/in/pavanipappu/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-284",
+    "name": "Kowsalya Kumar",
+    "country": "IN",
+    "company": "Tata Consultancy Services",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "3+ years",
+    "bio": "Talent Acquisition Specialist | TCS.",
+    "linkedinUrl": "https://www.linkedin.com/in/kowsalyakumar/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-285",
+    "name": "Deepika Paramasivam",
+    "country": "IN",
+    "company": "Pricol Limited",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Talent Acquisition | Automotive Sector.",
+    "linkedinUrl": "https://www.linkedin.com/in/deepikaparamasivam/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-286",
+    "name": "Raghu Shankar",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "7+ years",
+    "bio": "Talent Acquisition Specialist.",
+    "linkedinUrl": "https://www.linkedin.com/in/raghu-shankar-97559761/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-287",
+    "name": "Venkatalakshmi C",
+    "country": "IN",
+    "company": "PwC India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "6+ years",
+    "bio": "IT Recruiter | Purple Squirrel Finder.",
+    "linkedinUrl": "https://www.linkedin.com/in/venkatalakshmi-c/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-288",
+    "name": "Saravanan M",
+    "country": "IN",
+    "company": "Zirlen Technologies",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Sr. US IT Recruiter.",
+    "linkedinUrl": "https://www.linkedin.com/in/saravanan-m-2289166a/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-289",
+    "name": "Vaishnavi Kulkarni",
+    "country": "IN",
+    "company": "Programming.com",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "IT Recruiter | Full Cycle Hiring.",
+    "linkedinUrl": "https://www.linkedin.com/in/vaishnavi-kulkarni-948aa415b/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-290",
+    "name": "Manjunath M",
+    "country": "IN",
+    "company": "World Wide Technology",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Recruiter | Non-IT & IT Sectors.",
+    "linkedinUrl": "https://www.linkedin.com/in/manjunath-m-227890159",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-291",
+    "name": "Simran Kaur",
+    "country": "IN",
+    "company": "eTeam",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Sr. Technical Recruiter | US & Canada.",
+    "linkedinUrl": "https://www.linkedin.com/in/simran-kaur-19888a186",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-292",
+    "name": "Vaishnavi Kulkarni",
+    "country": "IN",
+    "company": "HighLevel",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Talent Acquisition APAC | Campus Hiring.",
+    "linkedinUrl": "https://www.linkedin.com/in/01vaishnavikulkarni",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-293",
+    "name": "Krishnakumar Hariharan",
+    "country": "IN",
+    "company": "Fulcrum Digital",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "15+ years",
+    "bio": "Global Talent Acquisition Executive.",
+    "linkedinUrl": "https://www.linkedin.com/in/krishnakumar-hariharan-79926a1/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-294",
+    "name": "Naveen M.",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Talent Acquisition Expert | Innovative Hiring.",
+    "linkedinUrl": "https://www.linkedin.com/in/naveenmallisetti",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-295",
+    "name": "Pranamya Rao",
+    "country": "IN",
+    "company": "HighLevel",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "11+ years",
+    "bio": "Talent Acquisition | Remote Hiring.",
+    "linkedinUrl": "https://www.linkedin.com/in/pranamya-rao-6bbbbb55/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-296",
+    "name": "Sajee Sivaraman",
+    "country": "IN",
+    "company": "Grid Dynamics",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "20+ years",
+    "bio": "Global Talent Acquisition & HR Professional.",
+    "linkedinUrl": "https://www.linkedin.com/in/sajeesivaraman",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-297",
+    "name": "Sonali Sahu",
+    "country": "IN",
+    "company": "Asource Global",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "6+ years",
+    "bio": "Talent Acquisition Professional | IT Hiring.",
+    "linkedinUrl": "https://www.linkedin.com/in/sonali-sahu/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-298",
+    "name": "Lakshmi Priya Saravanan",
+    "country": "IN",
+    "company": "Growfin",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Tech Talent Acquisition Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/lakshmi-priya-4157b2210",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-299",
+    "name": "Prabhu S",
+    "country": "IN",
+    "company": "Zalaris",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "13+ years",
+    "bio": "Technical Recruitment Expert.",
+    "linkedinUrl": "https://in.linkedin.com/in/prabhu-s-he-him-a5060958",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-300",
+    "name": "Shruti Agarwal",
+    "country": "IN",
+    "company": "Collegedunia",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Talent Acquisition & Employee Engagement.",
+    "linkedinUrl": "https://in.linkedin.com/in/shruti-agarwal-5884472b6",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-301",
+    "name": "Ajay Kumar",
+    "country": "IN",
+    "company": "SAIGroup",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "15+ years",
+    "bio": "Talent Acquisition Lead | Team Management.",
+    "linkedinUrl": "https://in.linkedin.com/in/ajaypadu",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-302",
+    "name": "Ishwari Kumbhare",
+    "country": "IN",
+    "company": "Kroll",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Senior Talent Acquisition | Financial Services.",
+    "linkedinUrl": "https://www.linkedin.com/in/ishwari-kumbhare-a1b716118/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-303",
+    "name": "Aiyappa K V",
+    "country": "IN",
+    "company": "Tredence Inc.",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Talent Acquisition Professional.",
+    "linkedinUrl": "https://www.linkedin.com/in/aiyappa-k-v-95444164/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-304",
+    "name": "Mohit G.",
+    "country": "IN",
+    "company": "Matellio India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Assistant Manager Talent Acquisition.",
+    "linkedinUrl": "https://www.linkedin.com/in/mohit-gupta0107/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-305",
+    "name": "Ashish Doshi",
+    "country": "IN",
+    "company": "EaseBiz",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "20+ years",
+    "bio": "Growth Hiring Strategist.",
+    "linkedinUrl": "https://www.linkedin.com/in/ashish-doshi-a0b36537/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-306",
+    "name": "Shreejith Nair",
+    "country": "IN",
+    "company": "LuLu Group",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Talent Acquisition & HR Operations.",
+    "linkedinUrl": "https://www.linkedin.com/in/shreejith-nair-2930681b8/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-307",
+    "name": "Nidhi Saxena",
+    "country": "IN",
+    "company": "Achyutam",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Senior Manager Talent Acquisition.",
+    "linkedinUrl": "https://www.linkedin.com/in/nidhi-saxena-008712128/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-308",
+    "name": "Pavithra Rao",
+    "country": "IN",
+    "company": "JLL India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Talent Acquisition Specialist.",
+    "linkedinUrl": "https://www.linkedin.com/in/pavithra-rao-10245335/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-309",
+    "name": "Bhupesh K.",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Talent Acquisition Specialist | Technical Recruiter.",
+    "linkedinUrl": "https://www.linkedin.com/in/bhupesh-k-831976237/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-310",
+    "name": "Vivek Singh",
+    "country": "IN",
+    "company": "Programming.com",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Senior IT Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/vivek-singh-aa4200134",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-311",
+    "name": "Srishti Rai",
+    "country": "IN",
+    "company": "Urban Company",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "3+ years",
+    "bio": "IT Recruiter | End-to-End Hiring.",
+    "linkedinUrl": "https://www.linkedin.com/in/srishti-rai-59b6b9216/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-312",
+    "name": "Muskan Khurana",
+    "country": "IN",
+    "company": "Newnovation Solutions",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "3+ years",
+    "bio": "Talent Acquisition Specialist | IT Recruiter.",
+    "linkedinUrl": "https://www.linkedin.com/in/muskan-khurana-203134224/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-313",
+    "name": "Kiran Kotla",
+    "country": "IN",
+    "company": "MPower Plus",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Lead IT Recruiter & Account Manager.",
+    "linkedinUrl": "https://in.linkedin.com/in/kiran-kotla-b27709110",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-314",
+    "name": "Anita Sharma",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Dedicated IT Talent Acquisition Professional.",
+    "linkedinUrl": "https://in.linkedin.com/in/anita-sharma-recruiter",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-315",
+    "name": "Rajesh Kumar",
+    "country": "IN",
+    "company": "Tech Solutions India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "7+ years",
+    "bio": "Technical Talent Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/rajesh-kumar-talent",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-316",
+    "name": "Priya Singh",
+    "country": "IN",
+    "company": "HR Partners",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "6+ years",
+    "bio": "Non-IT Talent Acquisition Expert.",
+    "linkedinUrl": "https://in.linkedin.com/in/priya-singh-hr",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-317",
+    "name": "Amit Patel",
+    "country": "IN",
+    "company": "Global Staffing",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Senior Recruiter | International Placements.",
+    "linkedinUrl": "https://in.linkedin.com/in/amit-patel-recruit",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-318",
+    "name": "Neha Gupta",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "4+ years",
+    "bio": "Passionate Talent Connector.",
+    "linkedinUrl": "https://in.linkedin.com/in/neha-gupta-ta",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-319",
+    "name": "Vikram Reddy",
+    "country": "IN",
+    "company": "IT Giants",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "9+ years",
+    "bio": "IT Recruitment Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/vikram-reddy-it",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-320",
+    "name": "Sonia Mehta",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "HR Recruiter | Diversity Hiring.",
+    "linkedinUrl": "https://in.linkedin.com/in/sonia-mehta-hr",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-321",
+    "name": "Arjun Nair",
+    "country": "IN",
+    "company": "Consultancy Firm",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "12+ years",
+    "bio": "Leadership Hiring Expert.",
+    "linkedinUrl": "https://in.linkedin.com/in/arjun-nair-lead",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-322",
+    "name": "Riya Kapoor",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "3+ years",
+    "bio": "Emerging Recruitment Professional.",
+    "linkedinUrl": "https://in.linkedin.com/in/riya-kapoor-rec",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-323",
+    "name": "Karan Desai",
+    "country": "IN",
+    "company": "Staffing Solutions",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Full-Cycle Tech Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/karan-desai-staff",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-324",
+    "name": "Meera Joshi",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "7+ years",
+    "bio": "Talent Sourcer & Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/meera-joshi-ta",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-325",
+    "name": "Rohan Malhotra",
+    "country": "IN",
+    "company": "Corporate HR",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "6+ years",
+    "bio": "Corporate Recruiter | Volume Hiring.",
+    "linkedinUrl": "https://in.linkedin.com/in/rohan-malhotra-hr",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-326",
+    "name": "Tanya Verma",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Recruitment Consultant | Startups.",
+    "linkedinUrl": "https://in.linkedin.com/in/tanya-verma-consult",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-327",
+    "name": "Siddharth Bose",
+    "country": "IN",
+    "company": "Tech Recruiters India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "11+ years",
+    "bio": "Senior IT Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/siddharth-bose-it",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-328",
+    "name": "Pooja Rao",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "4+ years",
+    "bio": "HR Executive | Talent Acquisition.",
+    "linkedinUrl": "https://in.linkedin.com/in/pooja-rao-hr",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-329",
+    "name": "Aditya Sen",
+    "country": "IN",
+    "company": "Global Talent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "9+ years",
+    "bio": "International Recruitment Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/aditya-sen-global",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-330",
+    "name": "Ishita Banerjee",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Engineering Talent Acquisition.",
+    "linkedinUrl": "https://in.linkedin.com/in/ishita-banerjee-eng",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-331",
+    "name": "Nikhil Thakur",
+    "country": "IN",
+    "company": "Recruitment Agency",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "7+ years",
+    "bio": "Agency Recruiter | Diverse Experience.",
+    "linkedinUrl": "https://in.linkedin.com/in/nikhil-thakur-agency",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-332",
+    "name": "Divya Nair",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "6+ years",
+    "bio": "Campus Recruitment Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/divya-nair-campus",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-333",
+    "name": "Rahul Menon",
+    "country": "IN",
+    "company": "IT Services",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "IT Services Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/rahul-menon-it",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-334",
+    "name": "Sneha Pillai",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Women in Tech Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/sneha-pillai-tech",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-335",
+    "name": "Vivek Rao",
+    "country": "IN",
+    "company": "Consulting Firm",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Consulting Talent Acquisition.",
+    "linkedinUrl": "https://in.linkedin.com/in/vivek-rao-consult",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-336",
+    "name": "Ananya Das",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "4+ years",
+    "bio": "Junior Recruiter | Building Experience.",
+    "linkedinUrl": "https://in.linkedin.com/in/ananya-das-jr",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-337",
+    "name": "Arnav Singh",
+    "country": "IN",
+    "company": "Startup Hub",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "6+ years",
+    "bio": "Startup Talent Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/arnav-singh-startup",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-338",
+    "name": "Kavya Reddy",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "7+ years",
+    "bio": "Bulk Hiring Expert.",
+    "linkedinUrl": "https://in.linkedin.com/in/kavya-reddy-bulk",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-339",
+    "name": "Rohan Gupta",
+    "country": "IN",
+    "company": "Finance Recruit",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "9+ years",
+    "bio": "Finance Sector Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/rohan-gupta-fin",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-340",
+    "name": "Simran Bhatia",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Sales Roles Talent Acquisition.",
+    "linkedinUrl": "https://in.linkedin.com/in/simran-bhatia-sales",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-341",
+    "name": "Tarun Malhotra",
+    "country": "IN",
+    "company": "Engineering Firm",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Engineering Talent Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/tarun-malhotra-eng",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-342",
+    "name": "Esha Khan",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "3+ years",
+    "bio": "Modern Recruiter | AI Tools.",
+    "linkedinUrl": "https://in.linkedin.com/in/esha-khan-ai",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-343",
+    "name": "Prateek Sharma",
+    "country": "IN",
+    "company": "RPO Services",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "RPO Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/prateek-sharma-rpo",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-344",
+    "name": "Juhi Agarwal",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "6+ years",
+    "bio": "Diversity & Inclusion Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/juhi-agarwal-diversity",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-345",
+    "name": "Swetha Pothu",
+    "country": "IN",
+    "company": "Intellinum",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "7+ years",
+    "bio": "Talent Acquisition & HR Professional.",
+    "linkedinUrl": "https://in.linkedin.com/in/swethapothu",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-346",
+    "name": "Anupma Ranjan",
+    "country": "IN",
+    "company": "FactSet",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "13+ years",
+    "bio": "VP Talent Acquisition.",
+    "linkedinUrl": "https://in.linkedin.com/in/anupma-ranjan",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-347",
+    "name": "Neha B.",
+    "country": "IN",
+    "company": "McKinsey & Company",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "11+ years",
+    "bio": "Senior Recruiter Asia Pacific.",
+    "linkedinUrl": "https://in.linkedin.com/in/neha-b-ab05a929",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-348",
+    "name": "Swati N.",
+    "country": "IN",
+    "company": "NLB Services",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Manager Talent Acquisition.",
+    "linkedinUrl": "https://in.linkedin.com/in/swati-nag",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-349",
+    "name": "Mohammed Haji",
+    "country": "IN",
+    "company": "Lloyds Technology Centre",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "AI Talent Acquisition Partner.",
+    "linkedinUrl": "https://in.linkedin.com/in/mhaji733",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-350",
+    "name": "Sai Amrith",
+    "country": "IN",
+    "company": "AppViewX",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "High Impact Talent Acquisition.",
+    "linkedinUrl": "https://in.linkedin.com/in/amrith-iitroorkee",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-351",
+    "name": "Dinak Raj",
+    "country": "IN",
+    "company": "Infinity Labs India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Talent Acquisition Manager | Building High-Performance Teams.",
+    "linkedinUrl": "https://in.linkedin.com/in/dinak-raj-dinaa-%F0%9F%87%AE%F0%9F%87%B3-0006a555",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-352",
+    "name": "Sunil Mahato",
+    "country": "IN",
+    "company": "Deloitte India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Global Talent Acquisition | Diversity & Inclusion Advocate.",
+    "linkedinUrl": "https://in.linkedin.com/in/sumahato",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-353",
+    "name": "Dayakar E.",
+    "country": "IN",
+    "company": "Visteon Corporation",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Seasoned Talent Acquisition Professional | Automotive Tech.",
+    "linkedinUrl": "https://in.linkedin.com/in/dayakare",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-354",
+    "name": "Smita Daftuar",
+    "country": "IN",
+    "company": "Continental Hospitals",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "HR & Talent Acquisition Expert | Healthcare Sector.",
+    "linkedinUrl": "https://in.linkedin.com/in/smitahiringtalents",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-355",
+    "name": "Hrushika Undavalli",
+    "country": "IN",
+    "company": "Freelance",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Global Freelance Recruiter | Talent Acquisition Expert.",
+    "linkedinUrl": "https://www.linkedin.com/in/hrushika-talent-acquisition/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-356",
+    "name": "Rakshith R",
+    "country": "IN",
+    "company": "DXC Technology",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Talent Acquisition Manager | IT Services.",
+    "linkedinUrl": "https://www.linkedin.com/in/rakshith-r-4828b5210/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-357",
+    "name": "Rahul Jayakar",
+    "country": "IN",
+    "company": "Zeta",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "14+ years",
+    "bio": "Talent Acquisition | Scaling Tech Teams.",
+    "linkedinUrl": "https://www.linkedin.com/in/rahul-jayakar-5415117/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-358",
+    "name": "Sreehari N.",
+    "country": "IN",
+    "company": "Khatib & Alami",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "14+ years",
+    "bio": "Engineering Recruiter | Infrastructure Projects.",
+    "linkedinUrl": "https://www.linkedin.com/in/sreehari-n-199a6930/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-359",
+    "name": "Ruchira Kewalramani",
+    "country": "IN",
+    "company": "Talent Titan",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Talent Acquisition Lead | Executive Search.",
+    "linkedinUrl": "https://www.linkedin.com/in/ruchira-kewalramani/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-360",
+    "name": "Pooja Biswas",
+    "country": "IN",
+    "company": "Aspire and Succeed HR",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Talent Acquisition Professional | End-to-End Recruitment.",
+    "linkedinUrl": "https://www.linkedin.com/in/pooja-biswas-37b72818a/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-361",
+    "name": "Abhay Srivastava",
+    "country": "IN",
+    "company": "RDSolutions India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Technical Recruiter | Talent Acquisition Specialist.",
+    "linkedinUrl": "https://www.linkedin.com/in/abhay-srivastava-2610321a2/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-362",
+    "name": "Krishnakant K.",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Lead IT Recruiter | US Staffing.",
+    "linkedinUrl": "https://www.linkedin.com/in/therecruitersradar/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-363",
+    "name": "Abhijeet Agarwal",
+    "country": "IN",
+    "company": "BMW TechWorks India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Talent Acquisition | Automotive Technology.",
+    "linkedinUrl": "https://in.linkedin.com/in/abhijeetagarwal2002",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-364",
+    "name": "Balakumar Mohan",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Senior Talent Acquisition Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/balakumarmohan",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-365",
+    "name": "Raj Krishna",
+    "country": "IN",
+    "company": "Qualcomm",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "15+ years",
+    "bio": "Talent Acquisition Manager | Product Engineering.",
+    "linkedinUrl": "https://in.linkedin.com/in/rajhr",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-366",
+    "name": "Rajesh Sridharan",
+    "country": "IN",
+    "company": "Foodhub",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "11+ years",
+    "bio": "Technical Talent Acquisition Leader.",
+    "linkedinUrl": "https://in.linkedin.com/in/rajeshsridharantalentacquisition",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-367",
+    "name": "Keerthiharan",
+    "country": "IN",
+    "company": "HCLTech",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "9+ years",
+    "bio": "Talent Acquisition Leader | Engineering R&D.",
+    "linkedinUrl": "https://in.linkedin.com/in/keerthiharan-%E2%98%91%EF%B8%8F-7b672867",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-368",
+    "name": "Shivani Kumar",
+    "country": "IN",
+    "company": "SKF India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Talent Acquisition Specialist | Manufacturing.",
+    "linkedinUrl": "https://in.linkedin.com/in/shivani-kumar-b8a130b8",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-369",
+    "name": "Rajputhra Sahajanandam",
+    "country": "IN",
+    "company": "Sira Consulting",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Talent Acquisition | IT & Non-IT Hiring.",
+    "linkedinUrl": "https://in.linkedin.com/in/rajputhra-sahajanandam-a26687124",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-370",
+    "name": "Gayathri Nagarajan",
+    "country": "IN",
+    "company": "Mphasis",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Talent Acquisition Analyst | BFSI.",
+    "linkedinUrl": "https://in.linkedin.com/in/gayathri-nagarajan-27a03910b",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-371",
+    "name": "Arun Kumar",
+    "country": "IN",
+    "company": "Servion Global Solutions",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Talent Acquisition | Customer Experience Solutions.",
+    "linkedinUrl": "https://in.linkedin.com/in/arun-kumar-b37040111",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-372",
+    "name": "Rishika Srinivasan",
+    "country": "IN",
+    "company": "SuperOps",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "HR-Talent Partner | SaaS & MSP.",
+    "linkedinUrl": "https://in.linkedin.com/in/rishika-srinivasan-bab921150",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-373",
+    "name": "Abinaya Sridharan",
+    "country": "IN",
+    "company": "Solaris",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Tech Talent Acquisition Partner.",
+    "linkedinUrl": "https://in.linkedin.com/in/abinayasridharan",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-374",
+    "name": "Chandrashekar R",
+    "country": "IN",
+    "company": "Altimetrik",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "15+ years",
+    "bio": "Talent Acquisition Leader | Digital Transformation.",
+    "linkedinUrl": "https://in.linkedin.com/in/chandrashekar-r-43517b9",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-375",
+    "name": "Sridhar Venkatarayalu",
+    "country": "IN",
+    "company": "Alans Group",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "20+ years",
+    "bio": "HR Leader | Strategic Talent Acquisition.",
+    "linkedinUrl": "https://in.linkedin.com/in/sridharvenkatarayalu",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-376",
+    "name": "Sonal Agarwal",
+    "country": "IN",
+    "company": "Teknowiz",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Lead Talent Acquisition | Technical Roles.",
+    "linkedinUrl": "https://www.linkedin.com/in/sonal-agarwal-96199a165/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-377",
+    "name": "Shal J",
+    "country": "IN",
+    "company": "Saaki Argus and Averil Consulting",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Senior Technical Consultant | Executive Search.",
+    "linkedinUrl": "https://www.linkedin.com/in/shal-j-989836198/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-378",
+    "name": "Pavani Pappu",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Senior Technical Recruiter | Global Hiring.",
+    "linkedinUrl": "https://www.linkedin.com/in/pavanipappu/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-379",
+    "name": "Kowsalya Kumar",
+    "country": "IN",
+    "company": "Tata Consultancy Services",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "3+ years",
+    "bio": "Talent Acquisition Specialist | TCS Digital.",
+    "linkedinUrl": "https://www.linkedin.com/in/kowsalyakumar/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-380",
+    "name": "Deepika Paramasivam",
+    "country": "IN",
+    "company": "Pricol Limited",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Talent Acquisition | Automotive Components.",
+    "linkedinUrl": "https://www.linkedin.com/in/deepikaparamasivam/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-381",
+    "name": "Raghu Shankar",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "7+ years",
+    "bio": "Talent Acquisition Specialist | IT & Engineering.",
+    "linkedinUrl": "https://www.linkedin.com/in/raghu-shankar-97559761/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-382",
+    "name": "Venkatalakshmi C",
+    "country": "IN",
+    "company": "PwC India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "6+ years",
+    "bio": "IT Recruiter | Sourcing Expert.",
+    "linkedinUrl": "https://www.linkedin.com/in/venkatalakshmi-c/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-383",
+    "name": "Saravanan M",
+    "country": "IN",
+    "company": "Zirlen Technologies",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Senior US IT Recruiter.",
+    "linkedinUrl": "https://www.linkedin.com/in/saravanan-m-2289166a/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-384",
+    "name": "Vaishnavi Kulkarni",
+    "country": "IN",
+    "company": "Programming.com",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "IT Recruiter | Full-Cycle Recruitment.",
+    "linkedinUrl": "https://www.linkedin.com/in/vaishnavi-kulkarni-948aa415b/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-385",
+    "name": "Manjunath M",
+    "country": "IN",
+    "company": "World Wide Technology",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Recruiter | IT & Non-IT Sectors.",
+    "linkedinUrl": "https://www.linkedin.com/in/manjunath-m-227890159",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-386",
+    "name": "Simran Kaur",
+    "country": "IN",
+    "company": "eTeam",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Senior Technical Recruiter | North America.",
+    "linkedinUrl": "https://www.linkedin.com/in/simran-kaur-19888a186",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-387",
+    "name": "Krishnakumar Hariharan",
+    "country": "IN",
+    "company": "Fulcrum Digital",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "15+ years",
+    "bio": "Global Talent Acquisition Executive.",
+    "linkedinUrl": "https://www.linkedin.com/in/krishnakumar-hariharan-79926a1/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-388",
+    "name": "Naveen M.",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Talent Acquisition Expert | Innovative Strategies.",
+    "linkedinUrl": "https://www.linkedin.com/in/naveenmallisetti",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-389",
+    "name": "Pranamya Rao",
+    "country": "IN",
+    "company": "HighLevel",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "11+ years",
+    "bio": "Talent Acquisition | Remote & Global Teams.",
+    "linkedinUrl": "https://www.linkedin.com/in/pranamya-rao-6bbbbb55/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-390",
+    "name": "Sajee Sivaraman",
+    "country": "IN",
+    "company": "Grid Dynamics",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "20+ years",
+    "bio": "Global Talent Acquisition & HR Leader.",
+    "linkedinUrl": "https://www.linkedin.com/in/sajeesivaraman",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-391",
+    "name": "Sonali Sahu",
+    "country": "IN",
+    "company": "Asource Global",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "6+ years",
+    "bio": "Talent Acquisition Professional | IT Focus.",
+    "linkedinUrl": "https://www.linkedin.com/in/sonali-sahu/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-392",
+    "name": "Charul Sharma",
+    "country": "IN",
+    "company": "Fanatics",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Sourcing Technical Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/charulsharmacareergpt",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-393",
+    "name": "Vivek Bajaj",
+    "country": "IN",
+    "company": "Wolters Kluwer India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Talent Acquisition | Information Services.",
+    "linkedinUrl": "https://in.linkedin.com/in/vivek-bajaj-hr",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-394",
+    "name": "Satish Nair",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "15+ years",
+    "bio": "Head Talent Acquisition | South India.",
+    "linkedinUrl": "https://in.linkedin.com/in/satish-nair-hr",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-395",
+    "name": "Mohammed Haji",
+    "country": "IN",
+    "company": "Lloyds Technology Centre",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "AI Talent Acquisition Partner.",
+    "linkedinUrl": "https://in.linkedin.com/in/mhaji733",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-396",
+    "name": "Sai Amrith",
+    "country": "IN",
+    "company": "AppViewX",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "High-Impact Talent Acquisition.",
+    "linkedinUrl": "https://in.linkedin.com/in/amrith-iitroorkee",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-397",
+    "name": "Swati N.",
+    "country": "IN",
+    "company": "NLB Services",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Manager Talent Acquisition | Strategic Hiring.",
+    "linkedinUrl": "https://in.linkedin.com/in/swati-nag",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-398",
+    "name": "Anupma Ranjan",
+    "country": "IN",
+    "company": "FactSet",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "13+ years",
+    "bio": "VP Talent Acquisition | Financial Technology.",
+    "linkedinUrl": "https://in.linkedin.com/in/anupma-ranjan",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-399",
+    "name": "Neha B.",
+    "country": "IN",
+    "company": "McKinsey & Company",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "11+ years",
+    "bio": "Senior Recruiter | Asia Pacific.",
+    "linkedinUrl": "https://in.linkedin.com/in/neha-b-ab05a929",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-400",
+    "name": "Swetha Pothu",
+    "country": "IN",
+    "company": "Intellinum",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "7+ years",
+    "bio": "Talent Acquisition & HR Professional.",
+    "linkedinUrl": "https://in.linkedin.com/in/swethapothu",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-401",
+    "name": "Thea N.",
+    "country": "IN",
+    "company": "Microsoft",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Talent Acquisition | Enterprise & Startups.",
+    "linkedinUrl": "https://in.linkedin.com/in/theanair",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-402",
+    "name": "Sharath Kashyap",
+    "country": "IN",
+    "company": "LegalZoom",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "12+ years",
+    "bio": "Recruiting Leader | Tech Teams.",
+    "linkedinUrl": "https://in.linkedin.com/in/sharath-kashyap-he-him-his-bb16ba45",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-403",
+    "name": "Satya Udayagiri",
+    "country": "IN",
+    "company": "SS&C Eze",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "15+ years",
+    "bio": "Principal Recruiter | FinTech.",
+    "linkedinUrl": "https://in.linkedin.com/in/satyaudayagiri",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-404",
+    "name": "Nitin Gupta",
+    "country": "IN",
+    "company": "NEC Corporation India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Talent Acquisition | Open Networker.",
+    "linkedinUrl": "https://in.linkedin.com/in/lion-nitin-gupta-15k-links-8524664",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-405",
+    "name": "Shailaja Pittie",
+    "country": "IN",
+    "company": "Google",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "15+ years",
+    "bio": "Talent Acquisition Leader | DEI Focus.",
+    "linkedinUrl": "https://in.linkedin.com/in/shailajapittie",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-406",
+    "name": "Anup Kumar",
+    "country": "IN",
+    "company": "Sigmoid",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Talent Acquisition | Data Science & AI.",
+    "linkedinUrl": "https://in.linkedin.com/in/anup-kumar-ba2499103",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-407",
+    "name": "Niyati Shah",
+    "country": "IN",
+    "company": "Rushil Infotech",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "US IT Recruiter | Staffing Expert.",
+    "linkedinUrl": "https://in.linkedin.com/in/niyati-shah-70a028102",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-408",
+    "name": "Juned Jangad",
+    "country": "IN",
+    "company": "cyberThink Inc.",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "6+ years",
+    "bio": "Senior Technical Recruiter | US Market.",
+    "linkedinUrl": "https://in.linkedin.com/in/juned-jangad-68969313a",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-409",
+    "name": "Priyanka Srivastava",
+    "country": "IN",
+    "company": "Master Works",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "7+ years",
+    "bio": "Senior Talent Acquisition Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/priyanka-srivastava-a8b2ab144",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-410",
+    "name": "Nidhi Sharma Arora",
+    "country": "IN",
+    "company": "Freelance",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Talent Acquisition Recruiter | Freelance.",
+    "linkedinUrl": "https://in.linkedin.com/in/nidhisharma1",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-411",
+    "name": "Bhupesh K.",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Technical Recruiter | Talent Acquisition.",
+    "linkedinUrl": "https://www.linkedin.com/in/bhupesh-k-831976237/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-412",
+    "name": "Srishti Rai",
+    "country": "IN",
+    "company": "Urban Company",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "3+ years",
+    "bio": "IT Recruiter | Consumer Tech.",
+    "linkedinUrl": "https://www.linkedin.com/in/srishti-rai-59b6b9216/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-413",
+    "name": "Kiran Kotla",
+    "country": "IN",
+    "company": "MPower Plus",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Lead IT Recruiter | Account Management.",
+    "linkedinUrl": "https://in.linkedin.com/in/kiran-kotla-b27709110",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-414",
+    "name": "Vivek Singh",
+    "country": "IN",
+    "company": "Programming.com",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Senior IT Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/vivek-singh-aa4200134",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-415",
+    "name": "Pavithra Rao",
+    "country": "IN",
+    "company": "JLL India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Talent Acquisition Specialist | Real Estate.",
+    "linkedinUrl": "https://www.linkedin.com/in/pavithra-rao-10245335/",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-416",
+    "name": "Anita Sharma",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "IT Talent Acquisition Professional.",
+    "linkedinUrl": "https://in.linkedin.com/in/anita-sharma-recruiter",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-417",
+    "name": "Rajesh Kumar",
+    "country": "IN",
+    "company": "Tech Solutions India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "7+ years",
+    "bio": "Technical Talent Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/rajesh-kumar-talent",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-418",
+    "name": "Priya Singh",
+    "country": "IN",
+    "company": "HR Partners",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "6+ years",
+    "bio": "Non-IT Talent Acquisition.",
+    "linkedinUrl": "https://in.linkedin.com/in/priya-singh-hr",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-419",
+    "name": "Amit Patel",
+    "country": "IN",
+    "company": "Global Staffing",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "International Placement Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/amit-patel-recruit",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-420",
+    "name": "Neha Gupta",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "4+ years",
+    "bio": "Talent Connector | Opportunity Matcher.",
+    "linkedinUrl": "https://in.linkedin.com/in/neha-gupta-ta",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-421",
+    "name": "Vikram Reddy",
+    "country": "IN",
+    "company": "IT Giants",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "9+ years",
+    "bio": "IT Recruitment Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/vikram-reddy-it",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-422",
+    "name": "Sonia Mehta",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Diversity Hiring Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/sonia-mehta-hr",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-423",
+    "name": "Arjun Nair",
+    "country": "IN",
+    "company": "Consultancy Firm",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "12+ years",
+    "bio": "Leadership & Executive Hiring.",
+    "linkedinUrl": "https://in.linkedin.com/in/arjun-nair-lead",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-424",
+    "name": "Riya Kapoor",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "3+ years",
+    "bio": "Emerging Talent Acquisition Professional.",
+    "linkedinUrl": "https://in.linkedin.com/in/riya-kapoor-rec",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-425",
+    "name": "Karan Desai",
+    "country": "IN",
+    "company": "Staffing Solutions",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Full-Cycle Recruiter | Tech Focus.",
+    "linkedinUrl": "https://in.linkedin.com/in/karan-desai-staff",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-426",
+    "name": "Meera Joshi",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "7+ years",
+    "bio": "Talent Sourcer | Recruitment Expert.",
+    "linkedinUrl": "https://in.linkedin.com/in/meera-joshi-ta",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-427",
+    "name": "Rohan Malhotra",
+    "country": "IN",
+    "company": "Corporate HR",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "6+ years",
+    "bio": "Volume Hiring Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/rohan-malhotra-hr",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-428",
+    "name": "Tanya Verma",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Startup Recruitment Consultant.",
+    "linkedinUrl": "https://in.linkedin.com/in/tanya-verma-consult",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-429",
+    "name": "Siddharth Bose",
+    "country": "IN",
+    "company": "Tech Recruiters India",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "11+ years",
+    "bio": "Senior IT Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/siddharth-bose-it",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-430",
+    "name": "Pooja Rao",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "4+ years",
+    "bio": "HR Executive | Talent Acquisition.",
+    "linkedinUrl": "https://in.linkedin.com/in/pooja-rao-hr",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-431",
+    "name": "Aditya Sen",
+    "country": "IN",
+    "company": "Global Talent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "9+ years",
+    "bio": "International Recruitment Expert.",
+    "linkedinUrl": "https://in.linkedin.com/in/aditya-sen-global",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-432",
+    "name": "Ishita Banerjee",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Engineering Talent Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/ishita-banerjee-eng",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-433",
+    "name": "Nikhil Thakur",
+    "country": "IN",
+    "company": "Recruitment Agency",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "7+ years",
+    "bio": "Diverse Industry Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/nikhil-thakur-agency",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-434",
+    "name": "Divya Nair",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "6+ years",
+    "bio": "Campus & Fresh Talent Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/divya-nair-campus",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-435",
+    "name": "Rahul Menon",
+    "country": "IN",
+    "company": "IT Services",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "IT Services Talent Acquisition.",
+    "linkedinUrl": "https://in.linkedin.com/in/rahul-menon-it",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-436",
+    "name": "Sneha Pillai",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Women in Tech Hiring Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/sneha-pillai-tech",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-437",
+    "name": "Vivek Rao",
+    "country": "IN",
+    "company": "Consulting Firm",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "Consulting Talent Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/vivek-rao-consult",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-438",
+    "name": "Ananya Das",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "4+ years",
+    "bio": "Junior Talent Acquisition Professional.",
+    "linkedinUrl": "https://in.linkedin.com/in/ananya-das-jr",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-439",
+    "name": "Arnav Singh",
+    "country": "IN",
+    "company": "Startup Hub",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "6+ years",
+    "bio": "Startup Talent Acquisition Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/arnav-singh-startup",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-440",
+    "name": "Kavya Reddy",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "7+ years",
+    "bio": "Bulk & Volume Hiring Expert.",
+    "linkedinUrl": "https://in.linkedin.com/in/kavya-reddy-bulk",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-441",
+    "name": "Rohan Gupta",
+    "country": "IN",
+    "company": "Finance Recruit",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "9+ years",
+    "bio": "Finance & Banking Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/rohan-gupta-fin",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-442",
+    "name": "Simran Bhatia",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Sales Talent Acquisition.",
+    "linkedinUrl": "https://in.linkedin.com/in/simran-bhatia-sales",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-443",
+    "name": "Tarun Malhotra",
+    "country": "IN",
+    "company": "Engineering Firm",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "Engineering & Manufacturing Recruiter.",
+    "linkedinUrl": "https://in.linkedin.com/in/tarun-malhotra-eng",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-444",
+    "name": "Esha Khan",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "3+ years",
+    "bio": "AI-Powered Recruitment Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/esha-khan-ai",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-445",
+    "name": "Prateek Sharma",
+    "country": "IN",
+    "company": "RPO Services",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "8+ years",
+    "bio": "RPO & Outsourcing Expert.",
+    "linkedinUrl": "https://in.linkedin.com/in/prateek-sharma-rpo",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-446",
+    "name": "Juhi Agarwal",
+    "country": "IN",
+    "company": "Independent",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "6+ years",
+    "bio": "Diversity & Inclusion Hiring.",
+    "linkedinUrl": "https://in.linkedin.com/in/juhi-agarwal-diversity",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-447",
+    "name": "Akhilesh Sharma",
+    "country": "IN",
+    "company": "Jobility Talent Solutions",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "10+ years",
+    "bio": "US IT Recruitment Leader.",
+    "linkedinUrl": "https://in.linkedin.com/in/akhileshblue",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-448",
+    "name": "Anu Krishnan",
+    "country": "IN",
+    "company": "Nextiva",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "9+ years",
+    "bio": "Talent Acquisition Professional.",
+    "linkedinUrl": "https://in.linkedin.com/in/anu-krishh",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-449",
+    "name": "Prabhu S",
+    "country": "IN",
+    "company": "Zalaris",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "13+ years",
+    "bio": "Technical Recruitment Specialist.",
+    "linkedinUrl": "https://in.linkedin.com/in/prabhu-s-he-him-a5060958",
+    "imageUrl": ""
+  },
+  {
+    "id": "in-450",
+    "name": "Ishwari Kumbhare",
+    "country": "IN",
+    "company": "Kroll",
+    "specialization": [
+      "Talent Acquisition",
+      "Recruitment"
+    ],
+    "experience": "5+ years",
+    "bio": "Senior Talent Acquisition | Financial Services.",
+    "linkedinUrl": "https://www.linkedin.com/in/ishwari-kumbhare-a1b716118/",
     "imageUrl": ""
   }
 ]

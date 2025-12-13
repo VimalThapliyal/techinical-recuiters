@@ -78,10 +78,12 @@ export function RecruiterCard({
     setIsSharing(true);
     try {
       const success = await shareContent(
-        `${recruiter.name} - Technical Recruiter`,
-        `Check out ${recruiter.name}, a ${
-          recruiter.company
-        } recruiter specializing in ${recruiter.specialization.join(", ")}`,
+        `${recruiter.name || "Recruiter"} - Technical Recruiter`,
+        `Check out ${recruiter.name || "this recruiter"}, a ${
+          recruiter.company || "company"
+        } recruiter specializing in ${
+          (recruiter.specialization || []).join(", ") || "recruitment"
+        }`,
         profileUrl
       );
       if (success) {
@@ -111,7 +113,7 @@ export function RecruiterCard({
       return recruiter.imageUrl;
     }
     // Use UI Avatars service to generate avatar with initials as fallback
-    const name = encodeURIComponent(recruiter.name);
+    const name = encodeURIComponent(recruiter.name || "Unknown");
     // Generate a consistent color based on the name hash
     const colors = [
       "6366f1",
@@ -140,7 +142,7 @@ export function RecruiterCard({
             <Avatar className="h-16 w-16">
               <AvatarImage
                 src={getAvatarUrl()}
-                alt={recruiter.name}
+                alt={recruiter.name || "Recruiter"}
                 onError={(e) => {
                   // Hide the image on error, fallback will show
                   e.currentTarget.style.display = "none";
@@ -153,13 +155,15 @@ export function RecruiterCard({
             <div className="flex-1 min-w-0">
               <div className="flex items-start justify-between gap-4 mb-2">
                 <div>
-                  <h3 className="h4 mb-1.5">{recruiter.name}</h3>
+                  <h3 className="h4 mb-1.5">
+                    {recruiter.name || "Unknown Recruiter"}
+                  </h3>
                   <div className="flex items-center gap-2 text-small text-[#666666] mb-3 font-normal">
                     <Briefcase className="h-4 w-4" />
-                    <span>{recruiter.company}</span>
+                    <span>{recruiter.company || "Unknown Company"}</span>
                     <span className="mx-1">•</span>
                     <MapPin className="h-4 w-4" />
-                    <span>{recruiter.country}</span>
+                    <span>{recruiter.country || "Unknown"}</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
@@ -196,11 +200,14 @@ export function RecruiterCard({
                 </div>
               </div>
               <p className="text-small text-[#666666] mb-4 line-clamp-2 leading-relaxed">
-                {recruiter.bio}
+                {recruiter.bio || "No bio available"}
               </p>
               <div className="flex flex-wrap gap-2">
                 {(recruiter.specialization || []).map((spec, index) => (
-                  <Badge key={`${recruiter.id}-spec-${index}-${spec}`} variant="secondary">
+                  <Badge
+                    key={`${recruiter.id}-spec-${index}-${spec}`}
+                    variant="secondary"
+                  >
                     {spec}
                   </Badge>
                 ))}
@@ -227,7 +234,7 @@ export function RecruiterCard({
           <Avatar className="h-16 w-16">
             <AvatarImage
               src={getAvatarUrl()}
-              alt={recruiter.name}
+              alt={recruiter.name || "Recruiter"}
               onError={(e) => {
                 // Hide the image on error, fallback will show
                 e.currentTarget.style.display = "none";
@@ -238,31 +245,37 @@ export function RecruiterCard({
             </AvatarFallback>
           </Avatar>
           <div className="flex-1 min-w-0">
-            <CardTitle className="h5 mb-1.5">{recruiter.name}</CardTitle>
+            <CardTitle className="h5 mb-1.5">
+              {recruiter.name || "Unknown Recruiter"}
+            </CardTitle>
             <CardDescription className="flex items-center gap-1.5 text-xs text-[#666666] mb-1 font-normal">
               <Briefcase className="h-3.5 w-3.5" />
-              {recruiter.company}
+              {recruiter.company || "Unknown Company"}
             </CardDescription>
             <CardDescription className="flex items-center gap-1.5 text-xs text-[#666666] font-normal">
               <MapPin className="h-3.5 w-3.5" />
-              {recruiter.country} • {recruiter.experience}
+              {recruiter.country || "Unknown"} • {recruiter.experience || "N/A"}
             </CardDescription>
           </div>
         </div>
       </CardHeader>
       <CardContent className="flex-1">
         <p className="text-small text-[#666666] mb-5 line-clamp-3 leading-relaxed">
-          {recruiter.bio}
+          {recruiter.bio || "No bio available"}
         </p>
         <div className="flex flex-wrap gap-2">
           {(recruiter.specialization || []).slice(0, 3).map((spec, index) => (
-            <Badge key={`${recruiter.id}-spec-${index}-${spec}`} variant="secondary" className="text-xs">
+            <Badge
+              key={`${recruiter.id}-spec-${index}-${spec}`}
+              variant="secondary"
+              className="text-xs"
+            >
               {spec}
             </Badge>
           ))}
-          {recruiter.specialization.length > 3 && (
+          {(recruiter.specialization || []).length > 3 && (
             <Badge variant="outline" className="text-xs">
-              +{recruiter.specialization.length - 3} more
+              +{(recruiter.specialization || []).length - 3} more
             </Badge>
           )}
         </div>

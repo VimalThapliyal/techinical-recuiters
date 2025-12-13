@@ -73,7 +73,7 @@ export function BestMatches({
                   <div className="space-y-1.5 mb-3">
                     {match.matchScore.reasons.slice(0, 2).map((reason, idx) => (
                       <div
-                        key={idx}
+                        key={`${match.id}-reason-${idx}-${reason.slice(0, 20)}`}
                         className="flex items-center gap-1.5 text-xs text-[#0077b5]"
                       >
                         <div className="w-1 h-1 rounded-full bg-[#0077b5]" />
@@ -87,7 +87,7 @@ export function BestMatches({
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {(match.specialization || []).slice(0, 3).map((spec, idx) => (
                     <Badge
-                      key={idx}
+                      key={`${match.id}-spec-${idx}-${spec}`}
                       variant="secondary"
                       className="text-xs px-2 py-0.5"
                     >
