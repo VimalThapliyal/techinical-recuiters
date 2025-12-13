@@ -117,7 +117,8 @@ export type SortOption =
 
 export function sortRecruiters(
   recruiters: Recruiter[],
-  sortBy: SortOption
+  sortBy: SortOption,
+  matchScores?: Map<string, number>
 ): Recruiter[] {
   const sorted = [...recruiters];
 
@@ -159,8 +160,13 @@ export function sortRecruiters(
         return bYears - aYears;
       });
     case "match-desc":
-      // Match score sorting is handled in the component with matchScores Map
-      // Return as-is here, will be sorted in the component
+      if (matchScores) {
+        return sorted.sort((a, b) => {
+          const scoreA = matchScores.get(a.id) || 0;
+          const scoreB = matchScores.get(b.id) || 0;
+          return scoreB - scoreA;
+        });
+      }
       return sorted;
     default:
       return sorted;

@@ -11,11 +11,13 @@ import { Recruiter } from "@/types/recruiter";
 import { CountryCode } from "@/types/recruiter";
 import { UserProfile } from "@/types/user";
 import { isValidCountryCode } from "@/lib/subdomain";
-import { sortRecruiters, SortOption } from "@/lib/data";
+import { sortRecruiters, SortOption, Statistics } from "@/lib/data";
 import { StatisticsDashboard } from "@/components/StatisticsDashboard";
 import { calculateMatchScore } from "@/lib/matching";
 import { Footer } from "@/components/Footer";
-import { Statistics } from "@/lib/data";
+import { Statistics as StatisticsType } from "@/lib/data";
+import { generateStructuredData } from "@/lib/seo";
+import { COUNTRY_INFO } from "@/lib/subdomain";
 
 const ITEMS_PER_PAGE = 12;
 
@@ -36,7 +38,7 @@ export default function CountryPage() {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const [statistics, setStatistics] = useState<Statistics>({
+  const [statistics, setStatistics] = useState<StatisticsType>({
     total: 0,
     withPhotos: 0,
     withoutPhotos: 0,
@@ -48,6 +50,31 @@ export default function CountryPage() {
   const [matchScores, setMatchScores] = useState<Map<string, number>>(
     new Map()
   );
+
+  const countryInfo = COUNTRY_INFO[country];
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    "https://techinical-recuiters.vercel.app";
+
+  // Add structured data for SEO
+  useEffect(() => {
+    const collectionSchema = generateStructuredData({
+      type: "CollectionPage",
+      title: `Technical Recruiters in ${countryInfo.name}`,
+      description: `Find and connect with technical recruiters in ${countryInfo.name}. Browse verified recruiter profiles by specialization and company.`,
+      url: `${siteUrl}/${country}`,
+      country,
+    });
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify(collectionSchema);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [country, countryInfo.name, siteUrl]);
 
   // Load user profile from localStorage
   useEffect(() => {
@@ -94,7 +121,7 @@ export default function CountryPage() {
         } else {
           const specSet = new Set<string>();
           (data.recruiters || []).forEach((r: Recruiter) => {
-            r.specialization.forEach((spec) => specSet.add(spec));
+            r.specialization?.forEach((spec) => specSet.add(spec));
           });
           setSpecializations(Array.from(specSet).sort());
         }
@@ -112,7 +139,7 @@ export default function CountryPage() {
         if (data.statistics) {
           setStatistics(data.statistics);
         } else {
-          // Fallback: calculate from fetched recruiters
+          // Fallback: calculate statistics if API doesn't provide them
           const recruiters = data.recruiters || [];
           const total = recruiters.length;
           const withPhotos = recruiters.filter(
@@ -135,7 +162,7 @@ export default function CountryPage() {
           // Top specializations
           const specializationCounts: Record<string, number> = {};
           recruiters.forEach((r: Recruiter) => {
-            r.specialization.forEach((spec) => {
+            r.specialization?.forEach((spec) => {
               specializationCounts[spec] =
                 (specializationCounts[spec] || 0) + 1;
             });
@@ -187,19 +214,8 @@ export default function CountryPage() {
         setSortBy("name-asc");
         setCurrentPage(1);
       } catch (error) {
-        console.error("Error fetching recruiters:", error);
-        // Fallback to empty arrays
-        setRecruiters([]);
-        setSpecializations([]);
-        setCompanies([]);
-        setStatistics({
-          total: 0,
-          withPhotos: 0,
-          withoutPhotos: 0,
-          topCompanies: [],
-          topSpecializations: [],
-          experienceDistribution: { "1-3": 0, "3-5": 0, "5-10": 0, "10+": 0 },
-        });
+        console.error("Failed to fetch recruiters:", error);
+        // Optionally set an error state to display to the user
       } finally {
         setLoading(false);
       }
@@ -217,17 +233,17 @@ export default function CountryPage() {
       const query = searchQuery.toLowerCase();
       filtered = filtered.filter(
         (r) =>
-          r.name.toLowerCase().includes(query) ||
-          r.company.toLowerCase().includes(query) ||
-          r.bio.toLowerCase().includes(query) ||
-          r.specialization.some((s) => s.toLowerCase().includes(query))
+          r.name?.toLowerCase().includes(query) ||
+          r.company?.toLowerCase().includes(query) ||
+          r.bio?.toLowerCase().includes(query) ||
+          r.specialization?.some((s) => s.toLowerCase().includes(query))
       );
     }
 
     // Apply specialization filter
     if (selectedSpecialization !== "all") {
       filtered = filtered.filter((r) =>
-        r.specialization.some((s) =>
+        r.specialization?.some((s) =>
           s.toLowerCase().includes(selectedSpecialization.toLowerCase())
         )
       );
@@ -236,28 +252,12 @@ export default function CountryPage() {
     // Apply company filter
     if (selectedCompany !== "all") {
       filtered = filtered.filter(
-        (r) => r.company.toLowerCase() === selectedCompany.toLowerCase()
+        (r) => r.company?.toLowerCase() === selectedCompany.toLowerCase()
       );
     }
 
     // Sort recruiters
-    let sorted = sortRecruiters(filtered, sortBy);
-
-    // If sorting by match score, sort by match score first
-    if (
-      sortBy === "match-desc" &&
-      userProfile &&
-      userProfile.skills.length > 0
-    ) {
-      sorted = sorted.sort((a, b) => {
-        const scoreA = matchScores.get(a.id) || 0;
-        const scoreB = matchScores.get(b.id) || 0;
-        if (scoreB !== scoreA) {
-          return scoreB - scoreA; // Higher scores first
-        }
-        return a.name.localeCompare(b.name); // Then alphabetically
-      });
-    }
+    const sorted = sortRecruiters(filtered, sortBy, matchScores);
 
     return sorted;
   }, [
@@ -266,7 +266,6 @@ export default function CountryPage() {
     selectedSpecialization,
     selectedCompany,
     sortBy,
-    userProfile,
     matchScores,
   ]);
 
@@ -293,13 +292,18 @@ export default function CountryPage() {
         viewMode={viewMode}
         onViewModeChange={setViewMode}
       />
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-        <div className="mb-10">
-          <div className="mb-8">
-            <h1 className="h1 mb-3 text-[#111827]">Technical Recruiters</h1>
-            <p className="text-lg text-[#6b7280] leading-relaxed max-w-2xl">
-              Connect with top technical recruiters in your region
-            </p>
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="mb-8">
+          <div className="flex items-start justify-between mb-6">
+            <div className="flex-1">
+              <h1 className="h1 mb-2">
+                Technical Recruiters in {countryInfo.name} {countryInfo.flag}
+              </h1>
+              <p className="text-large text-[#666666] leading-relaxed">
+                Connect with top technical recruiters in {countryInfo.name}.
+                Browse {statistics.total} verified recruiter profiles.
+              </p>
+            </div>
           </div>
 
           {/* Statistics Dashboard - Compact & Elegant */}
@@ -318,9 +322,9 @@ export default function CountryPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 mb-10">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-10">
           <div className="lg:col-span-1">
-            <div className="sticky top-24">
+            <div className="sticky top-20">
               <FilterPanel
                 specializations={specializations}
                 selectedSpecialization={selectedSpecialization}
@@ -337,11 +341,11 @@ export default function CountryPage() {
             </div>
           </div>
           <div className="lg:col-span-3">
-            <div className="mb-6">
+            <div className="mb-8">
               <SearchBar value={searchQuery} onChange={setSearchQuery} />
             </div>
             <div className="mb-6 flex items-center justify-between">
-              <div className="text-sm text-[#6b7280] font-medium">
+              <div className="text-small text-[#666666] font-medium">
                 Showing{" "}
                 <span className="font-semibold text-[#000000]">
                   {paginatedRecruiters.length > 0
