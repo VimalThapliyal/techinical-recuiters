@@ -134,14 +134,18 @@ export function getAllSkills(recruiters: Recruiter[]): string[] {
 
   recruiters.forEach((recruiter) => {
     // Extract skills from specializations
-    recruiter.specialization.forEach((spec) => {
-      // Split by common separators and add individual terms
-      const terms = spec
-        .split(/[,\s&]+/)
-        .map((t) => t.trim())
-        .filter((t) => t.length > 2);
-      terms.forEach((term) => skillsSet.add(term));
-    });
+    if (recruiter.specialization && Array.isArray(recruiter.specialization)) {
+      recruiter.specialization.forEach((spec) => {
+        if (spec && typeof spec === 'string') {
+          // Split by common separators and add individual terms
+          const terms = spec
+            .split(/[,\s&]+/)
+            .map((t) => t.trim())
+            .filter((t) => t.length > 2);
+          terms.forEach((term) => skillsSet.add(term));
+        }
+      });
+    }
 
     // Extract from bio (common tech terms)
     const bio = recruiter.bio.toLowerCase();

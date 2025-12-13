@@ -47,7 +47,7 @@ export function RecruiterCard({
   const { addToast } = useToast();
   const [isSharing, setIsSharing] = useState(false);
 
-  const initials = recruiter.name
+  const initials = (recruiter.name || "?")
     .split(" ")
     .map((n) => n[0])
     .join("")
@@ -125,7 +125,7 @@ export function RecruiterCard({
       "14b8a6",
     ];
     const colorIndex =
-      recruiter.name
+      (recruiter.name || "Unknown")
         .split("")
         .reduce((acc, char) => acc + char.charCodeAt(0), 0) % colors.length;
     return `https://ui-avatars.com/api/?name=${name}&size=200&background=${colors[colorIndex]}&color=fff&bold=true&format=png`;
