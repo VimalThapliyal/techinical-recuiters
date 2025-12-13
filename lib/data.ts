@@ -77,11 +77,15 @@ export function getAllSpecializations(country: CountryCode): string[] {
   if (!recruiters || !Array.isArray(recruiters)) {
     return [];
   }
-  
+
   const specializations = new Set<string>();
 
   recruiters.forEach((recruiter) => {
-    if (recruiter && recruiter.specialization && Array.isArray(recruiter.specialization)) {
+    if (
+      recruiter &&
+      recruiter.specialization &&
+      Array.isArray(recruiter.specialization)
+    ) {
       recruiter.specialization.forEach((spec) => specializations.add(spec));
     }
   });
@@ -119,13 +123,29 @@ export function sortRecruiters(
 
   switch (sortBy) {
     case "name-asc":
-      return sorted.sort((a, b) => a.name.localeCompare(b.name));
+      return sorted.sort((a, b) => {
+        const aName = a?.name || "";
+        const bName = b?.name || "";
+        return aName.localeCompare(bName);
+      });
     case "name-desc":
-      return sorted.sort((a, b) => b.name.localeCompare(a.name));
+      return sorted.sort((a, b) => {
+        const aName = a?.name || "";
+        const bName = b?.name || "";
+        return bName.localeCompare(aName);
+      });
     case "company-asc":
-      return sorted.sort((a, b) => a.company.localeCompare(b.company));
+      return sorted.sort((a, b) => {
+        const aCompany = a?.company || "";
+        const bCompany = b?.company || "";
+        return aCompany.localeCompare(bCompany);
+      });
     case "company-desc":
-      return sorted.sort((a, b) => b.company.localeCompare(a.company));
+      return sorted.sort((a, b) => {
+        const aCompany = a?.company || "";
+        const bCompany = b?.company || "";
+        return bCompany.localeCompare(aCompany);
+      });
     case "experience-asc":
       return sorted.sort((a, b) => {
         const aYears = extractYears(a?.experience);
@@ -149,7 +169,7 @@ export function sortRecruiters(
 
 function extractYears(experience: string | undefined): number {
   // Extract number from strings like "5+ years", "3-5 years", "10+ years"
-  if (!experience || typeof experience !== 'string') {
+  if (!experience || typeof experience !== "string") {
     return 0;
   }
   const match = experience.match(/(\d+)/);
@@ -182,7 +202,7 @@ export function getStatistics(country: CountryCode): Statistics {
       experienceDistribution: { "1-3": 0, "3-5": 0, "5-10": 0, "10+": 0 },
     };
   }
-  
+
   const total = recruiters.length;
 
   // Count recruiters with/without photos

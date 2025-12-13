@@ -37,11 +37,13 @@ export async function GET(request: NextRequest) {
     console.log(`📊 Fetching recruiters for country: ${country}`);
     const recruiters = getRecruitersByCountry(country);
     console.log(`✅ Found ${recruiters.length} recruiters for ${country}`);
-    
+
     if (recruiters.length === 0) {
-      console.warn(`⚠️  No recruiters found for ${country}. This might indicate a data loading issue.`);
+      console.warn(
+        `⚠️  No recruiters found for ${country}. This might indicate a data loading issue.`
+      );
     }
-    
+
     const specializations = getAllSpecializations(country);
     const statistics = getStatistics(country);
 
