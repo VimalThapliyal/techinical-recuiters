@@ -6,16 +6,16 @@ let dataMap: Record<CountryCode, Recruiter[]> | null = null;
 
 async function loadDataMap(): Promise<Record<CountryCode, Recruiter[]>> {
   if (dataMap) return dataMap;
-  
+
   // Only load on server-side (Node.js environment)
   if (typeof window === "undefined") {
     try {
       const { readFileSync } = await import("fs");
       const { join } = await import("path");
-      
+
       const countries: CountryCode[] = ["us", "uk", "ca", "au", "in"];
       dataMap = {} as Record<CountryCode, Recruiter[]>;
-      
+
       for (const country of countries) {
         try {
           const filePath = join(process.cwd(), "data", `${country}.json`);
@@ -26,7 +26,7 @@ async function loadDataMap(): Promise<Record<CountryCode, Recruiter[]>> {
           dataMap[country] = [];
         }
       }
-      
+
       return dataMap;
     } catch (error) {
       console.error("Error loading data files:", error);
@@ -39,7 +39,7 @@ async function loadDataMap(): Promise<Record<CountryCode, Recruiter[]>> {
       };
     }
   }
-  
+
   // Client-side: return empty, should use API route
   return {
     us: [],
@@ -53,29 +53,70 @@ async function loadDataMap(): Promise<Record<CountryCode, Recruiter[]>> {
 // Synchronous version for server-side use (API routes, server components)
 function getDataMapSync(): Record<CountryCode, Recruiter[]> {
   if (dataMap) return dataMap;
-  
+
   if (typeof window === "undefined") {
     try {
       const { readFileSync } = require("fs");
       const { join } = require("path");
-      
+
       const countries: CountryCode[] = ["us", "uk", "ca", "au", "in"];
       dataMap = {} as Record<CountryCode, Recruiter[]>;
-      
+
       for (const country of countries) {
         try {
-          const filePath = join(process.cwd(), "data", `${country}.json`);
-          const fileContents = readFileSync(filePath, "utf8");
-          dataMap[country] = JSON.parse(fileContents) as Recruiter[];
+          // Try multiple possible paths for Vercel/serverless environments
+          const cwd = process.cwd();
+          const possiblePaths = [
+            join(cwd, "data", `${country}.json`),
+            join(cwd, "..", "data", `${country}.json`),
+            // For Vercel/serverless, files might be in a different location
+            join("/var/task", "data", `${country}.json`), // AWS Lambda
+            join("/var/runtime", "data", `${country}.json`), // AWS Lambda alternative
+          ];
+
+          // Also try __dirname if available (CommonJS)
+          try {
+            const dirname = __dirname;
+            possiblePaths.unshift(join(dirname, "..", "data", `${country}.json`));
+          } catch (e) {
+            // __dirname not available (ESM), skip
+          }
+
+          let fileContents: string | null = null;
+          let filePath: string | null = null;
+          let lastError: Error | null = null;
+
+          for (const path of possiblePaths) {
+            try {
+              fileContents = readFileSync(path, "utf8");
+              filePath = path;
+              break;
+            } catch (e) {
+              lastError = e instanceof Error ? e : new Error(String(e));
+              // Try next path
+              continue;
+            }
+          }
+
+          if (!fileContents) {
+            console.error(`❌ Could not find ${country}.json. Tried paths:`, possiblePaths);
+            console.error(`   Last error:`, lastError?.message);
+            console.error(`   Current working directory: ${cwd}`);
+            throw new Error(`Could not find ${country}.json in any expected location. CWD: ${cwd}`);
+          }
+
+          const parsed = JSON.parse(fileContents) as Recruiter[];
+          dataMap[country] = parsed;
+          console.log(`✅ Loaded ${parsed.length} recruiters for ${country} from ${filePath}`);
         } catch (error) {
-          console.error(`Error loading data for ${country}:`, error);
+          console.error(`❌ Error loading data for ${country}:`, error);
           dataMap[country] = [];
         }
       }
-      
+
       return dataMap;
     } catch (error) {
-      console.error("Error loading data files:", error);
+      console.error("❌ Error loading data files:", error);
       return {
         us: [],
         uk: [],
@@ -85,7 +126,7 @@ function getDataMapSync(): Record<CountryCode, Recruiter[]> {
       };
     }
   }
-  
+
   return {
     us: [],
     uk: [],
@@ -96,8 +137,18 @@ function getDataMapSync(): Record<CountryCode, Recruiter[]> {
 }
 
 export function getRecruitersByCountry(country: CountryCode): Recruiter[] {
-  const dataMap = getDataMapSync();
-  return dataMap[country] || [];
+  try {
+    const dataMap = getDataMapSync();
+    const recruiters = dataMap[country];
+    if (!recruiters || !Array.isArray(recruiters)) {
+      console.warn(`⚠️  No recruiters found for ${country} in dataMap`);
+      return [];
+    }
+    return recruiters;
+  } catch (error) {
+    console.error(`❌ Error in getRecruitersByCountry for ${country}:`, error);
+    return [];
+  }
 }
 
 export function getRecruiterById(
@@ -152,10 +203,16 @@ export function searchRecruiters(
 
 export function getAllSpecializations(country: CountryCode): string[] {
   const recruiters = getRecruitersByCountry(country);
+  if (!recruiters || !Array.isArray(recruiters)) {
+    return [];
+  }
+  
   const specializations = new Set<string>();
 
   recruiters.forEach((recruiter) => {
-    recruiter.specialization.forEach((spec) => specializations.add(spec));
+    if (recruiter && recruiter.specialization && Array.isArray(recruiter.specialization)) {
+      recruiter.specialization.forEach((spec) => specializations.add(spec));
+    }
   });
 
   return Array.from(specializations).sort();
@@ -241,6 +298,17 @@ export interface Statistics {
 
 export function getStatistics(country: CountryCode): Statistics {
   const recruiters = getRecruitersByCountry(country);
+  if (!recruiters || !Array.isArray(recruiters)) {
+    return {
+      total: 0,
+      withPhotos: 0,
+      withoutPhotos: 0,
+      topCompanies: [],
+      topSpecializations: [],
+      experienceDistribution: { "1-3": 0, "3-5": 0, "5-10": 0, "10+": 0 },
+    };
+  }
+  
   const total = recruiters.length;
 
   // Count recruiters with/without photos
@@ -262,9 +330,11 @@ export function getStatistics(country: CountryCode): Statistics {
   // Top specializations
   const specializationCounts: Record<string, number> = {};
   recruiters.forEach((r) => {
-    r.specialization.forEach((spec) => {
-      specializationCounts[spec] = (specializationCounts[spec] || 0) + 1;
-    });
+    if (r && r.specialization && Array.isArray(r.specialization)) {
+      r.specialization.forEach((spec) => {
+        specializationCounts[spec] = (specializationCounts[spec] || 0) + 1;
+      });
+    }
   });
   const topSpecializations = Object.entries(specializationCounts)
     .map(([specialization, count]) => ({ specialization, count }))

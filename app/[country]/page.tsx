@@ -11,10 +11,7 @@ import { Recruiter } from "@/types/recruiter";
 import { CountryCode } from "@/types/recruiter";
 import { UserProfile } from "@/types/user";
 import { isValidCountryCode } from "@/lib/subdomain";
-import {
-  sortRecruiters,
-  SortOption,
-} from "@/lib/data";
+import { sortRecruiters, SortOption } from "@/lib/data";
 import { StatisticsDashboard } from "@/components/StatisticsDashboard";
 import { calculateMatchScore } from "@/lib/matching";
 import { Footer } from "@/components/Footer";
@@ -81,7 +78,7 @@ export default function CountryPage() {
   useEffect(() => {
     // Load recruiters for the country via API to avoid bundling large JSON files
     setLoading(true);
-    
+
     const fetchData = async () => {
       try {
         const response = await fetch(`/api/recruiters?country=${country}`);
@@ -89,7 +86,7 @@ export default function CountryPage() {
           throw new Error(`Failed to fetch: ${response.status}`);
         }
         const data = await response.json();
-        
+
         setRecruiters(data.recruiters || []);
         // Extract specializations from recruiters if not provided
         if (data.specializations && data.specializations.length > 0) {
@@ -101,7 +98,7 @@ export default function CountryPage() {
           });
           setSpecializations(Array.from(specSet).sort());
         }
-        
+
         // Extract companies from recruiters
         const companySet = new Set<string>();
         (data.recruiters || []).forEach((r: Recruiter) => {
@@ -110,7 +107,7 @@ export default function CountryPage() {
           }
         });
         setCompanies(Array.from(companySet).sort());
-        
+
         // Use statistics from API response, or calculate from fetched data
         if (data.statistics) {
           setStatistics(data.statistics);
@@ -118,9 +115,11 @@ export default function CountryPage() {
           // Fallback: calculate from fetched recruiters
           const recruiters = data.recruiters || [];
           const total = recruiters.length;
-          const withPhotos = recruiters.filter((r: Recruiter) => r.imageUrl).length;
+          const withPhotos = recruiters.filter(
+            (r: Recruiter) => r.imageUrl
+          ).length;
           const withoutPhotos = total - withPhotos;
-          
+
           // Top companies
           const companyCounts: Record<string, number> = {};
           recruiters.forEach((r: Recruiter) => {
@@ -132,32 +131,33 @@ export default function CountryPage() {
             .map(([company, count]) => ({ company, count }))
             .sort((a, b) => b.count - a.count)
             .slice(0, 10);
-          
+
           // Top specializations
           const specializationCounts: Record<string, number> = {};
           recruiters.forEach((r: Recruiter) => {
             r.specialization.forEach((spec) => {
-              specializationCounts[spec] = (specializationCounts[spec] || 0) + 1;
+              specializationCounts[spec] =
+                (specializationCounts[spec] || 0) + 1;
             });
           });
           const topSpecializations = Object.entries(specializationCounts)
             .map(([specialization, count]) => ({ specialization, count }))
             .sort((a, b) => b.count - a.count)
             .slice(0, 10);
-          
+
           // Experience distribution
           const extractYears = (exp: string): number => {
             const match = exp.match(/(\d+)/);
             return match ? parseInt(match[1], 10) : 0;
           };
-          
+
           const experienceDistribution = {
             "1-3": 0,
             "3-5": 0,
             "5-10": 0,
             "10+": 0,
           };
-          
+
           recruiters.forEach((r: Recruiter) => {
             const years = extractYears(r.experience);
             if (years >= 1 && years < 3) {
@@ -170,7 +170,7 @@ export default function CountryPage() {
               experienceDistribution["10+"]++;
             }
           });
-          
+
           setStatistics({
             total,
             withPhotos,
@@ -180,7 +180,7 @@ export default function CountryPage() {
             experienceDistribution,
           });
         }
-        
+
         setSearchQuery("");
         setSelectedSpecialization("all");
         setSelectedCompany("all");
@@ -204,7 +204,7 @@ export default function CountryPage() {
         setLoading(false);
       }
     };
-    
+
     fetchData();
   }, [country]);
 
