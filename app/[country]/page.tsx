@@ -30,6 +30,7 @@ export default function CountryPage() {
 
   const [recruiters, setRecruiters] = useState<Recruiter[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [debouncedSearchQuery, setDebouncedSearchQuery] = useState("");
   const [selectedSpecialization, setSelectedSpecialization] = useState("all");
   const [selectedCompany, setSelectedCompany] = useState("all");
   const [sortBy, setSortBy] = useState<SortOption>("name-asc");
@@ -38,6 +39,8 @@ export default function CountryPage() {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
+  const [totalCount, setTotalCount] = useState(0);
+  const [totalPages, setTotalPages] = useState(0);
   const [statistics, setStatistics] = useState<StatisticsType>({
     total: 0,
     withPhotos: 0,
@@ -88,7 +91,73 @@ export default function CountryPage() {
     }
   }, []);
 
-  // Calculate match scores when user profile or recruiters change
+  // Debounce search query to reduce API calls
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearchQuery(searchQuery);
+    }, 300); // 300ms delay
+
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
+
+
+  // Fetch recruiters with server-side pagination and filtering
+  useEffect(() => {
+    setLoading(true);
+
+    const fetchData = async () => {
+      try {
+        // Build query parameters
+        const params = new URLSearchParams({
+          country,
+          page: String(currentPage),
+          limit: String(ITEMS_PER_PAGE),
+          sortBy,
+        });
+
+        if (debouncedSearchQuery.trim()) {
+          params.append("q", debouncedSearchQuery);
+        }
+        if (selectedSpecialization !== "all") {
+          params.append("specialization", selectedSpecialization);
+        }
+        if (selectedCompany !== "all") {
+          params.append("company", selectedCompany);
+        }
+
+        const response = await fetch(`/api/recruiters?${params.toString()}`);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch: ${response.status}`);
+        }
+        const data = await response.json();
+
+        setRecruiters(data.recruiters || []);
+        setTotalCount(data.total || 0);
+        setTotalPages(data.totalPages || 0);
+
+        // Update specializations and companies if provided (only on first page)
+        if (data.specializations && data.specializations.length > 0) {
+          setSpecializations(data.specializations);
+        }
+        if (data.companies && data.companies.length > 0) {
+          setCompanies(data.companies);
+        }
+
+        // Update statistics if provided
+        if (data.statistics) {
+          setStatistics(data.statistics);
+        }
+      } catch (error) {
+        console.error("Failed to fetch recruiters:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [country, currentPage, debouncedSearchQuery, selectedSpecialization, selectedCompany, sortBy]);
+
+  // Calculate match scores for current page of recruiters only
   useEffect(() => {
     if (userProfile && userProfile.skills.length > 0 && recruiters.length > 0) {
       const scores = new Map<string, number>();
@@ -102,188 +171,12 @@ export default function CountryPage() {
     }
   }, [userProfile, recruiters]);
 
+  // Reset to page 1 when filters change (but not on initial load)
   useEffect(() => {
-    // Load recruiters for the country via API to avoid bundling large JSON files
-    setLoading(true);
-
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`/api/recruiters?country=${country}`);
-        if (!response.ok) {
-          throw new Error(`Failed to fetch: ${response.status}`);
-        }
-        const data = await response.json();
-
-        setRecruiters(data.recruiters || []);
-        // Extract specializations from recruiters if not provided
-        if (data.specializations && data.specializations.length > 0) {
-          setSpecializations(data.specializations);
-        } else {
-          const specSet = new Set<string>();
-          (data.recruiters || []).forEach((r: Recruiter) => {
-            r.specialization?.forEach((spec) => specSet.add(spec));
-          });
-          setSpecializations(Array.from(specSet).sort());
-        }
-
-        // Extract companies from recruiters
-        const companySet = new Set<string>();
-        (data.recruiters || []).forEach((r: Recruiter) => {
-          if (r.company && r.company !== "Unknown Company") {
-            companySet.add(r.company);
-          }
-        });
-        setCompanies(Array.from(companySet).sort());
-
-        // Use statistics from API response, or calculate from fetched data
-        if (data.statistics) {
-          setStatistics(data.statistics);
-        } else {
-          // Fallback: calculate statistics if API doesn't provide them
-          const recruiters = data.recruiters || [];
-          const total = recruiters.length;
-          const withPhotos = recruiters.filter(
-            (r: Recruiter) => r.imageUrl
-          ).length;
-          const withoutPhotos = total - withPhotos;
-
-          // Top companies
-          const companyCounts: Record<string, number> = {};
-          recruiters.forEach((r: Recruiter) => {
-            if (r.company && r.company !== "Unknown Company") {
-              companyCounts[r.company] = (companyCounts[r.company] || 0) + 1;
-            }
-          });
-          const topCompanies = Object.entries(companyCounts)
-            .map(([company, count]) => ({ company, count }))
-            .sort((a, b) => b.count - a.count)
-            .slice(0, 10);
-
-          // Top specializations
-          const specializationCounts: Record<string, number> = {};
-          recruiters.forEach((r: Recruiter) => {
-            r.specialization?.forEach((spec) => {
-              specializationCounts[spec] =
-                (specializationCounts[spec] || 0) + 1;
-            });
-          });
-          const topSpecializations = Object.entries(specializationCounts)
-            .map(([specialization, count]) => ({ specialization, count }))
-            .sort((a, b) => b.count - a.count)
-            .slice(0, 10);
-
-          // Experience distribution
-          const extractYears = (exp: string): number => {
-            const match = exp.match(/(\d+)/);
-            return match ? parseInt(match[1], 10) : 0;
-          };
-
-          const experienceDistribution = {
-            "1-3": 0,
-            "3-5": 0,
-            "5-10": 0,
-            "10+": 0,
-          };
-
-          recruiters.forEach((r: Recruiter) => {
-            const years = extractYears(r.experience);
-            if (years >= 1 && years < 3) {
-              experienceDistribution["1-3"]++;
-            } else if (years >= 3 && years < 5) {
-              experienceDistribution["3-5"]++;
-            } else if (years >= 5 && years < 10) {
-              experienceDistribution["5-10"]++;
-            } else if (years >= 10) {
-              experienceDistribution["10+"]++;
-            }
-          });
-
-          setStatistics({
-            total,
-            withPhotos,
-            withoutPhotos,
-            topCompanies,
-            topSpecializations,
-            experienceDistribution,
-          });
-        }
-
-        setSearchQuery("");
-        setSelectedSpecialization("all");
-        setSelectedCompany("all");
-        setSortBy("name-asc");
-        setCurrentPage(1);
-      } catch (error) {
-        console.error("Failed to fetch recruiters:", error);
-        // Optionally set an error state to display to the user
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [country]);
-
-  // Filter and sort recruiters
-  const filteredAndSortedRecruiters = useMemo(() => {
-    let filtered = [...recruiters];
-
-    // Apply search filter
-    if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase();
-      filtered = filtered.filter(
-        (r) =>
-          r.name?.toLowerCase().includes(query) ||
-          r.company?.toLowerCase().includes(query) ||
-          r.bio?.toLowerCase().includes(query) ||
-          r.specialization?.some((s) => s.toLowerCase().includes(query))
-      );
+    if (currentPage !== 1) {
+      setCurrentPage(1);
     }
-
-    // Apply specialization filter
-    if (selectedSpecialization !== "all") {
-      filtered = filtered.filter((r) =>
-        r.specialization?.some((s) =>
-          s.toLowerCase().includes(selectedSpecialization.toLowerCase())
-        )
-      );
-    }
-
-    // Apply company filter
-    if (selectedCompany !== "all") {
-      filtered = filtered.filter(
-        (r) => r.company?.toLowerCase() === selectedCompany.toLowerCase()
-      );
-    }
-
-    // Sort recruiters
-    const sorted = sortRecruiters(filtered, sortBy, matchScores);
-
-    return sorted;
-  }, [
-    recruiters,
-    searchQuery,
-    selectedSpecialization,
-    selectedCompany,
-    sortBy,
-    matchScores,
-  ]);
-
-  // Paginate results
-  const paginatedRecruiters = useMemo(() => {
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const endIndex = startIndex + ITEMS_PER_PAGE;
-    return filteredAndSortedRecruiters.slice(startIndex, endIndex);
-  }, [filteredAndSortedRecruiters, currentPage]);
-
-  const totalPages = Math.ceil(
-    filteredAndSortedRecruiters.length / ITEMS_PER_PAGE
-  );
-
-  // Reset to page 1 when filters change
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [searchQuery, selectedSpecialization, selectedCompany, sortBy]);
+  }, [debouncedSearchQuery, selectedSpecialization, selectedCompany, sortBy]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -348,7 +241,7 @@ export default function CountryPage() {
               <div className="text-small text-[#666666] font-medium">
                 Showing{" "}
                 <span className="font-semibold text-[#000000]">
-                  {paginatedRecruiters.length > 0
+                  {recruiters.length > 0
                     ? (currentPage - 1) * ITEMS_PER_PAGE + 1
                     : 0}
                 </span>{" "}
@@ -356,23 +249,18 @@ export default function CountryPage() {
                 <span className="font-semibold text-[#000000]">
                   {Math.min(
                     currentPage * ITEMS_PER_PAGE,
-                    filteredAndSortedRecruiters.length
+                    totalCount
                   )}
                 </span>{" "}
                 of{" "}
                 <span className="font-semibold text-[#000000]">
-                  {filteredAndSortedRecruiters.length}
+                  {totalCount}
                 </span>{" "}
                 recruiters
-                {filteredAndSortedRecruiters.length !== recruiters.length && (
-                  <span className="ml-2 text-[#999999]">
-                    (filtered from {recruiters.length} total)
-                  </span>
-                )}
               </div>
             </div>
             <RecruiterGrid
-              recruiters={paginatedRecruiters}
+              recruiters={recruiters}
               country={country}
               viewMode={viewMode}
               loading={loading}
