@@ -1,61 +1,5 @@
 [
   {
-    "id": "au-001",
-    "name": "Nathan Sutherland",
-    "country": "AU",
-    "company": "Sideline Talent Solutions",
-    "specialization": [
-      "Talent Acquisition",
-      "IT Recruitment"
-    ],
-    "experience": "5+ years",
-    "bio": "Director / Tech Recruiter | Australia | Helping Australia's tech industry hire software engineers / developers. After completing a Psychology degree in ...",
-    "linkedinUrl": "https://au.linkedin.com/in/nathan-sutherland-9000a9114",
-    "imageUrl": ""
-  },
-  {
-    "id": "au-002",
-    "name": "Joshua Sharpe",
-    "country": "AU",
-    "company": "Independent",
-    "specialization": [
-      "Talent Acquisition",
-      "IT Recruitment"
-    ],
-    "experience": "8+ years",
-    "bio": "Recruiter and Talent Acquisition Specialist 8 Years Recruiting across Technology, Digital Marketing and Design Currently working alongside HR and talent ...",
-    "linkedinUrl": "https://au.linkedin.com/in/joshuasharpe174",
-    "imageUrl": ""
-  },
-  {
-    "id": "au-003",
-    "name": "Harvey Jutton",
-    "country": "AU",
-    "company": "Unfiltered Recruiter",
-    "specialization": [
-      "Talent Acquisition",
-      "IT Recruitment"
-    ],
-    "experience": "5+ years",
-    "bio": "Unfiltered Recruiter | Founder | CEO | Recruiting the best people in the world in order to change the world | AI Enthusiast.",
-    "linkedinUrl": "https://au.linkedin.com/in/harvey-jutton-a840ab268",
-    "imageUrl": ""
-  },
-  {
-    "id": "au-004",
-    "name": "Danny Hansard",
-    "country": "AU",
-    "company": "Independent",
-    "specialization": [
-      "Talent Acquisition",
-      "IT Recruitment"
-    ],
-    "experience": "5+ years",
-    "bio": "Startup Founder | Experienced Tech Recruiter After working for a number of recruitment companies and picking up a passion for recruiting in software engineering and product management within the tech space ...",
-    "linkedinUrl": "https://au.linkedin.com/in/dannyhansard",
-    "imageUrl": ""
-  },
-  {
     "id": "au-005",
     "name": "Amy Schultz",
     "country": "AU",
@@ -96,20 +40,6 @@
     "bio": "Senior/Lead recruitment/talent acquisition specialist, consulting with organisations/managers/stakeholders to find the best solution/s for their needs.",
     "linkedinUrl": "https://au.linkedin.com/in/adamsydneyitrec",
     "imageUrl": "https://media.licdn.com/dms/image/v2/D5635AQEVuZ858vGZCQ/profile-framedphoto-shrink_800_800/B56ZrhP.OuLsAk-/0/1764715652235?e=1766253600&v=beta&t=65o9NoXGpdYlTUlLY21uB_gJb1r1uGPxsIiivex5By0"
-  },
-  {
-    "id": "au-008",
-    "name": "Aman Kumar",
-    "country": "AU",
-    "company": "Zone IT Solutions",
-    "specialization": [
-      "Talent Acquisition",
-      "IT Recruitment"
-    ],
-    "experience": "6+ years",
-    "bio": "Recruitment Consultant | Zone IT Solutions With an MBA degree in Human Resources Development and over six years of experience in IT and non-IT recruitment...",
-    "linkedinUrl": "https://www.linkedin.com/in/aman-kumar933",
-    "imageUrl": "https://media.licdn.com/dms/image/v2/D4D35AQFbq_gp0qIFOQ/profile-framedphoto-shrink_400_400/B4DZpJ6Cq0JUAc-/0/1762176543673?e=1766253600&v=beta&t=Z3CaTOpDd_q1l6LSZV2T0tr4qHafTcZ0swglsL1ouWQ"
   },
   {
     "id": "au-009",
@@ -182,20 +112,6 @@
     "imageUrl": ""
   },
   {
-    "id": "au-014",
-    "name": "Eli Gündüz",
-    "country": "AU",
-    "company": "Independent",
-    "specialization": [
-      "Talent Acquisition",
-      "IT Recruitment"
-    ],
-    "experience": "10+ years",
-    "bio": "I help tech professionals land $140K–$300K+ offers ... hiring top tech talent for fast-growing companies like Atlassian across Australia, NZ, and ...",
-    "linkedinUrl": "https://au.linkedin.com/in/eligunduz",
-    "imageUrl": ""
-  },
-  {
     "id": "au-015",
     "name": "Chris Reid",
     "country": "AU",
@@ -222,20 +138,6 @@
     "bio": "Experienced recruiter in Melbourne focusing on IT and technology roles.",
     "linkedinUrl": "https://au.linkedin.com/in/amy-johnston-23024432",
     "imageUrl": "https://media.licdn.com/dms/image/v2/D5603AQElGxIxZ6PUrA/profile-displayphoto-scale_400_400/B56ZrdghciLoAg-/0/1764652882216?e=1767225600&v=beta&t=nVS4xdM36qLeYAJI6xVEW7wP2Sha1tS7GDmIMrN0BUw"
-  },
-  {
-    "id": "au-017",
-    "name": "Matt Gold",
-    "country": "AU",
-    "company": "Re:Sourced",
-    "specialization": [
-      "Talent Acquisition",
-      "IT Recruitment"
-    ],
-    "experience": "13+ years",
-    "bio": "Founder & Director specializing in engineering and IT recruitment in Sydney.",
-    "linkedinUrl": "https://au.linkedin.com/in/mattcgold",
-    "imageUrl": ""
   },
   {
     "id": "au-018",

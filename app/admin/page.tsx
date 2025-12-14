@@ -30,6 +30,8 @@ import {
   Square,
   Edit,
   Users,
+  Pencil,
+  Check,
 } from "lucide-react";
 import { EditRecruiterModal } from "@/components/EditRecruiterModal";
 import { useToast } from "@/components/ui/toast";
@@ -64,6 +66,14 @@ export default function AdminPage() {
   const [editingRecruiter, setEditingRecruiter] = useState<Recruiter | null>(
     null
   );
+  const [editingImageId, setEditingImageId] = useState<string | null>(null);
+  const [editingImageUrl, setEditingImageUrl] = useState<string>("");
+  const [isSavingImage, setIsSavingImage] = useState(false);
+  const [duplicates, setDuplicates] = useState<
+    Array<{ recruiter: Recruiter; reason: string; duplicates: Recruiter[] }>
+  >([]);
+  const [showDuplicates, setShowDuplicates] = useState(false);
+  const [isScanningDuplicates, setIsScanningDuplicates] = useState(false);
 
   useEffect(() => {
     // Check authentication
@@ -129,24 +139,44 @@ export default function AdminPage() {
   };
 
   const handleDeleteRecruiter = async (recruiterId: string) => {
-    const response = await fetch("/api/admin/delete-recruiter", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ recruiterId }),
-    });
+    try {
+      const response = await fetch("/api/admin/delete-recruiter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ recruiterId }),
+      });
 
-    if (!response.ok) {
-      throw new Error("Failed to delete recruiter");
+      if (!response.ok) {
+        let errorMessage = "Failed to delete recruiter";
+        try {
+          const errorData = await response.json();
+          errorMessage = errorData.error || errorData.details || errorMessage;
+        } catch (e) {
+          // If response is not JSON, use status text
+          errorMessage = response.statusText || errorMessage;
+        }
+        throw new Error(errorMessage);
+      }
+
+      addToast({
+        title: "Deleted!",
+        description: "Recruiter has been removed from the directory",
+        variant: "success",
+      });
+
+      // Refresh recruiters list
+      fetchRecruiters();
+    } catch (error) {
+      console.error("Error deleting recruiter:", error);
+      const errorMessage =
+        error instanceof Error ? error.message : "Failed to delete recruiter";
+      addToast({
+        title: "Error",
+        description: errorMessage,
+        variant: "error",
+      });
+      // Don't re-throw - we've already shown the error to the user
     }
-
-    addToast({
-      title: "Deleted!",
-      description: "Recruiter has been removed from the directory",
-      variant: "success",
-    });
-
-    // Refresh recruiters list
-    fetchRecruiters();
   };
 
   const handleDeactivateRecruiter = async (
@@ -165,6 +195,111 @@ export default function AdminPage() {
 
     // Refresh recruiters list
     fetchRecruiters();
+  };
+
+  const normalizeLinkedInUrl = (url: string): string => {
+    if (!url || typeof url !== "string") return "";
+    try {
+      const urlObj = new URL(url);
+      urlObj.search = "";
+      urlObj.hash = "";
+      let normalized = urlObj.toString();
+      if (normalized.endsWith("/")) {
+        normalized = normalized.slice(0, -1);
+      }
+      return normalized.toLowerCase();
+    } catch (e) {
+      return url.toLowerCase();
+    }
+  };
+
+  const scanForDuplicates = () => {
+    setIsScanningDuplicates(true);
+    const duplicateMap = new Map<string, Recruiter[]>();
+    const nameCompanyMap = new Map<string, Recruiter[]>();
+    const foundDuplicates: Array<{
+      recruiter: Recruiter;
+      reason: string;
+      duplicates: Recruiter[];
+    }> = [];
+
+    recruiters.forEach((recruiter) => {
+      // Check by LinkedIn URL
+      const normalizedUrl = normalizeLinkedInUrl(recruiter.linkedinUrl);
+      if (normalizedUrl) {
+        if (!duplicateMap.has(normalizedUrl)) {
+          duplicateMap.set(normalizedUrl, []);
+        }
+        duplicateMap.get(normalizedUrl)!.push(recruiter);
+      }
+
+      // Check by name + company
+      const nameCompanyKey = `${(recruiter.name || "").toLowerCase()}::${(
+        recruiter.company || ""
+      ).toLowerCase()}`;
+      if (nameCompanyKey && nameCompanyKey !== "::") {
+        if (!nameCompanyMap.has(nameCompanyKey)) {
+          nameCompanyMap.set(nameCompanyKey, []);
+        }
+        nameCompanyMap.get(nameCompanyKey)!.push(recruiter);
+      }
+    });
+
+    // Find duplicates by URL
+    duplicateMap.forEach((recruiterList, url) => {
+      if (recruiterList.length > 1) {
+        recruiterList.forEach((recruiter) => {
+          const duplicates = recruiterList.filter((r) => r.id !== recruiter.id);
+          if (duplicates.length > 0) {
+            foundDuplicates.push({
+              recruiter,
+              reason: "duplicate LinkedIn URL",
+              duplicates,
+            });
+          }
+        });
+      }
+    });
+
+    // Find duplicates by name + company
+    nameCompanyMap.forEach((recruiterList, key) => {
+      if (recruiterList.length > 1) {
+        recruiterList.forEach((recruiter) => {
+          const duplicates = recruiterList.filter((r) => r.id !== recruiter.id);
+          if (duplicates.length > 0) {
+            // Only add if not already added as URL duplicate
+            const existing = foundDuplicates.find(
+              (d) => d.recruiter.id === recruiter.id
+            );
+            if (!existing) {
+              foundDuplicates.push({
+                recruiter,
+                reason: "duplicate name and company",
+                duplicates,
+              });
+            }
+          }
+        });
+      }
+    });
+
+    setDuplicates(foundDuplicates);
+    setShowDuplicates(true);
+    setIsScanningDuplicates(false);
+
+    if (foundDuplicates.length > 0) {
+      addToast({
+        title: "Duplicates Found",
+        description: `Found ${foundDuplicates.length} duplicate record(s)`,
+        variant: "default",
+      });
+    } else {
+      addToast({
+        title: "No Duplicates",
+        description: "All records are unique",
+        variant: "success",
+      });
+    }
   };
 
   // Filter and search submissions
@@ -681,6 +816,140 @@ export default function AdminPage() {
           {/* Existing Recruiters Tab */}
           {activeTab === "recruiters" && (
             <>
+              {/* Duplicate Detection Section */}
+              <Card className="linkedin-card mb-6">
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2">
+                        Duplicate Detection
+                      </h3>
+                      <p className="text-sm text-[#666666]">
+                        Find duplicate recruiters by LinkedIn URL or name +
+                        company
+                      </p>
+                    </div>
+                    <Button
+                      onClick={scanForDuplicates}
+                      disabled={isScanningDuplicates || recruiters.length === 0}
+                      variant="outline"
+                    >
+                      {isScanningDuplicates ? (
+                        <>Scanning...</>
+                      ) : (
+                        <>
+                          <Search className="h-4 w-4 mr-2" />
+                          Scan for Duplicates
+                        </>
+                      )}
+                    </Button>
+                  </div>
+                  {duplicates.length > 0 && (
+                    <div className="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                      <p className="text-sm font-semibold text-yellow-900">
+                        ⚠️ Found {duplicates.length} duplicate record(s)
+                      </p>
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => setShowDuplicates(!showDuplicates)}
+                        className="mt-2"
+                      >
+                        {showDuplicates ? "Hide" : "Show"} Duplicates
+                      </Button>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+
+              {/* Duplicates List */}
+              {showDuplicates && duplicates.length > 0 && (
+                <Card className="linkedin-card mb-6 border-yellow-300">
+                  <CardHeader>
+                    <CardTitle className="text-lg text-yellow-900">
+                      Duplicate Records ({duplicates.length})
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-6">
+                      {duplicates.map((dup, index) => (
+                        <div
+                          key={`${dup.recruiter.id}-${index}`}
+                          className="border border-yellow-200 rounded-lg p-4 bg-yellow-50"
+                        >
+                          <div className="flex items-start justify-between mb-3">
+                            <div>
+                              <h4 className="font-semibold text-base mb-1">
+                                {dup.recruiter.name}
+                              </h4>
+                              <p className="text-sm text-[#666666]">
+                                {dup.recruiter.company} •{" "}
+                                {dup.recruiter.country}
+                              </p>
+                              <Badge variant="destructive" className="mt-2">
+                                {dup.reason}
+                              </Badge>
+                            </div>
+                            <Button
+                              size="sm"
+                              variant="destructive"
+                              onClick={async () => {
+                                if (confirm(`Delete ${dup.recruiter.name}?`)) {
+                                  try {
+                                    await handleDeleteRecruiter(
+                                      dup.recruiter.id
+                                    );
+                                    scanForDuplicates(); // Rescan after deletion
+                                  } catch (error) {
+                                    console.error("Error deleting:", error);
+                                    // Error toast is already shown by handleDeleteRecruiter
+                                  }
+                                }
+                              }}
+                            >
+                              <X className="h-4 w-4 mr-1" />
+                              Delete
+                            </Button>
+                          </div>
+                          <div className="mt-3">
+                            <p className="text-sm font-semibold mb-2 text-yellow-900">
+                              Duplicate of:
+                            </p>
+                            <div className="space-y-2">
+                              {dup.duplicates.map((duplicate) => (
+                                <div
+                                  key={duplicate.id}
+                                  className="flex items-center justify-between p-2 bg-white rounded border border-yellow-200"
+                                >
+                                  <div>
+                                    <span className="font-medium">
+                                      {duplicate.name}
+                                    </span>
+                                    <span className="text-sm text-[#666666] ml-2">
+                                      {duplicate.company} • {duplicate.country}
+                                    </span>
+                                  </div>
+                                  <Button
+                                    size="sm"
+                                    variant="outline"
+                                    onClick={() =>
+                                      setEditingRecruiter(duplicate)
+                                    }
+                                  >
+                                    <Edit className="h-3 w-3 mr-1" />
+                                    Edit
+                                  </Button>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              )}
+
               {/* Search and Filters for Recruiters */}
               <Card className="linkedin-card mb-6">
                 <CardContent className="p-6">
@@ -732,42 +1001,48 @@ export default function AdminPage() {
                       </SelectContent>
                     </Select>
                   </div>
-                  <div className="mt-4 text-sm text-[#666666]">
-                    Showing{" "}
-                    {
-                      recruiters.filter((r) => {
-                        // Country filter
-                        if (
-                          countryFilter !== "all" &&
-                          r.country.toLowerCase() !==
-                            countryFilter.toLowerCase()
-                        )
-                          return false;
+                  <div className="mt-4 flex items-center justify-between">
+                    <div className="text-sm text-[#666666]">
+                      Showing{" "}
+                      {
+                        recruiters.filter((r) => {
+                          // Country filter
+                          if (
+                            countryFilter !== "all" &&
+                            r.country.toLowerCase() !==
+                              countryFilter.toLowerCase()
+                          )
+                            return false;
 
-                        // Image filter
-                        if (imageFilter === "with-image" && !r.imageUrl) {
-                          return false;
-                        }
-                        if (imageFilter === "no-image" && r.imageUrl) {
-                          return false;
-                        }
+                          // Image filter
+                          if (imageFilter === "with-image" && !r.imageUrl) {
+                            return false;
+                          }
+                          if (imageFilter === "no-image" && r.imageUrl) {
+                            return false;
+                          }
 
-                        // Search filter
-                        if (searchQuery.trim()) {
-                          const query = searchQuery.toLowerCase();
-                          return (
-                            r.name?.toLowerCase().includes(query) ||
-                            r.company?.toLowerCase().includes(query) ||
-                            r.bio?.toLowerCase().includes(query) ||
-                            r.specialization?.some((s) =>
-                              s.toLowerCase().includes(query)
-                            )
-                          );
-                        }
-                        return true;
-                      }).length
-                    }{" "}
-                    of {recruiters.length} recruiters
+                          // Search filter
+                          if (searchQuery.trim()) {
+                            const query = searchQuery.toLowerCase();
+                            return (
+                              r.name?.toLowerCase().includes(query) ||
+                              r.company?.toLowerCase().includes(query) ||
+                              r.bio?.toLowerCase().includes(query) ||
+                              r.specialization?.some((s) =>
+                                s.toLowerCase().includes(query)
+                              )
+                            );
+                          }
+                          return true;
+                        }).length
+                      }{" "}
+                      of {recruiters.length} recruiters
+                    </div>
+                    <div className="text-sm font-semibold text-[#0077b5]">
+                      📷 {recruiters.filter((r) => !r.imageUrl).length} without
+                      profile photo
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -857,21 +1132,115 @@ export default function AdminPage() {
                             </a>
                           </div>
 
-                          {recruiter.imageUrl && (
-                            <div>
-                              <h4 className="text-sm font-semibold mb-2">
-                                Profile Image
-                              </h4>
-                              <img
-                                src={recruiter.imageUrl}
-                                alt={recruiter.name}
-                                className="w-20 h-20 rounded-full object-cover border border-[#e0e0e0]"
-                                onError={(e) => {
-                                  e.currentTarget.style.display = "none";
-                                }}
-                              />
-                            </div>
-                          )}
+                          <div>
+                            <h4 className="text-sm font-semibold mb-2">
+                              Profile Image
+                            </h4>
+                            {editingImageId === recruiter.id ? (
+                              <div className="flex items-start gap-2">
+                                <div className="flex-1">
+                                  <Input
+                                    value={editingImageUrl}
+                                    onChange={(e) =>
+                                      setEditingImageUrl(e.target.value)
+                                    }
+                                    placeholder="Enter image URL"
+                                    className="text-sm"
+                                  />
+                                  {editingImageUrl && (
+                                    <img
+                                      src={editingImageUrl}
+                                      alt="Preview"
+                                      className="w-20 h-20 rounded-full object-cover border border-[#e0e0e0] mt-2"
+                                      onError={(e) => {
+                                        e.currentTarget.style.display = "none";
+                                      }}
+                                    />
+                                  )}
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                  <Button
+                                    size="sm"
+                                    onClick={async () => {
+                                      setIsSavingImage(true);
+                                      try {
+                                        const updatedRecruiter = {
+                                          ...recruiter,
+                                          imageUrl:
+                                            editingImageUrl.trim() || undefined,
+                                        };
+                                        await handleUpdateRecruiter(
+                                          updatedRecruiter
+                                        );
+                                        setEditingImageId(null);
+                                        setEditingImageUrl("");
+                                        addToast({
+                                          title: "Success!",
+                                          description:
+                                            "Image URL updated successfully",
+                                          variant: "success",
+                                        });
+                                      } catch (error) {
+                                        addToast({
+                                          title: "Error",
+                                          description:
+                                            "Failed to update image URL",
+                                          variant: "error",
+                                        });
+                                      } finally {
+                                        setIsSavingImage(false);
+                                      }
+                                    }}
+                                    disabled={isSavingImage}
+                                  >
+                                    <Check className="h-4 w-4" />
+                                  </Button>
+                                  <Button
+                                    size="sm"
+                                    variant="outline"
+                                    onClick={() => {
+                                      setEditingImageId(null);
+                                      setEditingImageUrl("");
+                                    }}
+                                    disabled={isSavingImage}
+                                  >
+                                    <X className="h-4 w-4" />
+                                  </Button>
+                                </div>
+                              </div>
+                            ) : (
+                              <div className="relative group inline-block">
+                                {recruiter.imageUrl ? (
+                                  <img
+                                    src={recruiter.imageUrl}
+                                    alt={recruiter.name}
+                                    className="w-20 h-20 rounded-full object-cover border border-[#e0e0e0]"
+                                    onError={(e) => {
+                                      e.currentTarget.style.display = "none";
+                                    }}
+                                  />
+                                ) : (
+                                  <div className="w-20 h-20 rounded-full border-2 border-dashed border-[#e0e0e0] flex items-center justify-center bg-[#f9fafb]">
+                                    <span className="text-xs text-[#666666]">
+                                      No Image
+                                    </span>
+                                  </div>
+                                )}
+                                <button
+                                  onClick={() => {
+                                    setEditingImageId(recruiter.id);
+                                    setEditingImageUrl(
+                                      recruiter.imageUrl || ""
+                                    );
+                                  }}
+                                  className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-full cursor-pointer"
+                                  title="Edit image URL"
+                                >
+                                  <Pencil className="h-5 w-5 text-white" />
+                                </button>
+                              </div>
+                            )}
+                          </div>
 
                           <div>
                             <h4 className="text-sm font-semibold mb-2">Bio</h4>
