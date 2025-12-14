@@ -124,7 +124,8 @@ export function EditRecruiterModal({
       onClose();
     } catch (error) {
       console.error("Update error:", error);
-      const errorMessage = error instanceof Error ? error.message : "Unknown error";
+      const errorMessage =
+        error instanceof Error ? error.message : "Unknown error";
       addToast({
         title: "Error",
         description: `Failed to update recruiter profile: ${errorMessage}`,

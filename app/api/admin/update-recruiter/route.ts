@@ -5,10 +5,12 @@ import { Recruiter } from "@/types/recruiter";
 import { CountryCode } from "@/types/recruiter";
 
 export async function POST(request: NextRequest) {
+  let recruiter: any = null;
   try {
-    const { recruiter } = await request.json();
+    const body = await request.json();
+    recruiter = body.recruiter;
 
-    if (!recruiter || !recruiter.id) {
+    if (!recruiter || !recruiter?.id) {
       return NextResponse.json(
         { error: "Invalid recruiter data" },
         { status: 400 }
@@ -102,12 +104,16 @@ export async function POST(request: NextRequest) {
     if (oldCountryCode !== countryCode) {
       // Remove from old country file
       oldRecruiters.splice(recruiterIndex, 1);
-      
+
       try {
         writeFileSync(oldDataFilePath, JSON.stringify(oldRecruiters, null, 2));
       } catch (writeError) {
         console.error("Error writing to old country file:", writeError);
-        throw new Error(`Failed to write to ${oldDataFilePath}: ${writeError instanceof Error ? writeError.message : 'Unknown error'}`);
+        throw new Error(
+          `Failed to write to ${oldDataFilePath}: ${
+            writeError instanceof Error ? writeError.message : "Unknown error"
+          }`
+        );
       }
 
       // Add to new country file
@@ -116,7 +122,11 @@ export async function POST(request: NextRequest) {
         writeFileSync(dataFilePath, JSON.stringify(recruiters, null, 2));
       } catch (writeError) {
         console.error("Error writing to new country file:", writeError);
-        throw new Error(`Failed to write to ${dataFilePath}: ${writeError instanceof Error ? writeError.message : 'Unknown error'}`);
+        throw new Error(
+          `Failed to write to ${dataFilePath}: ${
+            writeError instanceof Error ? writeError.message : "Unknown error"
+          }`
+        );
       }
     } else {
       // Update in place
@@ -125,7 +135,11 @@ export async function POST(request: NextRequest) {
         writeFileSync(oldDataFilePath, JSON.stringify(oldRecruiters, null, 2));
       } catch (writeError) {
         console.error("Error writing to file:", writeError);
-        throw new Error(`Failed to write to ${oldDataFilePath}: ${writeError instanceof Error ? writeError.message : 'Unknown error'}`);
+        throw new Error(
+          `Failed to write to ${oldDataFilePath}: ${
+            writeError instanceof Error ? writeError.message : "Unknown error"
+          }`
+        );
       }
     }
 
@@ -136,9 +150,10 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     console.error("Error updating recruiter:", error);
-    const errorMessage = error instanceof Error ? error.message : "Unknown error";
+    const errorMessage =
+      error instanceof Error ? error.message : "Unknown error";
     const errorStack = error instanceof Error ? error.stack : undefined;
-    
+
     // Log detailed error for debugging
     console.error("Error details:", {
       message: errorMessage,
@@ -146,13 +161,13 @@ export async function POST(request: NextRequest) {
       recruiterId: recruiter?.id,
       countryCode: recruiter?.country,
     });
-    
+
     return NextResponse.json(
-      { 
+      {
         error: "Failed to update recruiter",
         details: errorMessage,
         // Only include stack in development
-        ...(process.env.NODE_ENV === "development" && { stack: errorStack })
+        ...(process.env.NODE_ENV === "development" && { stack: errorStack }),
       },
       { status: 500 }
     );

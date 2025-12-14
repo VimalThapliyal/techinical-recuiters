@@ -48,6 +48,9 @@ export default function AdminPage() {
     "all" | "pending" | "approved" | "rejected"
   >("pending");
   const [countryFilter, setCountryFilter] = useState<string>("all");
+  const [imageFilter, setImageFilter] = useState<
+    "all" | "with-image" | "no-image"
+  >("all");
   const [selectedSubmissions, setSelectedSubmissions] = useState<Set<string>>(
     new Set()
   );
@@ -116,7 +119,8 @@ export default function AdminPage() {
 
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
-      const errorMessage = errorData.details || errorData.error || "Failed to update recruiter";
+      const errorMessage =
+        errorData.details || errorData.error || "Failed to update recruiter";
       throw new Error(errorMessage);
     }
 
@@ -680,7 +684,7 @@ export default function AdminPage() {
               {/* Search and Filters for Recruiters */}
               <Card className="linkedin-card mb-6">
                 <CardContent className="p-6">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                     <div className="md:col-span-2">
                       <div className="relative">
                         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#666666]" />
@@ -708,17 +712,47 @@ export default function AdminPage() {
                         ))}
                       </SelectContent>
                     </Select>
+                    <Select
+                      value={imageFilter}
+                      onValueChange={(
+                        value: "all" | "with-image" | "no-image"
+                      ) => setImageFilter(value)}
+                    >
+                      <SelectTrigger>
+                        <SelectValue placeholder="Filter by image" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">All Recruiters</SelectItem>
+                        <SelectItem value="with-image">
+                          With Profile Image
+                        </SelectItem>
+                        <SelectItem value="no-image">
+                          No Profile Image
+                        </SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
                   <div className="mt-4 text-sm text-[#666666]">
                     Showing{" "}
                     {
                       recruiters.filter((r) => {
+                        // Country filter
                         if (
                           countryFilter !== "all" &&
                           r.country.toLowerCase() !==
                             countryFilter.toLowerCase()
                         )
                           return false;
+
+                        // Image filter
+                        if (imageFilter === "with-image" && !r.imageUrl) {
+                          return false;
+                        }
+                        if (imageFilter === "no-image" && r.imageUrl) {
+                          return false;
+                        }
+
+                        // Search filter
                         if (searchQuery.trim()) {
                           const query = searchQuery.toLowerCase();
                           return (
@@ -748,11 +782,22 @@ export default function AdminPage() {
                 <div className="space-y-6">
                   {recruiters
                     .filter((r) => {
+                      // Country filter
                       if (
                         countryFilter !== "all" &&
                         r.country.toLowerCase() !== countryFilter.toLowerCase()
                       )
                         return false;
+
+                      // Image filter
+                      if (imageFilter === "with-image" && !r.imageUrl) {
+                        return false;
+                      }
+                      if (imageFilter === "no-image" && r.imageUrl) {
+                        return false;
+                      }
+
+                      // Search filter
                       if (searchQuery.trim()) {
                         const query = searchQuery.toLowerCase();
                         return (
